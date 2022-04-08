@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Monda&family=Monoton&family=Rubik+Puddles&display=swap');
+
+@font-face {
+    font-family: cutefont;
+    src: url(fonts/Blueberry\ .ttf);
+}
+/* Removes bullet points of the list*/
+*{
+    list-style: none;
+    font-family: 'Monda', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cloudtitle .cloudimg img {
+    padding-top: 50px;
+    width: 750px;
+    max-height: 250px;
+    position: relative;
+    display: block;
+    left:125px;
+
+}
+.cloudtitle .cloudtext{
+    font-size: 55px;
+    font-family: 'cutefont';
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: -120px;
+    left: 290px;
+    
+}
+
+.cloudtitle .cloudtext:hover{
+
+    color: rgb(60, 152, 122);
+    position: relative;
+    }
+
+
+body{
+    background-image: url("images/bg.png");
+    background-repeat:repeat;
+    
+    image-rendering:optimizeSpeed;
+    image-resolution: 0%;
+    image-rendering: pixelated;
+
+}
+
+.newhigh{
+    font-family: 'Monoton', cursive;
+    font-size: 30px;
+    position: relative;
+    left: 250px;
+    top: 100px;
+    z-index: 1;
+}
+
+.wrapper{
+    width: 500px;
+    height: 500px;
+
+}
+
+.leaderboard-section{
+    width: 900px;
+    height:350px;
+    margin: 50px auto 0;
+    background: #A5E3E0;
+    opacity: 0.75;
+    border-top: 5px;
+    padding: 25px 40px; 
+    left: 25px;
+    position: relative;
+    border-radius: 25px;
+    
+}
+
+.header ul {
+    display: flex;
+    
+}
+
+.header ul li{
+    margin-right: 200px;
+    font-size: 25px;
+    font-weight:1000;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    top: -345px;
+    left: 270px;
+    z-index: 1;
+    text-decoration: underline;
+    font-family: 'Baloo 2', cursive;
+}
+
+
+.scores .currentscore{
+    font-family: 'Baloo 2', cursive;
+    font-size: 25px;
+    font-weight:1000;
+    color: black;
+    position: relative;
+    top:-380px;
+    left:300px;
+    z-index: 1;
+    
+}
+
+.scores .previousbest{
+    font-family: 'Baloo 2', cursive;
+    font-size: 25px;
+    font-weight:1000;
+    color: black;
+    position: relative;
+    top:-380px;
+    left:300px;
+    z-index: 1;
+
+}
+.uploadscore .promptscore {
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    top: -180px;
+    left: 50px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Baloo 2', cursive;
+}
+
+.uploadscore .entername {
+    position: relative;
+    font-size: x-large;
+    z-index: 1;
+    top: -185px;
+    left: 60px;
+    font-family: 'Baloo 2', cursive;
+}
+/*<div class="uploadscore">
+<div class="promptscore">Upload Score?</div>
+<div class="entername">Enter Name:</div>*/
+
+
+/* Horizontal layout of a list */
+.leaderboard-section ul {
+    display: flex;
+}
+
+.leaderboard-section ul li{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight:600;
+    color: black;
+    cursor: pointer;
+}
+
+.leaderboard-section ul li:hover{
+    color: white;
+}
+
+.leaderboard-wrap {
+    position: absolute;
+    top:600px;
+    left: 210px;
+    background: #38ccd7;
+    width: 700px;
+    height: 175px;
+    border-radius: 25px;
+}
+
+.leaderboard-wrap .leaderboard_item {
+    padding: 25px;
+    position: relative;
+    top: 30px;
+}
+
+.leaderboard-wrap .leaderboard_item {
+}
+
+
