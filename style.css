@@ -46,6 +46,8 @@ body{
     image-rendering:optimizeSpeed;
     image-resolution: 0%;
     image-rendering: pixelated;
+    background-size: 1000px;
+    background-repeat: no-repeat;
 
 }
 
