@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const fs = require("fs");
 
 // create and configure the express app
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 
@@ -25,11 +25,11 @@ function addNewScore(newScore){
     });
 }
 
+
 let newPlayerScore = {
-    "name": "Kim",
+    "name": "D",
     "score": 200
 }
-addNewScore(newPlayerScore);
 
 //get top 3
 function getTopThree(){
@@ -39,8 +39,19 @@ function getTopThree(){
         if (a.score > b.score) return 1;
         return 0;
       }).reverse();
-      return sortedData[0], sortedData[1], sortedData[2];
+      top3 = [sortedData[0], sortedData[1], sortedData[2]];
+      return top3;
 }
+
+//getTopThree();
+
+app.get('/add', (req, res) => {
+    let newPlayerScore = {
+        "name": "D",
+        "score": 200
+    }
+    res.send(addNewScore(newPlayerScore));
+});
 
 app.get('/player', (req, res) => {
     res.send(getTopThree());
@@ -48,6 +59,6 @@ app.get('/player', (req, res) => {
 
 
 server.listen(3000, () => {
-    console.log('listening on *:3000');
+    console.log('listening on *:5000');
   });
 
