@@ -3,21 +3,77 @@
 <html>
     <head>
         <title>High Score Board</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="scorestyle.css">
+    
     
     </head>
     
     <body>
+        <!--CURRENT SCORE SEND-->
+        <input id= "initials" maxlength='3' placeholder="•••" value='AAA'/>
+
+        
+
+        <div class="container">
+           
+           
+
+            <div class="center">
+                <button class="ssbutton" id="returnmain"> 
+                    <svg width="120px" height="60px" viewBox="0 0 120 60" class="border">
+                        <polyline points="119,1 119,59 1,59 1,1 119,1" class="bg-line" />
+                        <polyline points="119,1 119,59 1,59 1,1 119,1" class="hl-line" />
+                    </svg>
+                 <span>RETURN TO MAIN</span>
+
+                </button>
+
+                <button class="ssbutton" id="submitscore" onclick="updateScore()"> 
+                    <svg width="90px" height="30px" viewBox="0 0 90 30" class="border">
+                        <polyline points="89,1 89,29 1,29 1,1 89,1" class="bg-line" />
+                        <polyline points="89,1 89,29 1,29 1,1 89,1" class="hl-line" />
+                    </svg>
+                 <span>SUBMIT</span>
+                </button>
+
+            </div>
+        
+        </div>
+        
+        
+        <script>
+           
+            function updateScore(){
+               // var currentScore = localStorage.get("cScore");
+                var playerName = document.getElementById("initials").value;
+                var currentScore = 900;
+               
+                var score = {
+                    name: playerName,
+                    score: currentScore
+                }
+
+                var xhr = new window.XMLHttpRequest()
+                xhr.open("POST", "uploadscore", true);
+                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+                xhr.send(JSON.stringify(score));
+            }
+
+            function retrieveScoreBoard(){
+                var xhr = new window.XMLHttpRequest()
+                xhr.open("GET", "/scoreboard", true);
+                xhr.send();
+            }
+        
+        </script>
+
         <div class="cloudtitle">
             <div class="cloudimg">
-                <img src="images/cloud.png" alt="picture_cloud">
+                
                 <div class="cloudtext"> High Score Board</div>
             </div>       
 
         </div>
-
-        <div class="newhigh">New Personal High Score!</div>
-
 
         <div class = "wrapper">
             <div class = "leaderboard-section">
@@ -27,6 +83,8 @@
             <div class="uploadscore">
                 <div class="promptscore">Upload Score?</div>
                 <div class="entername">Enter Name:</div>
+               
+           
             </div>
 
             <div class="scores">
@@ -37,18 +95,22 @@
 
             <div class="header">
                 <ul>
-                        <li>Name</li>
-                        <li>Score</li>
-                        <li>Date</li>
-                    </ul>
+                    <li>Name</li>
+                    <li>Score</li>
+                    <li>Date</li>
+                </ul>
             </div>
                     
             <div class = "leaderboard-wrap">
-                <div class ="leaderboard_item alltime">
                    
-                   <!--FIRST ENTRY-->
-                    <div class="leaderboard_mem">
-                       
+                  
+                    <div class="leaderboard_mem" id="leaderboard_mem">
+                        <div class="leaderboard_1" id="leaderboard_1"></div>
+
+                        <div class="leaderboard_2" id="leaderboard_2"></div>
+
+                        <div class="leaderboard_3" id="leaderboard_3"></div>
+
                     </div>
 
                    
@@ -57,10 +119,34 @@
             </div>
         </div>
 
+
+        <div id="background-wrap">
+            
+            <div class="x1">
+                <div class="cloud"></div>
+            </div>
+        
+            <div class="x2">
+                <div class="cloud"></div>
+            </div>
+        
+            <div class="x3">
+                <div class="cloud"></div>
+            </div>
+        
+            <div class="x4">
+                <div class="cloud"></div>
+            </div>
+        
+            <div class="x5">
+                <div class="cloud"></div>
+            </div>
+        </div>
+
     </body>
 
 
 
 
-
+    <script src="scoreboard.js"></script>
 </html>

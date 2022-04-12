@@ -5,6 +5,7 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 const fs = require("fs");
+const { dirname } = require('path');
 
 // create and configure the express app
 const PORT = process.env.PORT || 3000;
@@ -12,7 +13,7 @@ app.use(express.json());
 
 // The index route
 app.get('/', function(req, res) {
-    res.send('Cloud Raindrop Score Board');
+    res.sendFile(path.join(--dirname, '/index.html'));
  });
 
 //add score route
