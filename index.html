@@ -55,14 +55,14 @@
                 }
 
                 var xhr = new window.XMLHttpRequest()
-                xhr.open("POST", "/uploadscore", true);
+                xhr.open("POST", "http://54.85.51.87:5000/uploadscore", true);
                 xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
                 xhr.send(JSON.stringify(score));
             }
 
             function retrieveScoreBoard(){
                 var xhr = new window.XMLHttpRequest()
-                xhr.open("GET", "/scoreboard", true);
+                xhr.open("GET", "http://54.85.51.87:5000/scoreboard", true);
                 xhr.send();
             }
         
