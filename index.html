@@ -54,7 +54,7 @@
                 }
 
                 var xhr = new window.XMLHttpRequest()
-                xhr.open("POST", "uploadscore", true);
+                xhr.open("POST", "/uploadscore", true);
                 xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
                 xhr.send(JSON.stringify(score));
             }
