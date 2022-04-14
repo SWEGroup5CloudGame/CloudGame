@@ -4,14 +4,20 @@
     <head>
         <title>High Score Board</title>
         <link rel="stylesheet" type="text/css" href="scorestyle.css">
-    
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                retrieveScoreBoard();
+            });
+           
+        </script>
     
     </head>
     
     <body>
         <!--CURRENT SCORE SEND-->
         <input id= "initials" maxlength='3' placeholder="•••" value='AAA'/>
-
+        
         
 
         <div class="container">
@@ -42,7 +48,10 @@
         
         
         <script>
-           
+           const fs = require('fs');
+           console.log("Reached Script");
+
+        
             function updateScore(){
                // var currentScore = localStorage.get("cScore");
                 var playerName = document.getElementById("initials").value;
@@ -61,9 +70,14 @@
             }
 
             function retrieveScoreBoard(){
+                console.log("Retrieving Score Board")
                 var xhr = new window.XMLHttpRequest()
                 xhr.open("GET", "http://54.85.51.87:5000/scoreboard", true);
                 xhr.send();
+
+                let topthree = fs.readFileSync('scores.json');
+                
+                console.log(topthree)
             }
         
         </script>
