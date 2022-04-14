@@ -6,12 +6,9 @@
         <link rel="stylesheet" type="text/css" href="scorestyle.css">
         <script type="text/javascript">
 
-            document.onload = function () {
                 retrieveScoreBoard();
                 const fs = require('fs');
                 console.log("Reached Script");
-                
-            };
            
         </script>
     
@@ -66,6 +63,7 @@
             }
 
             function retrieveScoreBoard(){
+                var fs = require('fs');
                 console.log("Retrieving Score Board")
                 var xhr = new window.XMLHttpRequest()
                 xhr.open("GET", "http://54.85.51.87:5000/scoreboard", true);
