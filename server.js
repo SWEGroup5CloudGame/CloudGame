@@ -24,6 +24,8 @@ app.use(function (req, res, next) {
       next();
     });
 
+  
+
 //add score route
 app.post("/uploadscore", async function(req, res){
     //get score
@@ -66,4 +68,19 @@ app.get("/scoreboard", async function(req, res){
 server.listen(5000, () => {
     console.log('listening on *:5000');
   });
+
+  function retrieveScoreBoard(){
+    console.log("Retrieving Score Board")
+    var xhr = new window.XMLHttpRequest()
+    xhr.open("GET", "http://54.85.51.87:5000/scoreboard", true);
+    xhr.send();
+
+    let topthree = fs.readFileSync('scores.json', {encoding:'utf8', flag:'r'},
+                        function (err, data){
+                            if(err) console.log(err);
+                            else console.log(data);
+                        });
+    
+    console.log(topthree)
+}
 

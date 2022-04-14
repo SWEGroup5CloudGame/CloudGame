@@ -8,7 +8,7 @@
 		function startup(){
             const fs = require('fs');
 			console.log("Running retrieve");          
-	  		retrieveScoreBoard();
+	  		getScores();
 		}
         </script>
     
@@ -62,19 +62,10 @@
                 xhr.send(JSON.stringify(score));
             }
 
-            function retrieveScoreBoard(){
-                console.log("Retrieving Score Board")
+            function getScores(){
                 var xhr = new window.XMLHttpRequest()
-                xhr.open("GET", "http://54.85.51.87:5000/scoreboard", true);
-                xhr.send();
-
-                let topthree = fs.readFileSync('scores.json', {encoding:'utf8', flag:'r'},
-                                    function (err, data){
-                                        if(err) console.log(err);
-                                        else console.log(data);
-                                    });
-                
-                console.log(topthree)
+                var url = "http://54.85.51.87:5000/uploadscore";
+                xhr.open('GET', url);
             }
         
         </script>
