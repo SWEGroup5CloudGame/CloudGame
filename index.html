@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+    <head onload="startup()">
         <title>High Score Board</title>
         <link rel="stylesheet" type="text/css" href="scorestyle.css">
         <script type="text/javascript">
-            
-                const fs = require('fs');
-                retrieveScoreBoard();
-                
-                console.log("Reached Script");
-           
+		function startup(){
+            const fs = require('fs');
+			console.log("Running retrieve");          
+	  		retrieveScoreBoard();
+		}
         </script>
     
     </head>
@@ -64,7 +63,6 @@
             }
 
             function retrieveScoreBoard(){
-                var fs = require('fs');
                 console.log("Retrieving Score Board")
                 var xhr = new window.XMLHttpRequest()
                 xhr.open("GET", "http://54.85.51.87:5000/scoreboard", true);
