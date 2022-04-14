@@ -8,13 +8,21 @@ const fs = require("fs");
 const { dirname } = require('path');
 
 // create and configure the express app
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 // The index route
 app.get('/', function(req, res) {
     res.sendFile(path.join(--dirname, '/index.html'));
  });
+
+app.use(function (req, res, next) {
+    //Enabling CORS
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
+      next();
+    });
 
 //add score route
 app.post("/uploadscore", async function(req, res){
@@ -55,7 +63,7 @@ app.get("/scoreboard", async function(req, res){
     res.send({status: true, msg: "top 3 retrieved"});
     });
 
-server.listen(3000, () => {
-    console.log('listening on *:3000');
+server.listen(5000, () => {
+    console.log('listening on *:5000');
   });
 
