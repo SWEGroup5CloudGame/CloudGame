@@ -6,9 +6,12 @@
         <link rel="stylesheet" type="text/css" href="scorestyle.css">
         <script type="text/javascript">
 
-            $(document).ready(function () {
+            document.onload = function () {
                 retrieveScoreBoard();
-            });
+                const fs = require('fs');
+                console.log("Reached Script");
+                
+            };
            
         </script>
     
@@ -18,12 +21,8 @@
         <!--CURRENT SCORE SEND-->
         <input id= "initials" maxlength='3' placeholder="•••" value='AAA'/>
         
-        
-
         <div class="container">
            
-           
-
             <div class="center">
                 <button class="ssbutton" id="returnmain"> 
                     <svg width="120px" height="60px" viewBox="0 0 120 60" class="border">
@@ -48,10 +47,7 @@
         
         
         <script>
-           const fs = require('fs');
-           console.log("Reached Script");
-
-        
+          
             function updateScore(){
                // var currentScore = localStorage.get("cScore");
                 var playerName = document.getElementById("initials").value;
@@ -75,7 +71,11 @@
                 xhr.open("GET", "http://54.85.51.87:5000/scoreboard", true);
                 xhr.send();
 
-                let topthree = fs.readFileSync('scores.json');
+                let topthree = fs.readFileSync('scores.json', {encoding:'utf8', flag:'r'},
+                                    function (err, data){
+                                        if(err) console.log(err);
+                                        else console.log(data);
+                                    });
                 
                 console.log(topthree)
             }
