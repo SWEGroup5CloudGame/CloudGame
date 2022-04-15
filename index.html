@@ -44,51 +44,7 @@
         </div>
         
         
-        <script>
-          
-            function updateScore(){
-                //var currentScore = localStorage.get("cScore");
-                var playerName = document.getElementById("initials").value;
-                console.log(playerName);
-                var currentScore = 900;
-
-                var currentdate = new Date(); 
-                var today = (currentdate.getMonth()+1)  + "/" + currentdate.getDate() + "/" + currentdate.getFullYear();  
-               
-                var score = {
-                    name: playerName,
-                    score: currentScore,
-                    date: today
-                }
-
-                var xhr = new window.XMLHttpRequest()
-                xhr.open("POST", "http://54.85.51.87:5000/uploadscore", true);
-                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-                xhr.send(JSON.stringify(score));
-            }
-
-            function getScores(){
-        	console.log("Please print");
-		    var xhr = new window.XMLHttpRequest()
-                var url = "http://54.85.51.87:5000/scoreboard";
-		    
-		    xhr.open('GET', url);
-		    xhr.addEventListener("load", function () { 
-			console.log(JSON.parse(xhr.responseText)[0]['name']);
-		   var response  = JSON.parse(xhr.responseText);
-	            document.getElementById("name1").innerText = response[0]['name']
-	            document.getElementById("name2").innerText = response[1]['name']
-	            document.getElementById("name3").innerText = response[2]['name']
-	            document.getElementById("score1").innerText = response[0]['score']
-	            document.getElementById("score2").innerText = response[1]['score']
-	            document.getElementById("score3").innerText = response[2]['score']
-                document.getElementById("date1").innerText = response[0]['date']
-	            document.getElementById("date2").innerText = response[1]['date']
-	            document.getElementById("date3").innerText = response[2]['date']         });
-		    xhr.send();
-	    }
-        
-        </script>
+       
 
         <div class="cloudtitle">
             <div class="cloudimg">
@@ -154,7 +110,51 @@
             </div>
         </div>
 
+        <script>
+          
+            function updateScore(){
+                //var currentScore = localStorage.get("cScore");
+                var playerName = document.getElementById("initials").value;
+                console.log(playerName);
+                var currentScore = 900;
 
+                var currentdate = new Date(); 
+                var today = (currentdate.getMonth()+1)  + "/" + currentdate.getDate() + "/" + currentdate.getFullYear();  
+               
+                var score = {
+                    name: playerName,
+                    score: currentScore,
+                    date: today
+                }
+
+                var xhr = new window.XMLHttpRequest()
+                xhr.open("POST", "http://54.85.51.87:5000/uploadscore", true);
+                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+                xhr.send(JSON.stringify(score));
+            }
+
+            function getScores(){
+        	console.log("Please print");
+		    var xhr = new window.XMLHttpRequest()
+                var url = "http://54.85.51.87:5000/scoreboard";
+		    
+		    xhr.open('GET', url);
+		    xhr.addEventListener("load", function () { 
+			console.log(JSON.parse(xhr.responseText)[0]['name']);
+		   var response  = JSON.parse(xhr.responseText);
+	            document.getElementById("name1").innerText = response[0]['name']
+	            document.getElementById("name2").innerText = response[1]['name']
+	            document.getElementById("name3").innerText = response[2]['name']
+	            document.getElementById("score1").innerText = response[0]['score']
+	            document.getElementById("score2").innerText = response[1]['score']
+	            document.getElementById("score3").innerText = response[2]['score']
+                document.getElementById("date1").innerText = response[0]['date']
+	            document.getElementById("date2").innerText = response[1]['date']
+	            document.getElementById("date3").innerText = response[2]['date']         });
+		    xhr.send();
+	    }
+        
+        </script>
         <div id="background-wrap">
             
             <div class="x1">
