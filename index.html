@@ -140,7 +140,7 @@
 		    
 		    xhr.open('GET', url);
 		    xhr.addEventListener("load", function () { 
-			console.log(JSON.parse(xhr.responseText)[0]['name']);
+			console.log(JSON.parse(xhr.responseText));
 		   var response  = JSON.parse(xhr.responseText);
 	            document.getElementById("name1").innerText = response[0]['name']
 	            document.getElementById("name2").innerText = response[1]['name']
