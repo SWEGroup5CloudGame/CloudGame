@@ -1,66 +1,17 @@
 [
   {
-    "name": "AAA",
-    "score": 900
+    "name": "TAM",
+    "score": 300,
+    "date": "10/12/22"
   },
   {
-    "name": "BBB",
-    "score": 300
+    "name": "LIN",
+    "score": 100,
+    "date": "02/12/22"
   },
   {
-    "name": "CCC",
-    "score": 100
-  },
-  {
-    "name": "AAA",
-    "score": 900
-  },
-  {
-    "name": "AAA",
-    "score": 900
-  },
-  {
-    "name": "AAA",
-    "score": 900
-  },
-  {
-    "name": "AAA",
-    "score": 900
-  },
-  {
-    "name": "Hel",
-    "score": 900
-  },
-  {
-    "name": "Hel",
-    "score": 900
-  },
-  {
-    "name": "Hel",
-    "score": 900
-  },
-  {
-    "name": "Hel",
-    "score": 900
-  },
-  {
-    "name": "Hel",
-    "score": 900
-  },
-  {
-    "name": "Hel",
-    "score": 900
-  },
-  {
-    "name": "AAA",
-    "score": 900
-  },
-  {
-    "name": "AAA",
-    "score": 900
-  },
-  {
-    "name": "AAA",
-    "score": 900
+    "name": "ROB",
+    "score": 900,
+    "date": "09/12/22"
   }
 ]

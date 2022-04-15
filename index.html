@@ -7,8 +7,8 @@
         <script type="text/javascript">
 		window.onload = function() {
 		console.log("Running retrieve");   
-            document.getElementById("cscore").innerText = localStorage.get("cScore");       
-            document.getElementById("pscore").innerText = localStorage.get("pScore");      
+           // document.getElementById("cscore").innerText = localStorage.get("cScore");       
+            //document.getElementById("pscore").innerText = localStorage.get("pScore");      
 	  		getScores();
 		}
         </script>
@@ -53,7 +53,7 @@
                 var currentScore = 900;
 
                 var currentdate = new Date(); 
-                var today = (currentdate.getMonth()+1)  + "/" + currentdate.getDate() + "/" + currentdate.getFullYear() + " @ ";  
+                var today = (currentdate.getMonth()+1)  + "/" + currentdate.getDate() + "/" + currentdate.getFullYear();  
                
                 var score = {
                     name: playerName,
@@ -132,21 +132,21 @@
             <div class = "leaderboard-wrap">
                    
                         <div class="namelists" id="namelists">
-                            <div class="name1" id="name1">hi</div>
-                            <div class="name2" id="name2">fr</div>
-                            <div class="name3" id="name">hte</div>
+                            <div class="name1" id="name1"></div>
+                            <div class="name2" id="name2"></div>
+                            <div class="name3" id="name"></div>
                         </div>
 
                         <div class="scoreslist" id="scoreslist">
-                            <div class="score1" id="score1">122</div>
-                            <div class="score2" id="score">542</div>
-                            <div class="score3" id="score">6543</div>
+                            <div class="score1" id="score1"></div>
+                            <div class="score2" id="score"></div>
+                            <div class="score3" id="score"></div>
                         </div>
 
                         <div class="datelist" id="datelist">
-                            <div class="date1" id="date1">12/23/2323</div>
-                            <div class="date2" id="date2">12/23/2323</div>
-                            <div class="date3" id="date3">12/23/2323</div>
+                            <div class="date1" id="date1"></div>
+                            <div class="date2" id="date2"></div>
+                            <div class="date3" id="date3"></div>
                         </div>
                    
                 </div>
