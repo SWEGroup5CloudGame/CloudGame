@@ -4,6 +4,11 @@
     font-family: cutefont;
     src: url(fonts/Blueberry\ .ttf);
 }
+
+@font-face {
+    font-family: robbiefont;
+    src: url(fonts/Cheeky\ Rabbit.ttf);
+}
 /* Removes bullet points of the list*/
 *{
     list-style: none;
@@ -11,6 +16,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.leaderboard-wrap{
+    
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.namelists {
+   position: relative;
+
+   top: 50px;
+   left: 50px;
+}
+
+.scoreslist {
+    position: relative;
+    top: -54px;
+    left: 310px;
+ 
+}
+
+.datelist {
+    position: relative;
+    top: -155px;
+    left: 525px;
+}
+
+.name1, .name2, .name3, .score1, .score2, .score3, .date1, .date2, .date3 {
+    font-family: 'robbiefont';
+    position: relative;
+}
+
+.pscore{
+    font-family: 'robbiefont';
+    position: relative;
+    top:-35px;
+    left: 190px;
+}
+
+.cscore{
+    font-family: 'robbiefont';
+    position: relative;
+    top:-35px;
+    left: 80px;
 }
 
  .container {
@@ -189,6 +239,7 @@ input {
     font-weight: bold;
     color: rgb(60, 152, 122);
     position: relative;
+    
 
 }
 
@@ -247,6 +298,7 @@ body{
     font-family: 'cutefont';
 
 }
+
 .uploadscore .promptscore {
     color: rgb(0, 0, 0);
     font-size: x-large;
@@ -271,7 +323,7 @@ body{
 
 
 .header{
-    top: -560px;
+    top: -600px;
     left: 500px;
     position: relative;
     
@@ -309,7 +361,7 @@ body{
 .leaderboard-wrap {
     position: relative;
     margin-left: 92%;
-    top: -610px;
+    top: -650px;
     background: #38ccd7;
     width: 700px;
     height: 175px;

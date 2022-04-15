@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 
 <html>
-    <head onload="startup()">
+    <head>
         <title>High Score Board</title>
         <link rel="stylesheet" type="text/css" href="scorestyle.css">
         <script type="text/javascript">
-		function startup(){
-            const fs = require('fs');
-			console.log("Running retrieve");          
+		window.onload = function() {
+		console.log("Running retrieve");   
+            document.getElementById("cscore").innerText = localStorage.get("cScore");       
+            document.getElementById("pscore").innerText = localStorage.get("pScore");      
 	  		getScores();
 		}
         </script>
@@ -46,14 +47,18 @@
         <script>
           
             function updateScore(){
-               // var currentScore = localStorage.get("cScore");
+                //var currentScore = localStorage.get("cScore");
                 var playerName = document.getElementById("initials").value;
                 console.log(playerName);
                 var currentScore = 900;
+
+                var currentdate = new Date(); 
+                var today = (currentdate.getMonth()+1)  + "/" + currentdate.getDate() + "/" + currentdate.getFullYear() + " @ ";  
                
                 var score = {
                     name: playerName,
-                    score: currentScore
+                    score: currentScore,
+                    date: today
                 }
 
                 var xhr = new window.XMLHttpRequest()
@@ -63,10 +68,25 @@
             }
 
             function getScores(){
-                var xhr = new window.XMLHttpRequest()
-                var url = "http://54.85.51.87:5000/uploadscore";
-                xhr.open('GET', url);
-            }
+        	console.log("Please print");
+		    var xhr = new window.XMLHttpRequest()
+                var url = "http://54.85.51.87:5000/scoreboard";
+		    
+		    xhr.open('GET', url);
+		    xhr.addEventListener("load", function () { 
+			console.log(JSON.parse(xhr.responseText)[0]['name']);
+		   var response  = JSON.parse(xhr.responseText);
+	            document.getElementById("name1").innerText = response[0]['name']
+	            document.getElementById("name2").innerText = response[1]['name']
+	            document.getElementById("name3").innerText = response[2]['name']
+	            document.getElementById("score1").innerText = response[0]['score']
+	            document.getElementById("score2").innerText = response[1]['score']
+	            document.getElementById("score3").innerText = response[2]['score']
+                document.getElementById("date1").innerText = response[0]['date']
+	            document.getElementById("date2").innerText = response[1]['date']
+	            document.getElementById("date3").innerText = response[2]['date']         });
+		    xhr.send();
+	    }
         
         </script>
 
@@ -91,8 +111,13 @@
             </div>
 
             <div class="scores">
-                <div class="currentscore"> Score: </div>
-                <div class="previousbest"> Previous Best: </div>
+                <div class="currentscore"> Score: 
+                    <div class="cscore" id="cscore">placeholder</div>
+                </div>
+
+                <div class="previousbest"> Previous Best: 
+                    <div class="pscore" id="pscore"> Placeholder </div>
+                </div>
             </div>
 
 
@@ -106,16 +131,23 @@
                     
             <div class = "leaderboard-wrap">
                    
-                  
-                    <div class="leaderboard_mem" id="leaderboard_mem">
-                        <div class="leaderboard_1" id="leaderboard_1"></div>
+                        <div class="namelists" id="namelists">
+                            <div class="name1" id="name1">hi</div>
+                            <div class="name2" id="name2">fr</div>
+                            <div class="name3" id="name">hte</div>
+                        </div>
 
-                        <div class="leaderboard_2" id="leaderboard_2"></div>
+                        <div class="scoreslist" id="scoreslist">
+                            <div class="score1" id="score1">122</div>
+                            <div class="score2" id="score">542</div>
+                            <div class="score3" id="score">6543</div>
+                        </div>
 
-                        <div class="leaderboard_3" id="leaderboard_3"></div>
-
-                    </div>
-
+                        <div class="datelist" id="datelist">
+                            <div class="date1" id="date1">12/23/2323</div>
+                            <div class="date2" id="date2">12/23/2323</div>
+                            <div class="date3" id="date3">12/23/2323</div>
+                        </div>
                    
                 </div>
                 
@@ -152,4 +184,3 @@
 
 
     <script src="scoreboard.js"></script>
-</html>

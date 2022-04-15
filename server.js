@@ -29,11 +29,11 @@ app.use(function (req, res, next) {
 //add score route
 app.post("/uploadscore", async function(req, res){
     //get score
-    let {name, score} = req.body;
+    let {name, score, date} = req.body;
     //create new player
     var readScores = fs.readFileSync('scores.json');
     var myObject = JSON.parse(readScores);
-    myObject.push({name, score});
+    myObject.push({name, score, date});
     var newData = JSON.stringify(myObject, null, 2);
     fs.writeFile('scores.json', newData, err => {
         // error checking
@@ -62,8 +62,9 @@ app.get("/scoreboard", async function(req, res){
         if (a.score > b.score) return 1;
       }).reverse().slice(0, 3)    
     console.log(top3);
-    res.send({status: true, msg: "top 3 retrieved"});
-    });
+   // res.send({status: true, msg: "top 3 retrieved"});
+   res.send(top3);
+});
 
 server.listen(5000, () => {
     console.log('listening on *:5000');
