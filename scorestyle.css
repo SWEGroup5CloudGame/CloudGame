@@ -46,22 +46,19 @@
 }
 
 .name1, .name2, .name3, .score1, .score2, .score3, .date1, .date2, .date3 {
-    /*font-family: 'robbiefont';*/
-    font-family: 'Pacifico', cursive;
+    font-family: 'robbiefont';
     position: relative;
 }
 
 .pscore{
-    /*font-family: 'robbiefont';*/
-    font-family: 'Pacifico', cursive;
+    font-family: 'robbiefont';
     position: relative;
     top:-35px;
     left: 190px;
 }
 
 .cscore{
-   /*font-family: 'robbiefont';*/
-   font-family: 'Pacifico', cursive;
+    font-family: 'robbiefont';
     position: relative;
     top:-35px;
     left: 80px;
@@ -75,8 +72,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*font-family: 'robbiefont';*/
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lato', sans-serif;
     z-index: 2;
   }
   
@@ -141,8 +137,7 @@
     color: rgb(0, 0, 0);
     font-size: 18px;
     font-weight: 100;
-    /*font-family: 'cutefont';*/
-    font-family: 'Pacifico', cursive;
+    font-family: 'cutefont';
     outline: none;
   }
 
@@ -165,8 +160,7 @@ input {
 
 .cloudtitle .cloudtext{
     font-size: 55px;
-     /*font-family: 'cutefont';*/
-     font-family: 'Pacifico', cursive;
+    font-family: 'cutefont';
     color: rgb(0, 0, 0);
     position: relative;
     margin:50px 270px;
@@ -288,8 +282,7 @@ body{
 
 .scores {
     top:-600px;
-     /*font-family: 'cutefont';*/
-     font-family: 'Pacifico', cursive;
+    font-family: 'cutefont';
     font-size: 25px;
     font-weight:1000;
     color: black;
@@ -298,14 +291,12 @@ body{
     left: 100%;
 }
 .scores .currentscore{
-     /*font-family: 'cutefont';*/
-     font-family: 'Pacifico', cursive;
+    font-family: 'cutefont';
     
 }
 
 .scores .previousbest{
-     /*font-family: 'cutefont';*/
-     font-family: 'Pacifico', cursive;
+    font-family: 'cutefont';
 
 }
 
@@ -316,8 +307,7 @@ body{
     left: 290px;
     position: relative;
     z-index: 1;
-    /*font-family: 'cutefont';*/
-    font-family: 'Pacifico', cursive;
+    font-family: 'cutefont';
 }
 
 .uploadscore .entername {
@@ -326,8 +316,7 @@ body{
     z-index: 1;
     top: -385px;
     left: 297px;
-   /*font-family: 'cutefont';*/
-   font-family: 'Pacifico', cursive;
+    font-family: 'cutefont';
 }
 /*<div class="uploadscore">
 <div class="promptscore">Upload Score?</div>
@@ -355,8 +344,7 @@ body{
     position: relative;
    
     z-index: 1;
-    /*font-family: 'cutefont';*/
-    font-family: 'Pacifico', cursive;
+    font-family: 'cutefont';
 }
 
 .leaderboard-section ul li{
