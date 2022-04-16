@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Monda&family=Monoton&family=Rubik+Puddles&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @font-face {
     font-family: cutefont;
     src: url(fonts/Blueberry\ .ttf);
@@ -12,7 +13,7 @@
 /* Removes bullet points of the list*/
 *{
     list-style: none;
-    font-family: 'Monda', sans-serif;
+    font-family: 'Pacifico', cursive;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -45,19 +46,22 @@
 }
 
 .name1, .name2, .name3, .score1, .score2, .score3, .date1, .date2, .date3 {
-    font-family: 'robbiefont';
+    /*font-family: 'robbiefont';*/
+    font-family: 'Pacifico', cursive;
     position: relative;
 }
 
 .pscore{
-    font-family: 'robbiefont';
+    /*font-family: 'robbiefont';*/
+    font-family: 'Pacifico', cursive;
     position: relative;
     top:-35px;
     left: 190px;
 }
 
 .cscore{
-    font-family: 'robbiefont';
+   /*font-family: 'robbiefont';*/
+   font-family: 'Pacifico', cursive;
     position: relative;
     top:-35px;
     left: 80px;
@@ -71,7 +75,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Lato', sans-serif;
+    /*font-family: 'robbiefont';*/
+    font-family: 'Pacifico', cursive;
     z-index: 2;
   }
   
@@ -136,7 +141,8 @@
     color: rgb(0, 0, 0);
     font-size: 18px;
     font-weight: 100;
-    font-family: 'cutefont';
+    /*font-family: 'cutefont';*/
+    font-family: 'Pacifico', cursive;
     outline: none;
   }
 
@@ -159,7 +165,8 @@ input {
 
 .cloudtitle .cloudtext{
     font-size: 55px;
-    font-family: 'cutefont';
+     /*font-family: 'cutefont';*/
+     font-family: 'Pacifico', cursive;
     color: rgb(0, 0, 0);
     position: relative;
     margin:50px 270px;
@@ -281,7 +288,8 @@ body{
 
 .scores {
     top:-600px;
-    font-family: 'cutefont';
+     /*font-family: 'cutefont';*/
+     font-family: 'Pacifico', cursive;
     font-size: 25px;
     font-weight:1000;
     color: black;
@@ -290,12 +298,14 @@ body{
     left: 100%;
 }
 .scores .currentscore{
-    font-family: 'cutefont';
+     /*font-family: 'cutefont';*/
+     font-family: 'Pacifico', cursive;
     
 }
 
 .scores .previousbest{
-    font-family: 'cutefont';
+     /*font-family: 'cutefont';*/
+     font-family: 'Pacifico', cursive;
 
 }
 
@@ -306,7 +316,8 @@ body{
     left: 290px;
     position: relative;
     z-index: 1;
-    font-family: 'cutefont';
+    /*font-family: 'cutefont';*/
+    font-family: 'Pacifico', cursive;
 }
 
 .uploadscore .entername {
@@ -315,7 +326,8 @@ body{
     z-index: 1;
     top: -385px;
     left: 297px;
-    font-family: 'cutefont';
+   /*font-family: 'cutefont';*/
+   font-family: 'Pacifico', cursive;
 }
 /*<div class="uploadscore">
 <div class="promptscore">Upload Score?</div>
@@ -343,7 +355,8 @@ body{
     position: relative;
    
     z-index: 1;
-    font-family: 'cutefont';
+    /*font-family: 'cutefont';*/
+    font-family: 'Pacifico', cursive;
 }
 
 .leaderboard-section ul li{
