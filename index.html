@@ -31,7 +31,7 @@
 
                 </button>
 
-                <button class="ssbutton" id="submitscore" onclick="updateScore()"> 
+                <button class="ssbutton" id="submitscore" onclick="updateScore();window.location.reload(true);"> 
                     <svg width="90px" height="30px" viewBox="0 0 90 30" class="border">
                         <polyline points="89,1 89,29 1,29 1,1 89,1" class="bg-line" />
                         <polyline points="89,1 89,29 1,29 1,1 89,1" class="hl-line" />
@@ -154,6 +154,8 @@
 		    xhr.send();
 	    }
         
+       
+
         </script>
         <div id="background-wrap">
             
