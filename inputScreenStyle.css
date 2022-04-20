@@ -1,0 +1,17 @@
+#inputHeading {
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    background-color: grey; 
+    color: turquoise;
+    font-size: 180%;
+    text-decoration: underline;
+}
+
+#submitBtnLook{
+    background-color: turquoise;
+    color: hotpink;
+    font-family: 'Chewy', cursive;
+    width: 10%;
+    height: 5%;
+    font-size: 20px;
+}

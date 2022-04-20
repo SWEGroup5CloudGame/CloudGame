@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Verdana', serif;
+  	font-size: 100%;
+  	color: black;
+  	width:100% ; 
+  	height:100%;
+  	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	background-image: url("img/background.png");
+}
+.menu {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 3em;
+  cursor: pointer;
+  background-color: #4CAF50;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  background-image: url("img/clouds-37095.jpeg");
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalbutton {
+	border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1rem;
+  cursor: pointer;
+  background-color: #4CAF50;
+}
+.content {
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+<p align="center"><canvas id="myCanvas" width="960" height="640"></canvas><button class="menu" style="z-index:2; position:absolute; top:x; left:y" onclick="openMenu()">Menu</button></p><div style="display:none;"><img id="heart" src="img/heart.png" width="50" height="50"><img id="cloud" src="img/cloud2.png" width="1038" height="514"><img id="drop" src="img/drop.png" width="929" height="1280"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="">
+	    <div class="content"><button class="modalbutton" onclick="resume()">Resume</button></div>
+	    <div class="content"><button class="modalbutton" onclick="backtomenu()">Back to Main Menu</button></div>
+	    <div class="content"><button class="modalbutton" onclick="viewscore()">View Highscore Board</button></div>
+	</div>
+  </div>
+
+</div>
+<script>
+  	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	var health = 5;
+	var imgHeart = document.getElementById("heart");
+	var imgCloud = document.getElementById("cloud");
+	var imgDrop = document.getElementById("drop");
+	var modal = document.getElementById("myModal");
+	var score = 0;
+	var clouds = new Array();
+	var span = document.getElementsByClassName("close")[0];
+	var cloudwords = ["appreciate", "abominable", "aberration", "Alzheimers", "abstinence", "adaptation", "apocalypse", "Antarctica", "absolution", "abstaining", "adrenaline", "accomplish", "accounting", "appearance", "accelerate", "affliction", "atmosphere", "automobile", "apostrophe", "apothecary", "appetizing", "apprentice", "acceptance", "attraction", "allegiance", "aggravated", "abdication", "annihilate", "acceptable", "Alexandria", "Archimedes", "attractive", "assailable", "accusation", "aggression", "apparition", "abhorrence", "admiration", "aggressive", "Australian", "ammunition", "articulate", "antisocial", "ameliorate", "basketball", "blackboard", "breathless", "bottomless", "brightness", "bitterness", "benevolent", "brokenness", "blacksmith", "believable", "Birmingham", "ballooning", "Blackbeard", "Bangladesh", "bluebonnet", "belongings", "blackberry", "binoculars", "brilliance", "blabbering", "bewildered", "babysitter",  "biological", "bareheaded", "bootlegger", "bridesmaid", "battleship", "biophysics", "blistering", "brigantine", "bamboozled", "bolstering", "Burlington", "battlement",   "boundaries", "backpacker", "barbecuing", "California", "characters", "convection",  "Cinderella", "confidence", "conscience", "conference", "compliment", "chromosome", "corruption", "combustion", "conjecture", "cheesecake", "connection", "chalkboard",  "comparison", "creativity", "contagious", "cleverness", "clementine", "camouflage", "chinchilla", "concoction", "convincing", "charleston", "chimpanzee", "conclusion", "confession", "challenger", "cellophane", "complexion", "Cincinnati", "consistent",  "discipline", "diabolical", "difference", "disposable", "dictionary", "Disneyland",  "dedication", "department", "directions", "determined", "discussion", "disrespect",  "dehydrated", "definition", "democratic", "dependable", "daydreamer", "dreamworld",  "Dictaphone", "dishwasher", "deliberate", "demolition", "discovered", "deactivate", "divination", "Democritus", "everything", "expression", "earthquake", "excitement", "elementary", "everywhere", "experiment", "endangered", "evaluation", "excellence", "experience", "effortless", "expedition", "embroidery", "equestrian", "employment", "eucalyptus", "ecotourism", "equivalent", "enthusiasm", "excavation", "energizing", "estimation", "enterprise", "encryption", "enveloping", "electronic", "exhausting", "enchanting", "enrollment", "friendship", "foundation", "fundraiser", "flashlight",  "footprints", "fellowship", "footballer", "flamboyant", "foreseeing", "fraternity", "foreboding", "federation", "fertilizer", "fascinated", "filtration", "fettuccine",  "fairground", "fraudulent", "fortuitous", "government", "generation", "girlfriend", "gymnastics", "generosity", "graduation", "grapefruit", "geothermal", "gramophone",  "Gettysburg", "goldilocks", "guidelines", "guaranteed", "gravestone", "gorgonzola", "goalkeeper", "gooseberry", "goaltender", "gastronomy", "Greenpeace", "gargantuan", "gatekeeper", "governance", "Georgetown", "geographic", "homecoming", "helicopter", "historical", "hypotenuse", "hypothesis", "headhunter", "heartbreak", "hallelujah", "healthcare", "hesitation", "hemisphere", "hereditary", "Hephaestus", "habitation", "hairspring", "hydromatic", "Heisenberg", "headstrong", "hydrometer", "headmaster", "Hutchinson", "hoodwinked", "hobnobbing", "hematology", "highlights", "hydrophone", "insulation", "individual", "innovation", "instrument", "invincible", "infinitive", "indulgence", "invitation", "industrial", "immaculate", "inequality", "infectious", "iodination", "initiative", "impression", "irrigation", "intimation", "impressive", "identifier", "incredible", "icebreaker", "impediment", "impossible", "interstate", "impeccable", "infidelity", "insatiable", "irritation", "insolation", "intonation", "initiation", "indication", "interwoven", "interested", "investment", "irrational", "intolerant", "irrelevant", "intimidate", "journalist", "journalism", "Juggernaut", "jubilation", "jackhammer", "jawbreaker", "journeying", "jackrabbit", "judgmental", "jaggedness", "juxtaposed", "journeyman", "joyousness", "jawtwister", "jettisoned", "jubilantly", "judicially", "journalize", "jackstones", "kidnapping", "kookaburra", "Kazakhstan", "kingfisher", "knickknack", "knighthood", "Kyrgyzstan", "kinematics", "kicksorter", "keyboarder", "kettledrum", "knackwurst", "knockabout", "Kirgizstan", "knightlike", "kilocycles", "literature", "loneliness", "lightboard", "leadership", "laceration", "locomotive", "liberation", "laboratory", "leprechaun", "loveliness", "liveliness", "linebacker", "locomotion", "levitation", "lighthouse", "lightening", "lumberjack", "limitation", "litigation", "lanthanide", "lieutenant", "Louisville", "liverwurst", "loquacious", "luminosity", "lackluster", "livelihood", "ladyfinger",  "lambasting", "Luxembourg", "lamentable", "laryngitis", "lobsterman", "logrolling", "lifesaving", "Livingston", "luminaries", "literality", "lavishness", "maleficent", "motivation", "management", "mozzarella", "medication", "meticulous", "motorcycle", "microscope", "meditation", "Manchester", "motionless", "mysterious", "misfortune", "Montessori", "microphone", "moderation", "misleading", "monophobia", "missionary", "millennium", "Madagascar", "motherless", "Montgomery", "mainstream", "motherland", "mayonnaise", "mechanical", "mothership", "musicality", "magnifying", "modulation", "multimedia", "masquerade", "monotonous", "metabolism", "malcontent", "meningitis", "mediocrity", "narcissist", "nutcracker", "nucleotide", "navigation", "negligence", "natatorium", "nonfiction", "noticeable", "nonchalant", "neutralist", "narcissism", "nationally", "nightdress", "nitpicking", "Neapolitan", "negotiator", "neglecting", "negativity", "Northerner", "neutrality", "nonplussed", "newscaster", "narrowness", "newsletter", "naturalize", "nutritious", "neutralism", "nightstick", "nineteenth", "nonbearing", "notability", "needlefish", "nettlesome", "navigating", "nationwide", "nonstarter", "orthopedic", "oppression", "outrageous", "outlandish", "opposition", "occupation", "omnipotent", "operations", "obligation", "ordination", "outpouring", "occurrence", "optimistic", "oncologist", "objectives", "overlooked", "overacting", "orangutang", "omnivorous", "overweight", "oenologist", "originator", "observance", "opalescent", "overpriced", "omniscient", "obstructer", "perfection", "punishment", "pilgrimage", "protection", "procession", "practicing", "patriotism", "playground", "parliament", "possession", "photogenic", "Phosphorus", "pedestrian", "prefecture", "prosperity", "perception", "Pocahontas", "promethium", "production", "polynomial", "prediction", "philosophy", "plagiarism", "peacefully", "prevention", "participle", "pentameter", "percussion", "pernicious", "providence", "phenomenon", "penicillin", "playwright", "paranormal", "politician", "penetrator", "properties", "psychology", "podiatrist", "proportion", "positivity", "possessive", "Portuguese", "Prometheus", "Queensland", "quadrangle", "quarantine", "quartering", "quadruplet", "qualifying", "quintuplet", "quietening", "quadratics", "quarreling", "quaternion", "questioned", "quantifier", "quizmaster", "quantified", "relaxation", "retirement", "restaurant", "renovation", "revolution", "reciprocal", "rainforest", "resolution", "Republican", "revelation", "refraction", "remarkable", "roundabout", "reflection", "resistance", "respectful", "relentless", "recreation", "remembered", "resentment", "redemption", "Rottweiler", "rhinoceros", "repentance", "reparation", "remodeling", "roadrunner", "rhinestone", "rumination", "repertoire", "ringmaster", "relinquish", "recitation", "regretting", "relocation", "resolutive", "regression", "regulation", "Rutherford", "referendum", "retraction", "respecting", "ruminating", "resounding", "refulgence", "Radiolaria", "salmonella", "strawberry", "silhouette", "skateboard", "speechless", "statistics", "sweetheart", "separation", "snorkeling", "submission", "scoreboard", "Siddhartha", "sanitation", "slobbering", "slithering", "staggering", "simplicity", "suggestion", "starstruck", "simulation", "semicircle", "stalagmite", "seamstress", "sabbatical", "salutation", "smothering", "succession", "shopaholic", "supination", "supermodel", "sweltering", "subjection", "suggesting", "speciality", "snickering", "silverback", "succeeding", "subduction", "salamander", "saturation", "satisfying", "shattering", "technology", "television", "trampoline", "tambourine", "temptation", "tournament", "threatened", "tenderness", "toothbrush", "transition", "technetium", "toothpaste", "typewriter", "thoughtful", "tourniquet", "terminator", "temperance", "themselves", "translator", "tortellini", "thickening", "tumbleweed", "trochanter", "triumphant", "tourmaline", "transplant", "turbulence", "triangular", "Thucydides", "tyrannized", "terminable", "timberland", "tabernacle", "triskelion", "truthfully", "technician", "terrifying", "timberline", "timeliness", "televising", "tarantella", "tendinitis", "tightening", "typography", "tragically", "triplicate", "theatrical", "university", "understand", "ubiquitous", "underworld", "undeniable", "unyielding", "underwater", "upbringing", "upholstery", "undulating", "undefeated", "unstinting", "unbearable", "underrated", "unavailing", "undertaker", "unfairness", "unfaithful", "undetected", "unraveling", "untangling", "unsporting", "usurpation", "usefulness", "untrusting", "undercover", "unflagging", "unanswered", "unoriginal", "unbuckling", "unwavering", "unfriendly", "unsettling", "unobliging", "unbothered", "unlikeness", "ungrudging", "untwisting", "unworkable", "unscramble", "unthinking", "uniformity", "unexciting", "volleyball", "vegetables", "victorious", "vocabulary", "vegetarian", "vernacular", "vulnerable", "vegetation", "Versailles", "visitation", "vociferous", "validation", "vertebrate", "vindictive", "veneration", "viviparous", "visibility", "vacationer", "vitalizing", "visionless", "varnishing", "villainess", "validating", "venerating", "villanelle", "vaccinated", "vaporizing", "vermicelli", "variegated", "virtueless", "vociferate", "vindicated", "verbalized", "veterinary", "virtuosity", "vermillion", "victualing", "visualizer", "Vietnamese", "variations", "volubility", "vitalistic", "Washington", "weathering", "watermelon", "wilderness", "weatherman", "waterspout", "watercress", "wheelchair", "wonderland", "wildebeest", "woodcutter", "Wellington", "waterproof", "windowsill", "Winchester", "worthiness", "witnessing", "wanderlust", "wildflower", "weightless", "whispering", "workaholic", "wellspring", "Wilmington", "wrongdoing", "wallflower", "wateriness", "worthwhile", "watercolor", "wavelength", "withdrawal", "woodenness", "Wordsworth", "wickedness", "weedkiller", "windshield", "woodcarver", "watchmaker", "whimpering", "wonderment", "witchcraft", "windscreen", "whatsoever", "waterborne", "xenophobia", "xerophytic", "xenophobic",  "xerography", "youngsters", "yourselves", "yardmaster", "Youngstown", "youthfully", "yellowness", "younglings", "Yugoslavia", "yesteryear", "yellowbird", "yieldingly",  "yellowtail", "yellowcake", "yearningly", "yellowlegs", "zygodactyl"];
+	var drops = new Array();
+	var dropwords = ["about", "again", "angel", "amber", "apple", "abate", "alone", "anime", "after", "admin", "anger", "april", "above", "alive", "album", "arrow", "alley", "alien", "apart", "angle", "award", "along", "agent", "agony", "allow", "aster", "abide", "abode", "abort", "aztec", "alpha", "amish", "actor", "apron", "agree", "audio", "abuse", "abbot", "acorn", "angry", "attic", "aging", "awful", "board", "blood", "birth", "black", "bully", "brain", "bible", "being", "bread", "beard", "badge", "belly", "beach", "below", "berry", "brave", "bacon", "brown", "bored", "brian", "beast", "binge", "break", "block", "brush", "blast", "biome", "billy", "bough", "baker", "broom", "bench", "birds", "brand", "boron", "bayou", "blitz", "butch", "bobby", "bring", "bride", "bloom", "beans", "bagel", "china", "cough", "candy", "chris", "cycle", "color", "cloud", "chair", "crazy", "cross", "clear", "clock", "catch", "carol", "clean", "child", "clone", "cheer", "chaos", "coach", "craft", "chess", "clown", "cause", "close", "count", "cream", "chain", "crown", "comet", "court", "cider", "chase", "chest", "crime", "curve", "class", "chant", "cover", "cable", "crate", "coral", "crane", "chick", "cards", "curry", "cliff", "death", "dream", "dirty", "dance", "daily", "dress", "daisy", "dough", "daddy", "drive", "drama", "devil", "drink", "doing", "donna", "dodge", "drain", "delta", "demon", "ditch", "disco", "diary", "donut", "dozen", "dying", "drone", "doubt", "drugs", "drake", "depth", "denim", "diane", "delve", "draft", "dolly", "dozer", "dixie", "deity", "dread", "dwarf", "dally", "earth", "erica", "eight", "eagle", "every", "early", "ember", "extra", "event", "eager", "empty", "ether", "ebony", "enemy", "eater", "elect", "email", "equal", "elite", "elope", "elder", "enter", "eaten", "eject", "exist", "ester", "enjoy", "elbow", "eaves", "ender", "entry", "easel", "erase", "exile", "excel", "elate", "erect", "ended", "emery", "eerie", "eared", "ecole", "egest", "fifty", "faith", "forty", "forum", "fruit", "field", "fever", "funny", "fight", "force", "first", "final", "false", "frown", "flood", "fresh", "fancy", "flame", "flute", "fable", "focus", "fella", "fence", "floor", "fudge", "frank", "float", "frost", "flock", "flash", "flesh", "fling", "found", "fetch", "fairy", "forte", "fuzzy", "fault", "feast", "fries", "fluid", "fiend", "fangs", "fifth", "fungi", "fiber", "fraud", "front", "flour", "green", "glory", "grace", "going", "great", "guard", "graph", "globe", "given", "glove", "grand", "gnome", "giant", "grape", "group", "grain", "grant", "ghost", "gator", "gabby", "grove", "grade", "greed", "giver", "goose", "genre", "groom", "gland", "growl", "genus", "gourd", "goods", "guest", "guide", "games", "grief", "grown", "grave", "guava", "grill", "grasp", "groan", "glare", "gross", "gravy", "heart", "happy", "house", "honor", "honey", "harry", "human", "horse", "heavy", "heard", "habit", "hinge", "hyper", "hyena", "hippo", "hatch", "hello", "hobby", "hazel", "haven", "hands", "hater", "holla", "homer", "hound", "hedge", "hours", "hotel", "heath", "hurry", "hover", "heist", "harsh", "haiku", "humor", "henna", "hijab", "hydra", "husky", "heave", "image", "idiot", "irate", "index", "issue", "ivory", "idiom", "ideal", "icing", "ilium", "inner", "itchy", "intro", "irony", "indie", "items", "igloo", "irons", "ictus", "infix", "infra", "icily", "inlet", "infer", "imply", "ileum", "inane", "jelly", "judge", "jenny", "juice", "jolly", "jimmy", "japan", "joint", "jeans", "joker", "jello", "jewel", "juicy", "jared", "jokes", "jiffy", "jacks", "jumbo", "jazzy", "judas", "joust", "jetty", "jerky", "jaded", "joist", "jaunt", "jacky", "knife", "koala", "kitty", "karma", "knock", "kebab", "kayak", "kazoo", "kabob", "knack", "known", "kodak", "kiosk", "knead", "kudos", "krill", "knoll", "kneel", "kooky", "kappa", "krone", "kutch", "ketch", "kinda", "knave", "kanji", "klutz", "knots", "laugh", "lemon", "light", "llama", "lover", "leave", "later", "local", "liver", "lucky", "lunch", "latte", "loose", "lance", "ledge", "level", "loved", "latin", "lungs", "layer", "logic", "loyal", "lotus", "liter", "lohan", "liger", "lower", "lying", "liana", "label", "loser", "labor", "legal", "large", "limit", "lipid", "loner", "lunar", "learn", "leash", "lotto", "month", "music", "mouth", "money", "megan", "magic", "media", "mango", "metal", "mouse", "march", "maria", "molly", "meter", "movie", "mason", "melon", "match", "model", "maple", "mercy", "maker", "micro", "marry", "moist", "merry", "mommy", "mania", "moose", "maybe", "mount", "moron", "medal", "might", "misty", "motor", "motto", "monte", "mange", "missy", "mafia", "moody", "miser", "night", "never", "north", "ninja", "nasty", "noise", "nanny", "nacho", "ninth", "noble", "naive", "nerve", "nurse", "niece", "names", "notch", "novel", "notes", "nosey", "nappy", "nylon", "nance", "neigh", "nymph", "nails", "neath", "naked", "nasal", "nippy", "niche", "needy", "naggy", "named", "niner", "natty", "nomad", "noose", "naris", "netty", "other", "ocean", "organ", "olive", "ology", "obama", "onion", "often", "order", "oasis", "Orion", "offer", "otter", "ought", "opera", "older", "orbit", "owner","ozone", "opium", "omega", "ovary", "onset", "owing", "ombre", "ounce", "oxide", "orang", "orate", "okapi", "opine", "ovate", "odium", "oneal", "owned", "outer", "obese", "optic", "olden", "oiler", "odour", "oiled", "pizza", "party", "piano", "peace", "power", "point", "puppy", "phone", "pasta", "plant", "panda", "penny", "paper", "place", "photo", "peach", "plate", "peter", "plain", "paula", "purse", "plane", "poppy", "petal", "pearl", "price", "pride", "perry", "proud", "paint", "press", "patch", "punch", "pilot", "porch", "proof", "panic", "plaid", "prism", "poise", "piece", "prize", "potty", "pitch", "piggy", "pants", "pause", "queen", "quiet", "quick", "quack", "quest", "quart", "queue", "quilt", "quake", "quote", "quail", "quint", "quirk", "query", "quits", "quite", "qiana", "quasi", "quota", "qualm", "quash", "quaff", "quark", "quill", "qepiq", "quire", "quell", "quira", "quipu", "quern", "quirt", "quoit", "quean", "quoin", "river", "radio", "royal", "range", "right", "rhyme", "raven", "reach", "robin", "roman", "ready", "roger", "rough", "round", "rhino", "ranch", "ridge", "ruler", "rings", "reign", "ratio", "robot", "rally", "randy", "rocky", "rails", "rifle", "rouge", "rebel", "route", "rugby", "rover", "rocks", "rodeo", "radar", "roast", "roach", "rogue", "rapid", "rumor", "rusty", "rishi", "recon", "rated", "raise", "reuse", "seven", "sixty", "sugar", "smile", "south", "santa", "stone", "story", "smart", "smith", "sorry", "scarf", "state", "sweet", "scent", "space", "sound", "start", "socks", "sleep", "storm", "silly", "sally", "super", "stick", "scare", "solid", "shout", "sushi", "skull", "swing", "shine", "stand", "stage", "sight", "short", "spoon", "scout", "snail", "sauce", "share", "shark", "sheen", "shelf", "skate", "snake", "scary", "three", "tiger", "thing", "today", "truth", "train", "truck", "table", "think", "there", "touch", "tulip", "trust", "trout", "teeth", "topic", "tooth", "track", "tower", "total", "tweet", "treat", "twerp", "tired", "twist", "terry", "trial", "teach", "trade", "tiara", "tango", "times", "tweed", "thief", "tasty", "twice", "tater", "tough", "tical", "thorn", "tweak", "tight", "tease", "under", "union", "uncle", "unity", "utter", "ultra", "usher", "upset", "urban", "udder", "upper", "using", "urate", "unite", "umber", "usage", "usual", "ulcer", "units", "unify", "until", "upton", "unism", "umbra", "unman", "unshy", "untie", "utile", "unbar", "umbel", "urial", "unbox", "urger", "unfit", "umeed", "unlit", "unary", "vegan", "voice", "value", "ville", "video", "valve", "virus", "vodka", "viola", "verse", "villa", "vital", "varus", "vowel", "vapor", "vault", "Virgo", "viper", "vroom", "venue", "vocal", "vague", "vivid", "vomit", "venom", "valor", "vista", "vicar", "vinyl", "viral", "venal", "visit", "vanda", "vertu", "vixen", "vying", "valid", "vogue", "valet", "voter", "vigor", "views", "vetch", "volar", "Verdi", "world", "water", "woman", "words", "watch", "women", "worth", "white", "witch", "whale", "worry", "worse", "wrong", "wagon", "wings", "worst", "wrist", "woods", "waste", "works", "while", "weary", "wedge", "weird", "wheat", "wheel", "where", "wound", "wreck", "write", "whole", "waist", "weigh", "whack", "wince", "Weber", "whirl", "wacky", "woven", "windy", "wrath", "widow", "waver", "wiser", "wager", "wench", "xenon", "xylem", "xylol", "young", "youth", "Yahoo", "yacht", "years", "yeast", "yodel", "yield", "yummy", "yoked", "yenta", "yucca", "yucky", "yokel", "yards", "yearn", "yacca", "yobbo", "yogin", "yuppy", "yurak", "yogic", "yawny", "yesha", "yosha", "zebra", "zaman", "zippy", "zesty", "zakat", "zonal", "zamia", "zooid", "zombi", "zoned", "zilch", "zloty", "zingy"];
+	var eventTimer = 0;
+	var attack = "";
+	var difficulty = localStorage.getItem("mode");
+	var paused = false;
+	var words;
+	var definitions;	
+
+	if (difficulty == 4) {
+		words = localStorage.getItem("words").split(',');
+		definitions = localStorage.getItem("definitions").split(',');
+	}	
+
+	
+	function draw() {
+		if (!paused) {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+    	ctx.beginPath();
+		for (let i = 0; i < health; i++) {
+			ctx.drawImage(imgHeart, 910 - i * 60, 0, 50, 50);
+		}
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0, 0, 200, 60);
+		ctx.fillStyle = "white";
+		ctx.fill();
+		ctx.globalAlpha = 1;
+		ctx.fillStyle = "yellow";
+		ctx.textAlign = "right";
+		ctx.font = "60px Verdana";
+		ctx.fillText(score, 200, 53, 200);
+		drawclouds();
+		drawdrops();
+		if (eventTimer % 375 == 0 && clouds.length < 4) {
+			if (difficulty < 4) {
+				clouds.push(cloudwords[Math.floor(Math.random()*cloudwords.length)]);
+			}
+			else {
+				var temp = Math.floor(Math.random()*definitions.length)
+				clouds.push(new Array(definitions[temp], temp));
+			}
+		if (Math.random() <= .5 && clouds.length == 1) {
+			if (difficulty < 4) {
+				clouds.push(cloudwords[Math.floor(Math.random()*cloudwords.length)]);
+			}
+			else {
+				var temp = Math.floor(Math.random()*definitions.length)
+				clouds.push(new Array(definitions[temp], temp));
+			}
+		}
+		}
+		eventTimer += 1;
+		if (eventTimer % 250 == 0 && clouds.length > 1) {
+			rain();
+		} else if (eventTimer % 250 == 0 && clouds.length == 1) {
+			if (Math.random() <= .5) {
+				if (difficulty < 4) {
+					clouds.push(cloudwords[Math.floor(Math.random()*cloudwords.length)]);
+				}
+				else {
+					var temp = Math.floor(Math.random()*definitions.length)
+					clouds.push(new Array(definitions[temp], temp));
+				}
+			}
+		}
+		
+		ctx.fillStyle = "black";
+		ctx.textAlign = "center";
+		var f = "60px Verdana";
+		ctx.font = f;
+		ctx.fillText(attack, 480, 640-12, 960);
+	}
+	}
+	
+	function drawclouds() {		
+		clouds.forEach((element, index) => {
+			if (clouds.length == 1) {
+			ctx.drawImage(imgCloud, 0, 60, 960 / clouds.length, 480 / clouds.length);
+			ctx.fillStyle = "black";
+			ctx.textAlign = "center";
+			var f = (30) + "px Verdana";
+			ctx.font = f;
+			if (difficulty < 4) {
+				ctx.fillText(element, (480 / clouds.length) + 0, 480 / clouds.length, 960 / clouds.length);
+			} else {
+				ctx.fillText(words[element[1]], (480 / clouds.length) + 0, 480 / clouds.length, 960 / clouds.length);
+			}
+			} else {
+			ctx.drawImage(imgCloud, (960 - 960 / clouds.length) * (index / (clouds.length - 1)), 60, 960 / clouds.length, 480 / clouds.length); 
+			ctx.fillStyle = "black";
+			ctx.textAlign = "center";
+			var f = (30) + "px Verdana";
+			ctx.font = f;
+			if (difficulty < 4) {
+				ctx.fillText(element, (480 / clouds.length) + (960 - 960 / clouds.length) * (index / (clouds.length - 1)), 480 / clouds.length, 960 / clouds.length);
+			} else {
+				ctx.fillText(words[element[1]], (480 / clouds.length) + (960 - 960 / clouds.length) * (index / (clouds.length - 1)), 480 / clouds.length, 960 / clouds.length);
+			}
+			}
+		})
+	}
+	
+	function rain() {		
+		clouds.forEach((element, index) => {
+		if (Math.random() <= .5)
+		{
+			if (difficulty < 4) {
+			drops.push(new Array(dropwords[Math.floor(Math.random()*dropwords.length)], (480 / clouds.length - 128 / 2) + (960 - 960 / clouds.length) * (index / (clouds.length - 1)),  480 / clouds.length));
+			} else {
+			var temp = Math.floor(Math.random()*words.length);
+			drops.push(new Array(words[temp], (480 / clouds.length - 128 / 2) + (960 - 960 / clouds.length) * (index / (clouds.length - 1)),  480 / clouds.length, temp));
+			}
+		}
+		})
+	}
+	
+	function drawdrops() {
+		drops.forEach((element) => {
+			ctx.drawImage(imgDrop, element[1], element[2], 128, 93);
+			ctx.fillStyle = "black";
+			ctx.textAlign = "center";
+			var f = (30) + "px Verdana";
+			ctx.font = f;
+			if (difficulty < 4) {
+				ctx.fillText(element[0], element[1]+64, element[2]+70, 128);
+			} else {
+				ctx.fillText(definitions[element[3]], element[1]+64, element[2]+70, 128);
+			}
+			if (difficulty == 1 || difficulty == 4)
+			{
+				element[2] = element[2] + .5;
+			} else if (difficulty == 2) {
+				element[2] = element[2] + 1;
+			} else if (difficulty == 3) {
+				element[2] = element[2] + 1.5;
+			}
+		})
+		
+		var a = drops.length;
+		drops = drops.filter(element => element[2] < 640 - 93);
+		if (drops.length < a) {
+			health -= 1;
+			if (health == 0) {
+				localStorage.setItem("cScore", score);
+				if (score > localStorage.getItem("pScore")) {
+					localStorage.setItem("pScore", score);
+				}
+				window.location.href="highScoresBoard.html";
+			}
+		}
+	}
+	
+	setInterval(draw, 10);
+		
+		
+	window.addEventListener("keydown", function (event) {
+		if (!paused) {
+		if (event.defaultPrevented) {
+			return; 
+		}
+
+		if ((event.which > 64 && event.which < 91) || event.which == 32 || (event.which > 47 && event.which < 58) || event.which == 222) {
+			attack += event.key;
+		} else if (event.key == "Enter") {
+			kill(attack);
+			attack = "";
+		} else if (event.key == "Backspace") {
+			attack = attack.slice(0, -1);
+		} else {
+			return;
+		}
+		event.preventDefault();
+		}
+	}, true);
+		
+	function kill(v) {
+		var a = drops.length;
+		drops = drops.filter(element => element[0].toUpperCase() != v.toUpperCase());
+		if (difficulty < 4)
+			score += difficulty * (a - drops.length);
+		a = clouds.length;
+		if (difficulty < 4)
+		{
+			clouds = clouds.filter(element => element.toUpperCase() != v.toUpperCase());
+		} else {
+			clouds = clouds.filter(element => element[0].toUpperCase() != v.toUpperCase());
+		}
+		if (difficulty < 4)
+			score += 2 * difficulty * (a - clouds.length);
+	}
+
+	function openMenu() {
+		modal.style.display = "block";
+		paused = true;
+	}
+
+	function resume() {
+		modal.style.display = "none";
+		paused = false;
+		
+	}
+
+	function backtomenu() {
+		window.location.href="menu_index.html";
+	}
+
+	function viewscore() {
+		window.location.href="highScoresBoard.html";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	  modal.style.display = "none";
+	paused = false;
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+	    modal.style.display = "none";
+		paused = false;
+	  }
+	}
+
+</script></body></html>

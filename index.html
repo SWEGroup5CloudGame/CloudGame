@@ -1,188 +1,113 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud-Raindrop Game</title>
+    <link rel="stylesheet" href="menu_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<html>
-    <head>
-        <title>High Score Board</title>
-        <link rel="stylesheet" type="text/css" href="scorestyle.css">
-        <script type="text/javascript">
-		window.onload = function() {
-		console.log("Running retrieve");   
-           // document.getElementById("cscore").innerText = localStorage.get("cScore");       
-            //document.getElementById("pscore").innerText = localStorage.get("pScore");      
-	  		getScores();
-		}
-        </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Homemade+Apple&family=Rubik+Bubbles&display=swap" rel="stylesheet">
     
-    </head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <style>
+        body{
+            background: url('img/t2.png');
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+    </style>
     
-    <body>
-        <!--CURRENT SCORE SEND-->
-        <input id= "initials" maxlength='3' placeholder="•••" value='AAA'/>
+</head>
+<body >
+
+    <div id="mainTitle">
+       <h1 style="font-size:9vw; text-align: center"><strong>Cloud-Raindrop</strong></h1>
+    </div>
+
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+              <feComposite in="SourceGraphic" in2="goo"/>
+            </filter>
+          </defs>
+        </svg>
         
-        <div class="container">
-           
-            <div class="center">
-                <button class="ssbutton" id="returnmain"> 
-                    <svg width="120px" height="60px" viewBox="0 0 120 60" class="border">
-                        <polyline points="119,1 119,59 1,59 1,1 119,1" class="bg-line" />
-                        <polyline points="119,1 119,59 1,59 1,1 119,1" class="hl-line" />
-                    </svg>
-                 <span>RETURN TO MAIN</span>
+        <span class="button--bubble__container" id="strtBtn" >
+          <a id="startButtonID" class="button button--bubble" onclick='start()'>
+            Start
+          </a>
+          <span class="button--bubble__effect-container" >
+            <span class="circle top-left"></span>
+            <span class="circle top-left"></span>
+            <span class="circle top-left"></span>
+            <span class="button effect-button" ></span>
+            <span class="circle bottom-right"></span>
+            <span class="circle bottom-right"></span>
+            <span class="circle bottom-right"></span>
+          </span>
+        </span>
 
-                </button>
-
-                <button class="ssbutton" id="submitscore" onclick="updateScore();window.location.reload(true);"> 
-                    <svg width="90px" height="30px" viewBox="0 0 90 30" class="border">
-                        <polyline points="89,1 89,29 1,29 1,1 89,1" class="bg-line" />
-                        <polyline points="89,1 89,29 1,29 1,1 89,1" class="hl-line" />
-                    </svg>
-                 <span>SUBMIT</span>
-                </button>
-
+        <span class="button--bubble__container" id="modesBtn" class="dropdown">
+            <a class="button button--bubble dropbtn" onclick='changeModes()'>
+              Modes
+            </a>
+            <div id="myDd" class="dropdown-content">
+                <button id="modeBtns" onclick="easyMode()"><strong>Easy</strong></button>
+                <button id="modeBtns" onclick="medMode()"><strong>Medium</strong></button>
+                <button id="modeBtns" onclick="hardMode()"><strong>Hard</strong></button>
+                <button id="modeBtns" onclick="eduMode()"><strong>Education</strong></button>
             </div>
+            <span class="button--bubble__effect-container">
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+              <span class="button effect-button"></span>
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+            </span>
+        </span>
+
+
+        <span class="button--bubble__container" id="highScoresBtn">
+            <a href="highScoresBoard.html" class="button button--bubble" onclick='highScoresOpen()'>
+              High Scores Board
+            </a>
+            <span class="button--bubble__effect-container">
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+              <span class="button effect-button"></span>
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+            </span>
+        </span>
+        <span> 
+          <button id="soundBtn" onclick="soundPlay()"><i class="fa fa-play" id="playIcon"></i></button>
+        </span>
+
         
-        </div>
-        
-        
-       
+    </div>
+    
+</body>
 
-        <div class="cloudtitle">
-            <div class="cloudimg">
-                
-                <div class="cloudtext"> High Score Board</div>
-            </div>       
-
-        </div>
-
-        <div class = "wrapper">
-            <div class = "leaderboard-section">
-               
-            </div>
-
-            <div class="uploadscore">
-                <div class="promptscore">Upload Score?</div>
-                <div class="entername">Enter Name:</div>
-               
-           
-            </div>
-
-            <div class="scores">
-                <div class="currentscore"> Score: 
-                    <div class="cscore" id="cscore">12</div>
-                </div>
-
-                <div class="previousbest"> Previous Best: 
-                    <div class="pscore" id="pscore">3</div>
-                </div>
-            </div>
-
-
-            <div class="header">
-                <ul>
-                    <li>Name</li>
-                    <li>Score</li>
-                    <li>Date</li>
-                </ul>
-            </div>
-                    
-            <div class = "leaderboard-wrap">
-                   
-                        <div class="namelists" id="namelists">
-                            <div class="name1" id="name1"></div>
-                            <div class="name2" id="name2"></div>
-                            <div class="name3" id="name3"></div>
-                        </div>
-
-                        <div class="scoreslist" id="scoreslist">
-                            <div class="score1" id="score1"></div>
-                            <div class="score2" id="score2"></div>
-                            <div class="score3" id="score3"></div>
-                        </div>
-
-                        <div class="datelist" id="datelist">
-                            <div class="date1" id="date1"></div>
-                            <div class="date2" id="date2"></div>
-                            <div class="date3" id="date3"></div>
-                        </div>
-                   
-                </div>
-                
-            </div>
-        </div>
-
-        <script>
-          
-            function updateScore(){
-                //var currentScore = localStorage.get("cScore");
-                var playerName = document.getElementById("initials").value;
-                console.log(playerName);
-                var currentScore = 900;
-
-                var currentdate = new Date(); 
-                var today = (currentdate.getMonth()+1)  + "/" + currentdate.getDate() + "/" + currentdate.getFullYear();  
-               
-                var score = {
-                    name: playerName,
-                    score: currentScore,
-                    date: today
-                }
-
-                var xhr = new window.XMLHttpRequest()
-                xhr.open("POST", "http://54.85.51.87:5000/uploadscore", true);
-                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-                xhr.send(JSON.stringify(score));
-            }
-
-            function getScores(){
-        	console.log("Please print");
-		    var xhr = new window.XMLHttpRequest()
-                var url = "http://54.85.51.87:5000/scoreboard";
-		    
-		    xhr.open('GET', url);
-		    xhr.addEventListener("load", function () { 
-			console.log(JSON.parse(xhr.responseText));
-		   var response  = JSON.parse(xhr.responseText);
-	            document.getElementById("name1").innerText = response[0]['name']
-	            document.getElementById("name2").innerText = response[1]['name']
-	            document.getElementById("name3").innerText = response[2]['name']
-	            document.getElementById("score1").innerText = response[0]['score']
-	            document.getElementById("score2").innerText = response[1]['score']
-	            document.getElementById("score3").innerText = response[2]['score']
-                document.getElementById("date1").innerText = response[0]['date']
-	            document.getElementById("date2").innerText = response[1]['date']
-	            document.getElementById("date3").innerText = response[2]['date']         });
-		    xhr.send();
-	    }
-        
-       
-
-        </script>
-        <div id="background-wrap">
-            
-            <div class="x1">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x2">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x3">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x4">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x5">
-                <div class="cloud"></div>
-            </div>
-        </div>
-
-    </body>
-
-
-
-
-    <script src="scoreboard.js"></script>
+<script src="menu_script.js"></script>

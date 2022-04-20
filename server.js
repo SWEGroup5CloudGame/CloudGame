@@ -13,7 +13,7 @@ app.use(express.json());
 
 // The index route
 app.get('/', function(req, res) {
-    res.sendFile(path.join(--dirname, '/index.html'));
+    res.sendFile(path.join(--dirname, '/highScoresBoard.html'));
  });
 
 app.use(function (req, res, next) {

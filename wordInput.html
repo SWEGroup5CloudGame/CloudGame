@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body{
+            background: url('img/greyBG.png');
+            background-repeat:repeat-y;
+            background-size:cover;
+        }
+	input[type=text] {
+   		width: 520px;
+	}
+
+	#inputHeading {
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    background-color: grey; 
+    color: turquoise;
+    font-size: 180%;
+    text-decoration: underline;
+}
+
+#submitBtnLook{
+    background-color: turquoise;
+    color: hotpink;
+    font-family: 'Chewy', cursive;
+    width: 10%;
+    height: 5%;
+    font-size: 20px;
+}
+
+#newPairBtnLook{
+    background-color: turquoise;
+    color: hotpink;
+    font-family: 'Chewy', cursive;
+    width: 10%;
+    height: 5%;
+    font-size: 20px;
+}
+    </style>
+</head>
+<body >
+    <audio autoplay loop>
+        <source src="aud/Happy-Whistling-Ukulele.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="inputDescription">
+        <h1 style="font-size:2.5vw; text-align: center; font-family: 'Chewy', cursive; color: black;">
+            <strong>
+                Please enter the words and corresponding <br>
+                definitions you would like to learn below 
+            </strong>
+        </h1>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default" style="height:115%;">
+                        <div class="panel-heading" id= "inputHeading"><strong>Words:</strong></div>
+                        <div class="panel-body">
+                            <form id="wordInput"><input type="text" name="words[]"></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-default" style="height:115%;">
+                        <div class="panel-heading" id= "inputHeading"><strong>Definitions:</strong></div>
+                        <div class="panel-body">
+                            <form id="defInput"><input type="text" name="definitions[]"></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-light text-right">
+                <a id="submitBtn">
+                    <button id="submitBtnLook" onclick="submission()">
+                        Submit
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+	<div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-light text-right">
+                <a id="newPairBtn">
+                    <button id="newPairBtnLook" onclick="newPair()">
+                        +
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+var audio = new Audio("aud/611642__kstargio__waterbloop.mp3");
+var wordInput = document.getElementById('wordInput');
+var defInput = document.getElementById('defInput');
+
+
+function submission(){
+	var words = new Array();
+	for (var i = 0; i < wordInput.length; i++) {
+		words.push(wordInput.elements[i].value);
+	}
+	var definitions = new Array();
+	for (var i = 0; i < defInput.length; i++) {
+		definitions.push(defInput.elements[i].value);
+	}
+	localStorage.setItem("words", words);
+	localStorage.setItem("definitions", definitions);
+      document.getElementById("submitBtn").href='gamePage.html';
+}
+
+function newPair(){
+	var newInput = document.createElement('input');
+	newInput.type = 'text';
+	newInput.name = 'words[]';
+	wordInput.appendChild(newInput);
+
+	newInput = document.createElement('input');
+	newInput.type = 'text';
+	newInput.name = 'definitions[]';
+	defInput.appendChild(newInput);
+	audio.play();
+}
+</script>
