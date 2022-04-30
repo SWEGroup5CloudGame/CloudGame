@@ -31,7 +31,9 @@ app.post("/uploadscore", async function(req, res){
     //get score
     let {name, score, date} = req.body;
     //create new player
+
     var readScores = fs.readFileSync('scores.json');
+console.log("readscore" + readScores);
     var myObject = JSON.parse(readScores);
     myObject.push({name, score, date});
     var newData = JSON.stringify(myObject, null, 2);

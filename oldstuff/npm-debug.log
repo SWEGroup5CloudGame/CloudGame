@@ -1,0 +1,2801 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'pm2' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData pm2
+8 silly fetchNamedPackageData pm2
+9 silly mapToRegistry name pm2
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/pm2
+13 verbose request uri https://registry.npmjs.org/pm2
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 1:41:06 AM
+16 verbose request id fa8fb2e89685ee07
+17 http request GET https://registry.npmjs.org/pm2
+18 http 200 https://registry.npmjs.org/pm2
+19 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+19 verbose headers   'content-type': 'application/json',
+19 verbose headers   'transfer-encoding': 'chunked',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'cf-ray': '6fc9377b380358ae-IAD',
+19 verbose headers   'access-control-allow-origin': '*',
+19 verbose headers   age: '222',
+19 verbose headers   'cache-control': 'public, max-age=300',
+19 verbose headers   etag: 'W/"2b4287a1b12c5adf42af708140ab7629"',
+19 verbose headers   'last-modified': 'Thu, 17 Mar 2022 17:19:26 GMT',
+19 verbose headers   vary: 'accept-encoding, accept',
+19 verbose headers   'cf-cache-status': 'HIT',
+19 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+19 verbose headers   'x-amz-replication-status': 'PENDING',
+19 verbose headers   server: 'cloudflare',
+19 verbose headers   'content-encoding': 'gzip' }
+20 silly get cb [ 200,
+20 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+20 silly get     'content-type': 'application/json',
+20 silly get     'transfer-encoding': 'chunked',
+20 silly get     connection: 'keep-alive',
+20 silly get     'cf-ray': '6fc9377b380358ae-IAD',
+20 silly get     'access-control-allow-origin': '*',
+20 silly get     age: '222',
+20 silly get     'cache-control': 'public, max-age=300',
+20 silly get     etag: 'W/"2b4287a1b12c5adf42af708140ab7629"',
+20 silly get     'last-modified': 'Thu, 17 Mar 2022 17:19:26 GMT',
+20 silly get     vary: 'accept-encoding, accept',
+20 silly get     'cf-cache-status': 'HIT',
+20 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+20 silly get     'x-amz-replication-status': 'PENDING',
+20 silly get     server: 'cloudflare',
+20 silly get     'content-encoding': 'gzip' } ]
+21 verbose get saving pm2 to /root/.npm/registry.npmjs.org/pm2/.cache.json
+22 verbose makeDirectory /root/.npm creation not in flight; initializing
+23 silly makeDirectory /root/.npm uid: 1000 gid: 1000
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule pm2@5.2.0 checking installable status
+37 silly cache add args [ 'pm2', null ]
+38 verbose cache add spec pm2
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'pm2',
+39 silly cache add   scope: null,
+39 silly cache add   name: 'pm2',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: 'latest',
+39 silly cache add   type: 'tag' }
+40 silly addNamed pm2@latest
+41 verbose addNamed "latest" is being treated as a dist-tag for pm2
+42 info addNameTag [ 'pm2', 'latest' ]
+43 silly mapToRegistry name pm2
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry uri https://registry.npmjs.org/pm2
+47 verbose addNameTag registry:https://registry.npmjs.org/pm2 not in flight; fetching
+48 verbose get https://registry.npmjs.org/pm2 not expired, no request
+49 silly addNameTag next cb for pm2 with tag latest
+50 silly addNamed pm2@5.2.0
+51 verbose addNamed "5.2.0" is a plain semver version for pm2
+52 silly mapToRegistry name pm2
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry https://registry.npmjs.org/
+55 silly mapToRegistry uri https://registry.npmjs.org/pm2
+56 verbose addRemoteTarball https://registry.npmjs.org/pm2/-/pm2-5.2.0.tgz not in flight; adding
+57 verbose addRemoteTarball [ 'https://registry.npmjs.org/pm2/-/pm2-5.2.0.tgz',
+57 verbose addRemoteTarball   'fda71fab4b8fcfa5b7f546ca55a6e59e9ec5a68d' ]
+58 info retry fetch attempt 1 at 1:41:06 AM
+59 info attempt registry request try #1 at 1:41:06 AM
+60 http fetch GET https://registry.npmjs.org/pm2/-/pm2-5.2.0.tgz
+61 http fetch 200 https://registry.npmjs.org/pm2/-/pm2-5.2.0.tgz
+62 silly fetchAndShaCheck shasum fda71fab4b8fcfa5b7f546ca55a6e59e9ec5a68d
+63 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/pm2/-/pm2-5.2.0.tgz not in flight; adding
+64 verbose addTmpTarball already have metadata; skipping unpack for pm2@5.2.0
+65 silly cache afterAdd pm2@5.2.0
+66 verbose afterAdd /root/.npm/pm2/5.2.0/package/package.json not in flight; writing
+67 verbose afterAdd /root/.npm/pm2/5.2.0/package/package.json written
+68 silly fetchNamedPackageData @pm2/agent
+69 silly mapToRegistry name @pm2/agent
+70 silly mapToRegistry scope (from package name) @pm2
+71 verbose mapToRegistry no registry URL found in name for scope @pm2
+72 silly mapToRegistry using default registry
+73 silly mapToRegistry registry https://registry.npmjs.org/
+74 silly mapToRegistry uri https://registry.npmjs.org/@pm2%2fagent
+75 silly fetchNamedPackageData @pm2/io
+76 silly mapToRegistry name @pm2/io
+77 silly mapToRegistry scope (from package name) @pm2
+78 verbose mapToRegistry no registry URL found in name for scope @pm2
+79 silly mapToRegistry using default registry
+80 silly mapToRegistry registry https://registry.npmjs.org/
+81 silly mapToRegistry uri https://registry.npmjs.org/@pm2%2fio
+82 silly fetchNamedPackageData @pm2/js-api
+83 silly mapToRegistry name @pm2/js-api
+84 silly mapToRegistry scope (from package name) @pm2
+85 verbose mapToRegistry no registry URL found in name for scope @pm2
+86 silly mapToRegistry using default registry
+87 silly mapToRegistry registry https://registry.npmjs.org/
+88 silly mapToRegistry uri https://registry.npmjs.org/@pm2%2fjs-api
+89 silly fetchNamedPackageData async
+90 silly mapToRegistry name async
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry https://registry.npmjs.org/
+93 silly mapToRegistry uri https://registry.npmjs.org/async
+94 silly fetchNamedPackageData blessed
+95 silly mapToRegistry name blessed
+96 silly mapToRegistry using default registry
+97 silly mapToRegistry registry https://registry.npmjs.org/
+98 silly mapToRegistry uri https://registry.npmjs.org/blessed
+99 silly fetchNamedPackageData chalk
+100 silly mapToRegistry name chalk
+101 silly mapToRegistry using default registry
+102 silly mapToRegistry registry https://registry.npmjs.org/
+103 silly mapToRegistry uri https://registry.npmjs.org/chalk
+104 silly fetchNamedPackageData chokidar
+105 silly mapToRegistry name chokidar
+106 silly mapToRegistry using default registry
+107 silly mapToRegistry registry https://registry.npmjs.org/
+108 silly mapToRegistry uri https://registry.npmjs.org/chokidar
+109 silly fetchNamedPackageData cli-tableau
+110 silly mapToRegistry name cli-tableau
+111 silly mapToRegistry using default registry
+112 silly mapToRegistry registry https://registry.npmjs.org/
+113 silly mapToRegistry uri https://registry.npmjs.org/cli-tableau
+114 silly fetchNamedPackageData commander
+115 silly mapToRegistry name commander
+116 silly mapToRegistry using default registry
+117 silly mapToRegistry registry https://registry.npmjs.org/
+118 silly mapToRegistry uri https://registry.npmjs.org/commander
+119 silly fetchNamedPackageData croner
+120 silly mapToRegistry name croner
+121 silly mapToRegistry using default registry
+122 silly mapToRegistry registry https://registry.npmjs.org/
+123 silly mapToRegistry uri https://registry.npmjs.org/croner
+124 silly fetchNamedPackageData dayjs
+125 silly mapToRegistry name dayjs
+126 silly mapToRegistry using default registry
+127 silly mapToRegistry registry https://registry.npmjs.org/
+128 silly mapToRegistry uri https://registry.npmjs.org/dayjs
+129 silly fetchNamedPackageData debug
+130 silly mapToRegistry name debug
+131 silly mapToRegistry using default registry
+132 silly mapToRegistry registry https://registry.npmjs.org/
+133 silly mapToRegistry uri https://registry.npmjs.org/debug
+134 silly fetchNamedPackageData enquirer
+135 silly mapToRegistry name enquirer
+136 silly mapToRegistry using default registry
+137 silly mapToRegistry registry https://registry.npmjs.org/
+138 silly mapToRegistry uri https://registry.npmjs.org/enquirer
+139 silly fetchNamedPackageData eventemitter2
+140 silly mapToRegistry name eventemitter2
+141 silly mapToRegistry using default registry
+142 silly mapToRegistry registry https://registry.npmjs.org/
+143 silly mapToRegistry uri https://registry.npmjs.org/eventemitter2
+144 silly fetchNamedPackageData sprintf-js
+145 silly mapToRegistry name sprintf-js
+146 silly mapToRegistry using default registry
+147 silly mapToRegistry registry https://registry.npmjs.org/
+148 silly mapToRegistry uri https://registry.npmjs.org/sprintf-js
+149 silly fetchNamedPackageData fclone
+150 silly mapToRegistry name fclone
+151 silly mapToRegistry using default registry
+152 silly mapToRegistry registry https://registry.npmjs.org/
+153 silly mapToRegistry uri https://registry.npmjs.org/fclone
+154 silly fetchNamedPackageData mkdirp
+155 silly mapToRegistry name mkdirp
+156 silly mapToRegistry using default registry
+157 silly mapToRegistry registry https://registry.npmjs.org/
+158 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+159 silly fetchNamedPackageData needle
+160 silly mapToRegistry name needle
+161 silly mapToRegistry using default registry
+162 silly mapToRegistry registry https://registry.npmjs.org/
+163 silly mapToRegistry uri https://registry.npmjs.org/needle
+164 silly fetchNamedPackageData pidusage
+165 silly mapToRegistry name pidusage
+166 silly mapToRegistry using default registry
+167 silly mapToRegistry registry https://registry.npmjs.org/
+168 silly mapToRegistry uri https://registry.npmjs.org/pidusage
+169 silly fetchNamedPackageData pm2-axon
+170 silly mapToRegistry name pm2-axon
+171 silly mapToRegistry using default registry
+172 silly mapToRegistry registry https://registry.npmjs.org/
+173 silly mapToRegistry uri https://registry.npmjs.org/pm2-axon
+174 silly fetchNamedPackageData pm2-axon-rpc
+175 silly mapToRegistry name pm2-axon-rpc
+176 silly mapToRegistry using default registry
+177 silly mapToRegistry registry https://registry.npmjs.org/
+178 silly mapToRegistry uri https://registry.npmjs.org/pm2-axon-rpc
+179 silly fetchNamedPackageData pm2-deploy
+180 silly mapToRegistry name pm2-deploy
+181 silly mapToRegistry using default registry
+182 silly mapToRegistry registry https://registry.npmjs.org/
+183 silly mapToRegistry uri https://registry.npmjs.org/pm2-deploy
+184 silly fetchNamedPackageData pm2-multimeter
+185 silly mapToRegistry name pm2-multimeter
+186 silly mapToRegistry using default registry
+187 silly mapToRegistry registry https://registry.npmjs.org/
+188 silly mapToRegistry uri https://registry.npmjs.org/pm2-multimeter
+189 silly fetchNamedPackageData promptly
+190 silly mapToRegistry name promptly
+191 silly mapToRegistry using default registry
+192 silly mapToRegistry registry https://registry.npmjs.org/
+193 silly mapToRegistry uri https://registry.npmjs.org/promptly
+194 silly fetchNamedPackageData semver
+195 silly mapToRegistry name semver
+196 silly mapToRegistry using default registry
+197 silly mapToRegistry registry https://registry.npmjs.org/
+198 silly mapToRegistry uri https://registry.npmjs.org/semver
+199 silly fetchNamedPackageData source-map-support
+200 silly mapToRegistry name source-map-support
+201 silly mapToRegistry using default registry
+202 silly mapToRegistry registry https://registry.npmjs.org/
+203 silly mapToRegistry uri https://registry.npmjs.org/source-map-support
+204 silly fetchNamedPackageData vizion
+205 silly mapToRegistry name vizion
+206 silly mapToRegistry using default registry
+207 silly mapToRegistry registry https://registry.npmjs.org/
+208 silly mapToRegistry uri https://registry.npmjs.org/vizion
+209 silly fetchNamedPackageData yamljs
+210 silly mapToRegistry name yamljs
+211 silly mapToRegistry using default registry
+212 silly mapToRegistry registry https://registry.npmjs.org/
+213 silly mapToRegistry uri https://registry.npmjs.org/yamljs
+214 silly fetchNamedPackageData pm2-sysmonit
+215 silly mapToRegistry name pm2-sysmonit
+216 silly mapToRegistry using default registry
+217 silly mapToRegistry registry https://registry.npmjs.org/
+218 silly mapToRegistry uri https://registry.npmjs.org/pm2-sysmonit
+219 silly fetchNamedPackageData @pm2/pm2-version-check
+220 silly mapToRegistry name @pm2/pm2-version-check
+221 silly mapToRegistry scope (from package name) @pm2
+222 verbose mapToRegistry no registry URL found in name for scope @pm2
+223 silly mapToRegistry using default registry
+224 silly mapToRegistry registry https://registry.npmjs.org/
+225 silly mapToRegistry uri https://registry.npmjs.org/@pm2%2fpm2-version-check
+226 verbose request uri https://registry.npmjs.org/@pm2%2fagent
+227 verbose request no auth needed
+228 info attempt registry request try #1 at 1:41:06 AM
+229 http request GET https://registry.npmjs.org/@pm2%2fagent
+230 verbose request uri https://registry.npmjs.org/@pm2%2fio
+231 verbose request no auth needed
+232 info attempt registry request try #1 at 1:41:06 AM
+233 http request GET https://registry.npmjs.org/@pm2%2fio
+234 verbose request uri https://registry.npmjs.org/@pm2%2fjs-api
+235 verbose request no auth needed
+236 info attempt registry request try #1 at 1:41:06 AM
+237 http request GET https://registry.npmjs.org/@pm2%2fjs-api
+238 verbose request uri https://registry.npmjs.org/async
+239 verbose request no auth needed
+240 info attempt registry request try #1 at 1:41:06 AM
+241 http request GET https://registry.npmjs.org/async
+242 verbose request uri https://registry.npmjs.org/blessed
+243 verbose request no auth needed
+244 info attempt registry request try #1 at 1:41:06 AM
+245 http request GET https://registry.npmjs.org/blessed
+246 verbose request uri https://registry.npmjs.org/chalk
+247 verbose request no auth needed
+248 info attempt registry request try #1 at 1:41:06 AM
+249 http request GET https://registry.npmjs.org/chalk
+250 verbose request uri https://registry.npmjs.org/chokidar
+251 verbose request no auth needed
+252 info attempt registry request try #1 at 1:41:06 AM
+253 http request GET https://registry.npmjs.org/chokidar
+254 verbose request uri https://registry.npmjs.org/cli-tableau
+255 verbose request no auth needed
+256 info attempt registry request try #1 at 1:41:06 AM
+257 http request GET https://registry.npmjs.org/cli-tableau
+258 verbose request uri https://registry.npmjs.org/commander
+259 verbose request no auth needed
+260 info attempt registry request try #1 at 1:41:06 AM
+261 http request GET https://registry.npmjs.org/commander
+262 verbose request uri https://registry.npmjs.org/croner
+263 verbose request no auth needed
+264 info attempt registry request try #1 at 1:41:06 AM
+265 http request GET https://registry.npmjs.org/croner
+266 verbose request uri https://registry.npmjs.org/dayjs
+267 verbose request no auth needed
+268 info attempt registry request try #1 at 1:41:06 AM
+269 http request GET https://registry.npmjs.org/dayjs
+270 verbose request uri https://registry.npmjs.org/debug
+271 verbose request no auth needed
+272 info attempt registry request try #1 at 1:41:06 AM
+273 http request GET https://registry.npmjs.org/debug
+274 verbose request uri https://registry.npmjs.org/enquirer
+275 verbose request no auth needed
+276 info attempt registry request try #1 at 1:41:06 AM
+277 http request GET https://registry.npmjs.org/enquirer
+278 verbose request uri https://registry.npmjs.org/eventemitter2
+279 verbose request no auth needed
+280 info attempt registry request try #1 at 1:41:06 AM
+281 http request GET https://registry.npmjs.org/eventemitter2
+282 verbose request uri https://registry.npmjs.org/sprintf-js
+283 verbose request no auth needed
+284 info attempt registry request try #1 at 1:41:06 AM
+285 http request GET https://registry.npmjs.org/sprintf-js
+286 verbose request uri https://registry.npmjs.org/fclone
+287 verbose request no auth needed
+288 info attempt registry request try #1 at 1:41:06 AM
+289 http request GET https://registry.npmjs.org/fclone
+290 verbose request uri https://registry.npmjs.org/mkdirp
+291 verbose request no auth needed
+292 info attempt registry request try #1 at 1:41:06 AM
+293 http request GET https://registry.npmjs.org/mkdirp
+294 verbose request uri https://registry.npmjs.org/needle
+295 verbose request no auth needed
+296 info attempt registry request try #1 at 1:41:06 AM
+297 http request GET https://registry.npmjs.org/needle
+298 verbose request uri https://registry.npmjs.org/pidusage
+299 verbose request no auth needed
+300 info attempt registry request try #1 at 1:41:06 AM
+301 http request GET https://registry.npmjs.org/pidusage
+302 verbose request uri https://registry.npmjs.org/pm2-axon
+303 verbose request no auth needed
+304 info attempt registry request try #1 at 1:41:06 AM
+305 http request GET https://registry.npmjs.org/pm2-axon
+306 verbose request uri https://registry.npmjs.org/pm2-axon-rpc
+307 verbose request no auth needed
+308 info attempt registry request try #1 at 1:41:06 AM
+309 http request GET https://registry.npmjs.org/pm2-axon-rpc
+310 verbose request uri https://registry.npmjs.org/pm2-deploy
+311 verbose request no auth needed
+312 info attempt registry request try #1 at 1:41:06 AM
+313 http request GET https://registry.npmjs.org/pm2-deploy
+314 verbose request uri https://registry.npmjs.org/pm2-multimeter
+315 verbose request no auth needed
+316 info attempt registry request try #1 at 1:41:06 AM
+317 http request GET https://registry.npmjs.org/pm2-multimeter
+318 verbose request uri https://registry.npmjs.org/promptly
+319 verbose request no auth needed
+320 info attempt registry request try #1 at 1:41:06 AM
+321 http request GET https://registry.npmjs.org/promptly
+322 verbose request uri https://registry.npmjs.org/semver
+323 verbose request no auth needed
+324 info attempt registry request try #1 at 1:41:06 AM
+325 http request GET https://registry.npmjs.org/semver
+326 verbose request uri https://registry.npmjs.org/source-map-support
+327 verbose request no auth needed
+328 info attempt registry request try #1 at 1:41:06 AM
+329 http request GET https://registry.npmjs.org/source-map-support
+330 verbose request uri https://registry.npmjs.org/vizion
+331 verbose request no auth needed
+332 info attempt registry request try #1 at 1:41:06 AM
+333 http request GET https://registry.npmjs.org/vizion
+334 verbose request uri https://registry.npmjs.org/yamljs
+335 verbose request no auth needed
+336 info attempt registry request try #1 at 1:41:06 AM
+337 http request GET https://registry.npmjs.org/yamljs
+338 verbose request uri https://registry.npmjs.org/pm2-sysmonit
+339 verbose request no auth needed
+340 info attempt registry request try #1 at 1:41:06 AM
+341 http request GET https://registry.npmjs.org/pm2-sysmonit
+342 verbose request uri https://registry.npmjs.org/@pm2%2fpm2-version-check
+343 verbose request no auth needed
+344 info attempt registry request try #1 at 1:41:06 AM
+345 http request GET https://registry.npmjs.org/@pm2%2fpm2-version-check
+346 http 200 https://registry.npmjs.org/pm2-multimeter
+347 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+347 verbose headers   'content-type': 'application/json; charset=UTF-8',
+347 verbose headers   'transfer-encoding': 'chunked',
+347 verbose headers   connection: 'keep-alive',
+347 verbose headers   'cf-ray': '6fc9377d9da8819d-IAD',
+347 verbose headers   'access-control-allow-origin': '*',
+347 verbose headers   age: '153',
+347 verbose headers   'cache-control': 'public, max-age=300',
+347 verbose headers   etag: 'W/"34e2321bf7e66e905d87e86504134cd1"',
+347 verbose headers   'last-modified': 'Sun, 27 May 2018 12:28:10 GMT',
+347 verbose headers   vary: 'accept-encoding, accept',
+347 verbose headers   'cf-cache-status': 'HIT',
+347 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+347 verbose headers   server: 'cloudflare',
+347 verbose headers   'content-encoding': 'gzip' }
+348 silly get cb [ 200,
+348 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+348 silly get     'content-type': 'application/json; charset=UTF-8',
+348 silly get     'transfer-encoding': 'chunked',
+348 silly get     connection: 'keep-alive',
+348 silly get     'cf-ray': '6fc9377d9da8819d-IAD',
+348 silly get     'access-control-allow-origin': '*',
+348 silly get     age: '153',
+348 silly get     'cache-control': 'public, max-age=300',
+348 silly get     etag: 'W/"34e2321bf7e66e905d87e86504134cd1"',
+348 silly get     'last-modified': 'Sun, 27 May 2018 12:28:10 GMT',
+348 silly get     vary: 'accept-encoding, accept',
+348 silly get     'cf-cache-status': 'HIT',
+348 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+348 silly get     server: 'cloudflare',
+348 silly get     'content-encoding': 'gzip' } ]
+349 verbose get saving pm2-multimeter to /root/.npm/registry.npmjs.org/pm2-multimeter/.cache.json
+350 http 200 https://registry.npmjs.org/fclone
+351 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+351 verbose headers   'content-type': 'application/json; charset=UTF-8',
+351 verbose headers   'transfer-encoding': 'chunked',
+351 verbose headers   connection: 'keep-alive',
+351 verbose headers   'cf-ray': '6fc9377d9dae81c1-IAD',
+351 verbose headers   'access-control-allow-origin': '*',
+351 verbose headers   age: '154',
+351 verbose headers   'cache-control': 'public, max-age=300',
+351 verbose headers   etag: 'W/"9eb30c79abf219af9d8fe1a70e5cbfa2"',
+351 verbose headers   'last-modified': 'Sun, 27 May 2018 00:27:46 GMT',
+351 verbose headers   vary: 'accept-encoding, accept',
+351 verbose headers   'cf-cache-status': 'HIT',
+351 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+351 verbose headers   server: 'cloudflare',
+351 verbose headers   'content-encoding': 'gzip' }
+352 silly get cb [ 200,
+352 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+352 silly get     'content-type': 'application/json; charset=UTF-8',
+352 silly get     'transfer-encoding': 'chunked',
+352 silly get     connection: 'keep-alive',
+352 silly get     'cf-ray': '6fc9377d9dae81c1-IAD',
+352 silly get     'access-control-allow-origin': '*',
+352 silly get     age: '154',
+352 silly get     'cache-control': 'public, max-age=300',
+352 silly get     etag: 'W/"9eb30c79abf219af9d8fe1a70e5cbfa2"',
+352 silly get     'last-modified': 'Sun, 27 May 2018 00:27:46 GMT',
+352 silly get     vary: 'accept-encoding, accept',
+352 silly get     'cf-cache-status': 'HIT',
+352 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+352 silly get     server: 'cloudflare',
+352 silly get     'content-encoding': 'gzip' } ]
+353 verbose get saving fclone to /root/.npm/registry.npmjs.org/fclone/.cache.json
+354 http 200 https://registry.npmjs.org/sprintf-js
+355 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+355 verbose headers   'content-type': 'application/json',
+355 verbose headers   'transfer-encoding': 'chunked',
+355 verbose headers   connection: 'keep-alive',
+355 verbose headers   'cf-ray': '6fc9377d9fd95764-IAD',
+355 verbose headers   'access-control-allow-origin': '*',
+355 verbose headers   age: '73',
+355 verbose headers   'cache-control': 'public, max-age=300',
+355 verbose headers   etag: 'W/"b6e8a4d1682cc3c8b2ca6cca966f7fb0"',
+355 verbose headers   'last-modified': 'Thu, 17 Mar 2022 17:19:27 GMT',
+355 verbose headers   vary: 'accept-encoding, accept',
+355 verbose headers   'cf-cache-status': 'HIT',
+355 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+355 verbose headers   'x-amz-replication-status': 'PENDING',
+355 verbose headers   server: 'cloudflare',
+355 verbose headers   'content-encoding': 'gzip' }
+356 silly get cb [ 200,
+356 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+356 silly get     'content-type': 'application/json',
+356 silly get     'transfer-encoding': 'chunked',
+356 silly get     connection: 'keep-alive',
+356 silly get     'cf-ray': '6fc9377d9fd95764-IAD',
+356 silly get     'access-control-allow-origin': '*',
+356 silly get     age: '73',
+356 silly get     'cache-control': 'public, max-age=300',
+356 silly get     etag: 'W/"b6e8a4d1682cc3c8b2ca6cca966f7fb0"',
+356 silly get     'last-modified': 'Thu, 17 Mar 2022 17:19:27 GMT',
+356 silly get     vary: 'accept-encoding, accept',
+356 silly get     'cf-cache-status': 'HIT',
+356 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+356 silly get     'x-amz-replication-status': 'PENDING',
+356 silly get     server: 'cloudflare',
+356 silly get     'content-encoding': 'gzip' } ]
+357 verbose get saving sprintf-js to /root/.npm/registry.npmjs.org/sprintf-js/.cache.json
+358 http 200 https://registry.npmjs.org/yamljs
+359 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+359 verbose headers   'content-type': 'application/json; charset=UTF-8',
+359 verbose headers   'transfer-encoding': 'chunked',
+359 verbose headers   connection: 'keep-alive',
+359 verbose headers   'cf-ray': '6fc9377d9b0059b6-IAD',
+359 verbose headers   'access-control-allow-origin': '*',
+359 verbose headers   age: '153',
+359 verbose headers   'cache-control': 'public, max-age=300',
+359 verbose headers   etag: 'W/"63ad635057cef415730311812c8928ea"',
+359 verbose headers   'last-modified': 'Sun, 27 May 2018 22:35:13 GMT',
+359 verbose headers   vary: 'accept-encoding, accept',
+359 verbose headers   'cf-cache-status': 'HIT',
+359 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+359 verbose headers   server: 'cloudflare',
+359 verbose headers   'content-encoding': 'gzip' }
+360 silly get cb [ 200,
+360 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+360 silly get     'content-type': 'application/json; charset=UTF-8',
+360 silly get     'transfer-encoding': 'chunked',
+360 silly get     connection: 'keep-alive',
+360 silly get     'cf-ray': '6fc9377d9b0059b6-IAD',
+360 silly get     'access-control-allow-origin': '*',
+360 silly get     age: '153',
+360 silly get     'cache-control': 'public, max-age=300',
+360 silly get     etag: 'W/"63ad635057cef415730311812c8928ea"',
+360 silly get     'last-modified': 'Sun, 27 May 2018 22:35:13 GMT',
+360 silly get     vary: 'accept-encoding, accept',
+360 silly get     'cf-cache-status': 'HIT',
+360 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+360 silly get     server: 'cloudflare',
+360 silly get     'content-encoding': 'gzip' } ]
+361 verbose get saving yamljs to /root/.npm/registry.npmjs.org/yamljs/.cache.json
+362 http 200 https://registry.npmjs.org/pm2-deploy
+363 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+363 verbose headers   'content-type': 'application/json',
+363 verbose headers   'transfer-encoding': 'chunked',
+363 verbose headers   connection: 'keep-alive',
+363 verbose headers   'cf-ray': '6fc9377d9c619c7f-IAD',
+363 verbose headers   'access-control-allow-origin': '*',
+363 verbose headers   age: '153',
+363 verbose headers   'cache-control': 'public, max-age=300',
+363 verbose headers   etag: 'W/"e3b4566867a9e89af2c99d876ce28b69"',
+363 verbose headers   'last-modified': 'Mon, 13 Apr 2020 23:01:22 GMT',
+363 verbose headers   vary: 'accept-encoding, accept',
+363 verbose headers   'cf-cache-status': 'HIT',
+363 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+363 verbose headers   server: 'cloudflare',
+363 verbose headers   'content-encoding': 'gzip' }
+364 silly get cb [ 200,
+364 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+364 silly get     'content-type': 'application/json',
+364 silly get     'transfer-encoding': 'chunked',
+364 silly get     connection: 'keep-alive',
+364 silly get     'cf-ray': '6fc9377d9c619c7f-IAD',
+364 silly get     'access-control-allow-origin': '*',
+364 silly get     age: '153',
+364 silly get     'cache-control': 'public, max-age=300',
+364 silly get     etag: 'W/"e3b4566867a9e89af2c99d876ce28b69"',
+364 silly get     'last-modified': 'Mon, 13 Apr 2020 23:01:22 GMT',
+364 silly get     vary: 'accept-encoding, accept',
+364 silly get     'cf-cache-status': 'HIT',
+364 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+364 silly get     server: 'cloudflare',
+364 silly get     'content-encoding': 'gzip' } ]
+365 verbose get saving pm2-deploy to /root/.npm/registry.npmjs.org/pm2-deploy/.cache.json
+366 http 200 https://registry.npmjs.org/mkdirp
+367 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+367 verbose headers   'content-type': 'application/json',
+367 verbose headers   'transfer-encoding': 'chunked',
+367 verbose headers   connection: 'keep-alive',
+367 verbose headers   'cf-ray': '6fc9377d985559fd-IAD',
+367 verbose headers   'access-control-allow-origin': '*',
+367 verbose headers   age: '184',
+367 verbose headers   'cache-control': 'public, max-age=300',
+367 verbose headers   etag: 'W/"020bf121b35ad22f2aeb35686d092012"',
+367 verbose headers   'last-modified': 'Tue, 22 Mar 2022 23:48:16 GMT',
+367 verbose headers   vary: 'accept-encoding, accept',
+367 verbose headers   'cf-cache-status': 'HIT',
+367 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+367 verbose headers   'x-amz-replication-status': 'PENDING',
+367 verbose headers   server: 'cloudflare',
+367 verbose headers   'content-encoding': 'gzip' }
+368 silly get cb [ 200,
+368 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+368 silly get     'content-type': 'application/json',
+368 silly get     'transfer-encoding': 'chunked',
+368 silly get     connection: 'keep-alive',
+368 silly get     'cf-ray': '6fc9377d985559fd-IAD',
+368 silly get     'access-control-allow-origin': '*',
+368 silly get     age: '184',
+368 silly get     'cache-control': 'public, max-age=300',
+368 silly get     etag: 'W/"020bf121b35ad22f2aeb35686d092012"',
+368 silly get     'last-modified': 'Tue, 22 Mar 2022 23:48:16 GMT',
+368 silly get     vary: 'accept-encoding, accept',
+368 silly get     'cf-cache-status': 'HIT',
+368 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+368 silly get     'x-amz-replication-status': 'PENDING',
+368 silly get     server: 'cloudflare',
+368 silly get     'content-encoding': 'gzip' } ]
+369 verbose get saving mkdirp to /root/.npm/registry.npmjs.org/mkdirp/.cache.json
+370 silly resolveWithNewModule pm2-multimeter@0.1.2 checking installable status
+371 silly cache add args [ 'pm2-multimeter@^0.1.2', null ]
+372 verbose cache add spec pm2-multimeter@^0.1.2
+373 silly cache add parsed spec Result {
+373 silly cache add   raw: 'pm2-multimeter@^0.1.2',
+373 silly cache add   scope: null,
+373 silly cache add   name: 'pm2-multimeter',
+373 silly cache add   rawSpec: '^0.1.2',
+373 silly cache add   spec: '>=0.1.2 <0.2.0',
+373 silly cache add   type: 'range' }
+374 silly addNamed pm2-multimeter@>=0.1.2 <0.2.0
+375 verbose addNamed ">=0.1.2 <0.2.0" is a valid semver range for pm2-multimeter
+376 silly addNameRange { name: 'pm2-multimeter',
+376 silly addNameRange   range: '>=0.1.2 <0.2.0',
+376 silly addNameRange   hasData: false }
+377 silly mapToRegistry name pm2-multimeter
+378 silly mapToRegistry using default registry
+379 silly mapToRegistry registry https://registry.npmjs.org/
+380 silly mapToRegistry uri https://registry.npmjs.org/pm2-multimeter
+381 verbose addNameRange registry:https://registry.npmjs.org/pm2-multimeter not in flight; fetching
+382 http 200 https://registry.npmjs.org/@pm2%2fagent
+383 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+383 verbose headers   'content-type': 'application/json',
+383 verbose headers   'transfer-encoding': 'chunked',
+383 verbose headers   connection: 'keep-alive',
+383 verbose headers   'cf-ray': '6fc9377d8ab858ae-IAD',
+383 verbose headers   'access-control-allow-origin': '*',
+383 verbose headers   age: '154',
+383 verbose headers   'cache-control': 'public, max-age=300',
+383 verbose headers   etag: 'W/"ff38e051a3cde914b2b71088218c1547"',
+383 verbose headers   'last-modified': 'Wed, 06 Apr 2022 15:29:35 GMT',
+383 verbose headers   vary: 'accept-encoding, accept',
+383 verbose headers   'cf-cache-status': 'HIT',
+383 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+383 verbose headers   'x-amz-replication-status': 'COMPLETED',
+383 verbose headers   server: 'cloudflare',
+383 verbose headers   'content-encoding': 'gzip' }
+384 silly get cb [ 200,
+384 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+384 silly get     'content-type': 'application/json',
+384 silly get     'transfer-encoding': 'chunked',
+384 silly get     connection: 'keep-alive',
+384 silly get     'cf-ray': '6fc9377d8ab858ae-IAD',
+384 silly get     'access-control-allow-origin': '*',
+384 silly get     age: '154',
+384 silly get     'cache-control': 'public, max-age=300',
+384 silly get     etag: 'W/"ff38e051a3cde914b2b71088218c1547"',
+384 silly get     'last-modified': 'Wed, 06 Apr 2022 15:29:35 GMT',
+384 silly get     vary: 'accept-encoding, accept',
+384 silly get     'cf-cache-status': 'HIT',
+384 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+384 silly get     'x-amz-replication-status': 'COMPLETED',
+384 silly get     server: 'cloudflare',
+384 silly get     'content-encoding': 'gzip' } ]
+385 verbose get saving @pm2/agent to /root/.npm/registry.npmjs.org/_40pm2_252fagent/.cache.json
+386 http 200 https://registry.npmjs.org/chalk
+387 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+387 verbose headers   'content-type': 'application/json',
+387 verbose headers   'transfer-encoding': 'chunked',
+387 verbose headers   connection: 'keep-alive',
+387 verbose headers   'cf-ray': '6fc9377d99395b9a-IAD',
+387 verbose headers   'access-control-allow-origin': '*',
+387 verbose headers   age: '152',
+387 verbose headers   'cache-control': 'public, max-age=300',
+387 verbose headers   etag: 'W/"c3eb6ac2b4a11f0cbc09505e326cbd9d"',
+387 verbose headers   'last-modified': 'Tue, 12 Apr 2022 05:53:38 GMT',
+387 verbose headers   vary: 'accept-encoding, accept',
+387 verbose headers   'cf-cache-status': 'HIT',
+387 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+387 verbose headers   'x-amz-replication-status': 'PENDING',
+387 verbose headers   server: 'cloudflare',
+387 verbose headers   'content-encoding': 'gzip' }
+388 silly get cb [ 200,
+388 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+388 silly get     'content-type': 'application/json',
+388 silly get     'transfer-encoding': 'chunked',
+388 silly get     connection: 'keep-alive',
+388 silly get     'cf-ray': '6fc9377d99395b9a-IAD',
+388 silly get     'access-control-allow-origin': '*',
+388 silly get     age: '152',
+388 silly get     'cache-control': 'public, max-age=300',
+388 silly get     etag: 'W/"c3eb6ac2b4a11f0cbc09505e326cbd9d"',
+388 silly get     'last-modified': 'Tue, 12 Apr 2022 05:53:38 GMT',
+388 silly get     vary: 'accept-encoding, accept',
+388 silly get     'cf-cache-status': 'HIT',
+388 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+388 silly get     'x-amz-replication-status': 'PENDING',
+388 silly get     server: 'cloudflare',
+388 silly get     'content-encoding': 'gzip' } ]
+389 verbose get saving chalk to /root/.npm/registry.npmjs.org/chalk/.cache.json
+390 silly resolveWithNewModule fclone@1.0.11 checking installable status
+391 silly cache add args [ 'fclone@1.0.11', null ]
+392 verbose cache add spec fclone@1.0.11
+393 silly cache add parsed spec Result {
+393 silly cache add   raw: 'fclone@1.0.11',
+393 silly cache add   scope: null,
+393 silly cache add   name: 'fclone',
+393 silly cache add   rawSpec: '1.0.11',
+393 silly cache add   spec: '1.0.11',
+393 silly cache add   type: 'version' }
+394 silly addNamed fclone@1.0.11
+395 verbose addNamed "1.0.11" is a plain semver version for fclone
+396 silly mapToRegistry name fclone
+397 silly mapToRegistry using default registry
+398 silly mapToRegistry registry https://registry.npmjs.org/
+399 silly mapToRegistry uri https://registry.npmjs.org/fclone
+400 verbose addNameVersion registry:https://registry.npmjs.org/fclone not in flight; fetching
+401 silly resolveWithNewModule sprintf-js@1.1.2 checking installable status
+402 silly cache add args [ 'sprintf-js@1.1.2', null ]
+403 verbose cache add spec sprintf-js@1.1.2
+404 silly cache add parsed spec Result {
+404 silly cache add   raw: 'sprintf-js@1.1.2',
+404 silly cache add   scope: null,
+404 silly cache add   name: 'sprintf-js',
+404 silly cache add   rawSpec: '1.1.2',
+404 silly cache add   spec: '1.1.2',
+404 silly cache add   type: 'version' }
+405 silly addNamed sprintf-js@1.1.2
+406 verbose addNamed "1.1.2" is a plain semver version for sprintf-js
+407 silly mapToRegistry name sprintf-js
+408 silly mapToRegistry using default registry
+409 silly mapToRegistry registry https://registry.npmjs.org/
+410 silly mapToRegistry uri https://registry.npmjs.org/sprintf-js
+411 verbose addNameVersion registry:https://registry.npmjs.org/sprintf-js not in flight; fetching
+412 http 200 https://registry.npmjs.org/blessed
+413 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+413 verbose headers   'content-type': 'application/json',
+413 verbose headers   'transfer-encoding': 'chunked',
+413 verbose headers   connection: 'keep-alive',
+413 verbose headers   'cf-ray': '6fc9377d9f048009-IAD',
+413 verbose headers   'access-control-allow-origin': '*',
+413 verbose headers   age: '154',
+413 verbose headers   'cache-control': 'public, max-age=300',
+413 verbose headers   etag: 'W/"fe080fcbc9dc09ca5b160eba28d5183f"',
+413 verbose headers   'last-modified': 'Thu, 17 Mar 2022 17:19:29 GMT',
+413 verbose headers   vary: 'accept-encoding, accept',
+413 verbose headers   'cf-cache-status': 'HIT',
+413 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+413 verbose headers   'x-amz-replication-status': 'COMPLETED',
+413 verbose headers   server: 'cloudflare',
+413 verbose headers   'content-encoding': 'gzip' }
+414 silly get cb [ 200,
+414 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+414 silly get     'content-type': 'application/json',
+414 silly get     'transfer-encoding': 'chunked',
+414 silly get     connection: 'keep-alive',
+414 silly get     'cf-ray': '6fc9377d9f048009-IAD',
+414 silly get     'access-control-allow-origin': '*',
+414 silly get     age: '154',
+414 silly get     'cache-control': 'public, max-age=300',
+414 silly get     etag: 'W/"fe080fcbc9dc09ca5b160eba28d5183f"',
+414 silly get     'last-modified': 'Thu, 17 Mar 2022 17:19:29 GMT',
+414 silly get     vary: 'accept-encoding, accept',
+414 silly get     'cf-cache-status': 'HIT',
+414 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+414 silly get     'x-amz-replication-status': 'COMPLETED',
+414 silly get     server: 'cloudflare',
+414 silly get     'content-encoding': 'gzip' } ]
+415 verbose get saving blessed to /root/.npm/registry.npmjs.org/blessed/.cache.json
+416 http 200 https://registry.npmjs.org/source-map-support
+417 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+417 verbose headers   'content-type': 'application/json',
+417 verbose headers   'transfer-encoding': 'chunked',
+417 verbose headers   connection: 'keep-alive',
+417 verbose headers   'cf-ray': '6fc9377d9ac0591a-IAD',
+417 verbose headers   'access-control-allow-origin': '*',
+417 verbose headers   age: '153',
+417 verbose headers   'cache-control': 'public, max-age=300',
+417 verbose headers   etag: 'W/"f83ad66a5e9a4c4a5f929bfd927ffd7a"',
+417 verbose headers   'last-modified': 'Fri, 19 Nov 2021 11:03:02 GMT',
+417 verbose headers   vary: 'accept-encoding, accept',
+417 verbose headers   'cf-cache-status': 'HIT',
+417 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+417 verbose headers   'x-amz-replication-status': 'COMPLETED',
+417 verbose headers   server: 'cloudflare',
+417 verbose headers   'content-encoding': 'gzip' }
+418 silly get cb [ 200,
+418 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+418 silly get     'content-type': 'application/json',
+418 silly get     'transfer-encoding': 'chunked',
+418 silly get     connection: 'keep-alive',
+418 silly get     'cf-ray': '6fc9377d9ac0591a-IAD',
+418 silly get     'access-control-allow-origin': '*',
+418 silly get     age: '153',
+418 silly get     'cache-control': 'public, max-age=300',
+418 silly get     etag: 'W/"f83ad66a5e9a4c4a5f929bfd927ffd7a"',
+418 silly get     'last-modified': 'Fri, 19 Nov 2021 11:03:02 GMT',
+418 silly get     vary: 'accept-encoding, accept',
+418 silly get     'cf-cache-status': 'HIT',
+418 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+418 silly get     'x-amz-replication-status': 'COMPLETED',
+418 silly get     server: 'cloudflare',
+418 silly get     'content-encoding': 'gzip' } ]
+419 verbose get saving source-map-support to /root/.npm/registry.npmjs.org/source-map-support/.cache.json
+420 verbose get https://registry.npmjs.org/pm2-multimeter not expired, no request
+421 silly addNameRange number 2 { name: 'pm2-multimeter',
+421 silly addNameRange   range: '>=0.1.2 <0.2.0',
+421 silly addNameRange   hasData: true }
+422 silly addNameRange versions [ 'pm2-multimeter', [ '0.1.2' ] ]
+423 silly addNamed pm2-multimeter@0.1.2
+424 verbose addNamed "0.1.2" is a plain semver version for pm2-multimeter
+425 silly resolveWithNewModule yamljs@0.3.0 checking installable status
+426 silly cache add args [ 'yamljs@0.3.0', null ]
+427 verbose cache add spec yamljs@0.3.0
+428 silly cache add parsed spec Result {
+428 silly cache add   raw: 'yamljs@0.3.0',
+428 silly cache add   scope: null,
+428 silly cache add   name: 'yamljs',
+428 silly cache add   rawSpec: '0.3.0',
+428 silly cache add   spec: '0.3.0',
+428 silly cache add   type: 'version' }
+429 silly addNamed yamljs@0.3.0
+430 verbose addNamed "0.3.0" is a plain semver version for yamljs
+431 silly mapToRegistry name yamljs
+432 silly mapToRegistry using default registry
+433 silly mapToRegistry registry https://registry.npmjs.org/
+434 silly mapToRegistry uri https://registry.npmjs.org/yamljs
+435 verbose addNameVersion registry:https://registry.npmjs.org/yamljs not in flight; fetching
+436 http 200 https://registry.npmjs.org/eventemitter2
+437 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+437 verbose headers   'content-type': 'application/json',
+437 verbose headers   'transfer-encoding': 'chunked',
+437 verbose headers   connection: 'keep-alive',
+437 verbose headers   'cf-ray': '6fc9377d983b5722-IAD',
+437 verbose headers   'access-control-allow-origin': '*',
+437 verbose headers   age: '154',
+437 verbose headers   'cache-control': 'public, max-age=300',
+437 verbose headers   etag: 'W/"7aa522fbac24c2aacf10226c2c729c0f"',
+437 verbose headers   'last-modified': 'Sun, 09 Jan 2022 09:07:26 GMT',
+437 verbose headers   vary: 'accept-encoding, accept',
+437 verbose headers   'cf-cache-status': 'HIT',
+437 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+437 verbose headers   'x-amz-replication-status': 'COMPLETED',
+437 verbose headers   server: 'cloudflare',
+437 verbose headers   'content-encoding': 'gzip' }
+438 silly get cb [ 200,
+438 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+438 silly get     'content-type': 'application/json',
+438 silly get     'transfer-encoding': 'chunked',
+438 silly get     connection: 'keep-alive',
+438 silly get     'cf-ray': '6fc9377d983b5722-IAD',
+438 silly get     'access-control-allow-origin': '*',
+438 silly get     age: '154',
+438 silly get     'cache-control': 'public, max-age=300',
+438 silly get     etag: 'W/"7aa522fbac24c2aacf10226c2c729c0f"',
+438 silly get     'last-modified': 'Sun, 09 Jan 2022 09:07:26 GMT',
+438 silly get     vary: 'accept-encoding, accept',
+438 silly get     'cf-cache-status': 'HIT',
+438 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+438 silly get     'x-amz-replication-status': 'COMPLETED',
+438 silly get     server: 'cloudflare',
+438 silly get     'content-encoding': 'gzip' } ]
+439 verbose get saving eventemitter2 to /root/.npm/registry.npmjs.org/eventemitter2/.cache.json
+440 silly mapToRegistry name pm2-multimeter
+441 silly mapToRegistry using default registry
+442 silly mapToRegistry registry https://registry.npmjs.org/
+443 silly mapToRegistry uri https://registry.npmjs.org/pm2-multimeter
+444 verbose addRemoteTarball https://registry.npmjs.org/pm2-multimeter/-/pm2-multimeter-0.1.2.tgz not in flight; adding
+445 verbose addRemoteTarball [ 'https://registry.npmjs.org/pm2-multimeter/-/pm2-multimeter-0.1.2.tgz',
+445 verbose addRemoteTarball   '1a1e55153d41a05534cea23cfe860abaa0eb4ace' ]
+446 http 200 https://registry.npmjs.org/semver
+447 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+447 verbose headers   'content-type': 'application/json',
+447 verbose headers   'transfer-encoding': 'chunked',
+447 verbose headers   connection: 'keep-alive',
+447 verbose headers   'cf-ray': '6fc9377d9cb75de1-IAD',
+447 verbose headers   'access-control-allow-origin': '*',
+447 verbose headers   age: '105',
+447 verbose headers   'cache-control': 'public, max-age=300',
+447 verbose headers   etag: 'W/"584ac7527457b248613c33706dcabef9"',
+447 verbose headers   'last-modified': 'Tue, 12 Apr 2022 17:26:26 GMT',
+447 verbose headers   vary: 'accept-encoding, accept',
+447 verbose headers   'cf-cache-status': 'HIT',
+447 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+447 verbose headers   'x-amz-replication-status': 'COMPLETED',
+447 verbose headers   server: 'cloudflare',
+447 verbose headers   'content-encoding': 'gzip' }
+448 silly get cb [ 200,
+448 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+448 silly get     'content-type': 'application/json',
+448 silly get     'transfer-encoding': 'chunked',
+448 silly get     connection: 'keep-alive',
+448 silly get     'cf-ray': '6fc9377d9cb75de1-IAD',
+448 silly get     'access-control-allow-origin': '*',
+448 silly get     age: '105',
+448 silly get     'cache-control': 'public, max-age=300',
+448 silly get     etag: 'W/"584ac7527457b248613c33706dcabef9"',
+448 silly get     'last-modified': 'Tue, 12 Apr 2022 17:26:26 GMT',
+448 silly get     vary: 'accept-encoding, accept',
+448 silly get     'cf-cache-status': 'HIT',
+448 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+448 silly get     'x-amz-replication-status': 'COMPLETED',
+448 silly get     server: 'cloudflare',
+448 silly get     'content-encoding': 'gzip' } ]
+449 verbose get saving semver to /root/.npm/registry.npmjs.org/semver/.cache.json
+450 silly resolveWithNewModule pm2-deploy@1.0.2 checking installable status
+451 silly cache add args [ 'pm2-deploy@~1.0.2', null ]
+452 verbose cache add spec pm2-deploy@~1.0.2
+453 silly cache add parsed spec Result {
+453 silly cache add   raw: 'pm2-deploy@~1.0.2',
+453 silly cache add   scope: null,
+453 silly cache add   name: 'pm2-deploy',
+453 silly cache add   rawSpec: '~1.0.2',
+453 silly cache add   spec: '>=1.0.2 <1.1.0',
+453 silly cache add   type: 'range' }
+454 silly addNamed pm2-deploy@>=1.0.2 <1.1.0
+455 verbose addNamed ">=1.0.2 <1.1.0" is a valid semver range for pm2-deploy
+456 silly addNameRange { name: 'pm2-deploy', range: '>=1.0.2 <1.1.0', hasData: false }
+457 silly mapToRegistry name pm2-deploy
+458 silly mapToRegistry using default registry
+459 silly mapToRegistry registry https://registry.npmjs.org/
+460 silly mapToRegistry uri https://registry.npmjs.org/pm2-deploy
+461 verbose addNameRange registry:https://registry.npmjs.org/pm2-deploy not in flight; fetching
+462 http 200 https://registry.npmjs.org/enquirer
+463 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+463 verbose headers   'content-type': 'application/json',
+463 verbose headers   'transfer-encoding': 'chunked',
+463 verbose headers   connection: 'keep-alive',
+463 verbose headers   'cf-ray': '6fc9377d987757af-IAD',
+463 verbose headers   'access-control-allow-origin': '*',
+463 verbose headers   age: '117',
+463 verbose headers   'cache-control': 'public, max-age=300',
+463 verbose headers   etag: 'W/"487b109f122df5c83e6620a0ea95c4f6"',
+463 verbose headers   'last-modified': 'Sun, 09 Jan 2022 08:23:29 GMT',
+463 verbose headers   vary: 'accept-encoding, accept',
+463 verbose headers   'cf-cache-status': 'HIT',
+463 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+463 verbose headers   'x-amz-replication-status': 'PENDING',
+463 verbose headers   server: 'cloudflare',
+463 verbose headers   'content-encoding': 'gzip' }
+464 silly get cb [ 200,
+464 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+464 silly get     'content-type': 'application/json',
+464 silly get     'transfer-encoding': 'chunked',
+464 silly get     connection: 'keep-alive',
+464 silly get     'cf-ray': '6fc9377d987757af-IAD',
+464 silly get     'access-control-allow-origin': '*',
+464 silly get     age: '117',
+464 silly get     'cache-control': 'public, max-age=300',
+464 silly get     etag: 'W/"487b109f122df5c83e6620a0ea95c4f6"',
+464 silly get     'last-modified': 'Sun, 09 Jan 2022 08:23:29 GMT',
+464 silly get     vary: 'accept-encoding, accept',
+464 silly get     'cf-cache-status': 'HIT',
+464 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+464 silly get     'x-amz-replication-status': 'PENDING',
+464 silly get     server: 'cloudflare',
+464 silly get     'content-encoding': 'gzip' } ]
+465 verbose get saving enquirer to /root/.npm/registry.npmjs.org/enquirer/.cache.json
+466 http 200 https://registry.npmjs.org/needle
+467 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+467 verbose headers   'content-type': 'application/json',
+467 verbose headers   'transfer-encoding': 'chunked',
+467 verbose headers   connection: 'keep-alive',
+467 verbose headers   'cf-ray': '6fc9377d9fc156e0-IAD',
+467 verbose headers   'access-control-allow-origin': '*',
+467 verbose headers   age: '130',
+467 verbose headers   'cache-control': 'public, max-age=300',
+467 verbose headers   etag: 'W/"7540059d1d620b8a4bc61bfb2b249aa0"',
+467 verbose headers   'last-modified': 'Thu, 07 Apr 2022 14:44:17 GMT',
+467 verbose headers   vary: 'accept-encoding, accept',
+467 verbose headers   'cf-cache-status': 'HIT',
+467 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+467 verbose headers   'x-amz-replication-status': 'PENDING',
+467 verbose headers   server: 'cloudflare',
+467 verbose headers   'content-encoding': 'gzip' }
+468 silly get cb [ 200,
+468 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+468 silly get     'content-type': 'application/json',
+468 silly get     'transfer-encoding': 'chunked',
+468 silly get     connection: 'keep-alive',
+468 silly get     'cf-ray': '6fc9377d9fc156e0-IAD',
+468 silly get     'access-control-allow-origin': '*',
+468 silly get     age: '130',
+468 silly get     'cache-control': 'public, max-age=300',
+468 silly get     etag: 'W/"7540059d1d620b8a4bc61bfb2b249aa0"',
+468 silly get     'last-modified': 'Thu, 07 Apr 2022 14:44:17 GMT',
+468 silly get     vary: 'accept-encoding, accept',
+468 silly get     'cf-cache-status': 'HIT',
+468 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+468 silly get     'x-amz-replication-status': 'PENDING',
+468 silly get     server: 'cloudflare',
+468 silly get     'content-encoding': 'gzip' } ]
+469 verbose get saving needle to /root/.npm/registry.npmjs.org/needle/.cache.json
+470 info retry fetch attempt 1 at 1:41:06 AM
+471 info attempt registry request try #1 at 1:41:06 AM
+472 http fetch GET https://registry.npmjs.org/pm2-multimeter/-/pm2-multimeter-0.1.2.tgz
+473 verbose get https://registry.npmjs.org/fclone not expired, no request
+474 verbose get https://registry.npmjs.org/sprintf-js not expired, no request
+475 silly resolveWithNewModule mkdirp@1.0.4 checking installable status
+476 silly cache add args [ 'mkdirp@1.0.4', null ]
+477 verbose cache add spec mkdirp@1.0.4
+478 silly cache add parsed spec Result {
+478 silly cache add   raw: 'mkdirp@1.0.4',
+478 silly cache add   scope: null,
+478 silly cache add   name: 'mkdirp',
+478 silly cache add   rawSpec: '1.0.4',
+478 silly cache add   spec: '1.0.4',
+478 silly cache add   type: 'version' }
+479 silly addNamed mkdirp@1.0.4
+480 verbose addNamed "1.0.4" is a plain semver version for mkdirp
+481 silly mapToRegistry name mkdirp
+482 silly mapToRegistry using default registry
+483 silly mapToRegistry registry https://registry.npmjs.org/
+484 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+485 verbose addNameVersion registry:https://registry.npmjs.org/mkdirp not in flight; fetching
+486 http 200 https://registry.npmjs.org/async
+487 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+487 verbose headers   'content-type': 'application/json',
+487 verbose headers   'transfer-encoding': 'chunked',
+487 verbose headers   connection: 'keep-alive',
+487 verbose headers   'cf-ray': '6fc9377d88516fe9-IAD',
+487 verbose headers   'access-control-allow-origin': '*',
+487 verbose headers   age: '281',
+487 verbose headers   'cache-control': 'public, max-age=300',
+487 verbose headers   etag: 'W/"d2a8831b6dc06a8c6cb87eddc51ba937"',
+487 verbose headers   'last-modified': 'Wed, 13 Apr 2022 23:17:07 GMT',
+487 verbose headers   vary: 'accept-encoding, accept',
+487 verbose headers   'cf-cache-status': 'HIT',
+487 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+487 verbose headers   'x-amz-replication-status': 'PENDING',
+487 verbose headers   server: 'cloudflare',
+487 verbose headers   'content-encoding': 'gzip' }
+488 silly get cb [ 200,
+488 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+488 silly get     'content-type': 'application/json',
+488 silly get     'transfer-encoding': 'chunked',
+488 silly get     connection: 'keep-alive',
+488 silly get     'cf-ray': '6fc9377d88516fe9-IAD',
+488 silly get     'access-control-allow-origin': '*',
+488 silly get     age: '281',
+488 silly get     'cache-control': 'public, max-age=300',
+488 silly get     etag: 'W/"d2a8831b6dc06a8c6cb87eddc51ba937"',
+488 silly get     'last-modified': 'Wed, 13 Apr 2022 23:17:07 GMT',
+488 silly get     vary: 'accept-encoding, accept',
+488 silly get     'cf-cache-status': 'HIT',
+488 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+488 silly get     'x-amz-replication-status': 'PENDING',
+488 silly get     server: 'cloudflare',
+488 silly get     'content-encoding': 'gzip' } ]
+489 verbose get saving async to /root/.npm/registry.npmjs.org/async/.cache.json
+490 silly mapToRegistry name fclone
+491 silly mapToRegistry using default registry
+492 silly mapToRegistry registry https://registry.npmjs.org/
+493 silly mapToRegistry uri https://registry.npmjs.org/fclone
+494 verbose addRemoteTarball https://registry.npmjs.org/fclone/-/fclone-1.0.11.tgz not in flight; adding
+495 verbose addRemoteTarball [ 'https://registry.npmjs.org/fclone/-/fclone-1.0.11.tgz',
+495 verbose addRemoteTarball   '10e85da38bfea7fc599341c296ee1d77266ee640' ]
+496 silly mapToRegistry name sprintf-js
+497 silly mapToRegistry using default registry
+498 silly mapToRegistry registry https://registry.npmjs.org/
+499 silly mapToRegistry uri https://registry.npmjs.org/sprintf-js
+500 verbose addRemoteTarball https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.2.tgz not in flight; adding
+501 verbose addRemoteTarball [ 'https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.2.tgz',
+501 verbose addRemoteTarball   'da1765262bf8c0f571749f2ad6c26300207ae673' ]
+502 verbose get https://registry.npmjs.org/yamljs not expired, no request
+503 silly mapToRegistry name yamljs
+504 silly mapToRegistry using default registry
+505 silly mapToRegistry registry https://registry.npmjs.org/
+506 silly mapToRegistry uri https://registry.npmjs.org/yamljs
+507 verbose addRemoteTarball https://registry.npmjs.org/yamljs/-/yamljs-0.3.0.tgz not in flight; adding
+508 verbose addRemoteTarball [ 'https://registry.npmjs.org/yamljs/-/yamljs-0.3.0.tgz',
+508 verbose addRemoteTarball   'dc060bf267447b39f7304e9b2bfbe8b5a7ddb03b' ]
+509 silly resolveWithNewModule @pm2/agent@2.0.1 checking installable status
+510 silly cache add args [ '@pm2/agent@~2.0.0', null ]
+511 verbose cache add spec @pm2/agent@~2.0.0
+512 silly cache add parsed spec Result {
+512 silly cache add   raw: '@pm2/agent@~2.0.0',
+512 silly cache add   scope: '@pm2',
+512 silly cache add   name: '@pm2/agent',
+512 silly cache add   rawSpec: '~2.0.0',
+512 silly cache add   spec: '>=2.0.0 <2.1.0',
+512 silly cache add   type: 'range' }
+513 silly addNamed @pm2/agent@>=2.0.0 <2.1.0
+514 verbose addNamed ">=2.0.0 <2.1.0" is a valid semver range for @pm2/agent
+515 silly addNameRange { name: '@pm2/agent', range: '>=2.0.0 <2.1.0', hasData: false }
+516 silly mapToRegistry name @pm2/agent
+517 silly mapToRegistry scope (from package name) @pm2
+518 verbose mapToRegistry no registry URL found in name for scope @pm2
+519 silly mapToRegistry using default registry
+520 silly mapToRegistry registry https://registry.npmjs.org/
+521 silly mapToRegistry uri https://registry.npmjs.org/@pm2%2fagent
+522 verbose addNameRange registry:https://registry.npmjs.org/@pm2%2fagent not in flight; fetching
+523 http 200 https://registry.npmjs.org/pm2-axon
+524 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+524 verbose headers   'content-type': 'application/json',
+524 verbose headers   'transfer-encoding': 'chunked',
+524 verbose headers   connection: 'keep-alive',
+524 verbose headers   'cf-ray': '6fc9377d9a185dbc-IAD',
+524 verbose headers   'access-control-allow-origin': '*',
+524 verbose headers   'cache-control': 'public, max-age=300',
+524 verbose headers   etag: 'W/"116f6cdfe08aabf4ab1538418eff9ec5"',
+524 verbose headers   'last-modified': 'Wed, 02 Jun 2021 10:16:52 GMT',
+524 verbose headers   vary: 'accept-encoding, accept',
+524 verbose headers   'cf-cache-status': 'REVALIDATED',
+524 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+524 verbose headers   server: 'cloudflare',
+524 verbose headers   'content-encoding': 'gzip' }
+525 silly get cb [ 200,
+525 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+525 silly get     'content-type': 'application/json',
+525 silly get     'transfer-encoding': 'chunked',
+525 silly get     connection: 'keep-alive',
+525 silly get     'cf-ray': '6fc9377d9a185dbc-IAD',
+525 silly get     'access-control-allow-origin': '*',
+525 silly get     'cache-control': 'public, max-age=300',
+525 silly get     etag: 'W/"116f6cdfe08aabf4ab1538418eff9ec5"',
+525 silly get     'last-modified': 'Wed, 02 Jun 2021 10:16:52 GMT',
+525 silly get     vary: 'accept-encoding, accept',
+525 silly get     'cf-cache-status': 'REVALIDATED',
+525 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+525 silly get     server: 'cloudflare',
+525 silly get     'content-encoding': 'gzip' } ]
+526 verbose get saving pm2-axon to /root/.npm/registry.npmjs.org/pm2-axon/.cache.json
+527 http 200 https://registry.npmjs.org/debug
+528 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+528 verbose headers   'content-type': 'application/json',
+528 verbose headers   'transfer-encoding': 'chunked',
+528 verbose headers   connection: 'keep-alive',
+528 verbose headers   'cf-ray': '6fc9377d9a47599e-IAD',
+528 verbose headers   'access-control-allow-origin': '*',
+528 verbose headers   age: '69',
+528 verbose headers   'cache-control': 'public, max-age=300',
+528 verbose headers   etag: 'W/"37ed6061559dbb4a16869af66577f2e7"',
+528 verbose headers   'last-modified': 'Thu, 17 Mar 2022 13:38:49 GMT',
+528 verbose headers   vary: 'accept-encoding, accept',
+528 verbose headers   'cf-cache-status': 'HIT',
+528 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+528 verbose headers   'x-amz-replication-status': 'COMPLETED',
+528 verbose headers   server: 'cloudflare',
+528 verbose headers   'content-encoding': 'gzip' }
+529 silly get cb [ 200,
+529 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+529 silly get     'content-type': 'application/json',
+529 silly get     'transfer-encoding': 'chunked',
+529 silly get     connection: 'keep-alive',
+529 silly get     'cf-ray': '6fc9377d9a47599e-IAD',
+529 silly get     'access-control-allow-origin': '*',
+529 silly get     age: '69',
+529 silly get     'cache-control': 'public, max-age=300',
+529 silly get     etag: 'W/"37ed6061559dbb4a16869af66577f2e7"',
+529 silly get     'last-modified': 'Thu, 17 Mar 2022 13:38:49 GMT',
+529 silly get     vary: 'accept-encoding, accept',
+529 silly get     'cf-cache-status': 'HIT',
+529 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+529 silly get     'x-amz-replication-status': 'COMPLETED',
+529 silly get     server: 'cloudflare',
+529 silly get     'content-encoding': 'gzip' } ]
+530 verbose get saving debug to /root/.npm/registry.npmjs.org/debug/.cache.json
+531 http 200 https://registry.npmjs.org/chokidar
+532 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+532 verbose headers   'content-type': 'application/json',
+532 verbose headers   'transfer-encoding': 'chunked',
+532 verbose headers   connection: 'keep-alive',
+532 verbose headers   'cf-ray': '6fc9377d993c81d5-IAD',
+532 verbose headers   'access-control-allow-origin': '*',
+532 verbose headers   age: '257',
+532 verbose headers   'cache-control': 'public, max-age=300',
+532 verbose headers   etag: 'W/"f1561b9713d7ce98c221cc7e7f7962f5"',
+532 verbose headers   'last-modified': 'Tue, 12 Apr 2022 06:13:11 GMT',
+532 verbose headers   vary: 'accept-encoding, accept',
+532 verbose headers   'cf-cache-status': 'HIT',
+532 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+532 verbose headers   'x-amz-replication-status': 'PENDING',
+532 verbose headers   server: 'cloudflare',
+532 verbose headers   'content-encoding': 'gzip' }
+533 silly get cb [ 200,
+533 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+533 silly get     'content-type': 'application/json',
+533 silly get     'transfer-encoding': 'chunked',
+533 silly get     connection: 'keep-alive',
+533 silly get     'cf-ray': '6fc9377d993c81d5-IAD',
+533 silly get     'access-control-allow-origin': '*',
+533 silly get     age: '257',
+533 silly get     'cache-control': 'public, max-age=300',
+533 silly get     etag: 'W/"f1561b9713d7ce98c221cc7e7f7962f5"',
+533 silly get     'last-modified': 'Tue, 12 Apr 2022 06:13:11 GMT',
+533 silly get     vary: 'accept-encoding, accept',
+533 silly get     'cf-cache-status': 'HIT',
+533 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+533 silly get     'x-amz-replication-status': 'PENDING',
+533 silly get     server: 'cloudflare',
+533 silly get     'content-encoding': 'gzip' } ]
+534 verbose get saving chokidar to /root/.npm/registry.npmjs.org/chokidar/.cache.json
+535 http 200 https://registry.npmjs.org/vizion
+536 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+536 verbose headers   'content-type': 'application/json',
+536 verbose headers   'transfer-encoding': 'chunked',
+536 verbose headers   connection: 'keep-alive',
+536 verbose headers   'cf-ray': '6fc9377d9b375ccb-IAD',
+536 verbose headers   'access-control-allow-origin': '*',
+536 verbose headers   'cache-control': 'public, max-age=300',
+536 verbose headers   etag: 'W/"9756d743d81f824469632c17764147de"',
+536 verbose headers   'last-modified': 'Wed, 03 Mar 2021 02:10:31 GMT',
+536 verbose headers   vary: 'accept-encoding, accept',
+536 verbose headers   'cf-cache-status': 'REVALIDATED',
+536 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+536 verbose headers   server: 'cloudflare',
+536 verbose headers   'content-encoding': 'gzip' }
+537 silly get cb [ 200,
+537 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+537 silly get     'content-type': 'application/json',
+537 silly get     'transfer-encoding': 'chunked',
+537 silly get     connection: 'keep-alive',
+537 silly get     'cf-ray': '6fc9377d9b375ccb-IAD',
+537 silly get     'access-control-allow-origin': '*',
+537 silly get     'cache-control': 'public, max-age=300',
+537 silly get     etag: 'W/"9756d743d81f824469632c17764147de"',
+537 silly get     'last-modified': 'Wed, 03 Mar 2021 02:10:31 GMT',
+537 silly get     vary: 'accept-encoding, accept',
+537 silly get     'cf-cache-status': 'REVALIDATED',
+537 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+537 silly get     server: 'cloudflare',
+537 silly get     'content-encoding': 'gzip' } ]
+538 verbose get saving vizion to /root/.npm/registry.npmjs.org/vizion/.cache.json
+539 info retry fetch attempt 1 at 1:41:07 AM
+540 info attempt registry request try #1 at 1:41:07 AM
+541 http fetch GET https://registry.npmjs.org/fclone/-/fclone-1.0.11.tgz
+542 info retry fetch attempt 1 at 1:41:07 AM
+543 info attempt registry request try #1 at 1:41:07 AM
+544 http fetch GET https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.2.tgz
+545 verbose get https://registry.npmjs.org/pm2-deploy not expired, no request
+546 silly addNameRange number 2 { name: 'pm2-deploy', range: '>=1.0.2 <1.1.0', hasData: true }
+547 silly addNameRange versions [ 'pm2-deploy',
+547 silly addNameRange   [ '0.0.1-beta',
+547 silly addNameRange     '0.0.2',
+547 silly addNameRange     '0.0.3',
+547 silly addNameRange     '0.0.4',
+547 silly addNameRange     '0.1.0',
+547 silly addNameRange     '0.1.1',
+547 silly addNameRange     '0.1.2',
+547 silly addNameRange     '0.2.0',
+547 silly addNameRange     '0.2.1',
+547 silly addNameRange     '0.3.1-0',
+547 silly addNameRange     '0.3.1-1',
+547 silly addNameRange     '0.3.1',
+547 silly addNameRange     '0.3.2',
+547 silly addNameRange     '0.3.3',
+547 silly addNameRange     '0.3.4',
+547 silly addNameRange     '0.3.5',
+547 silly addNameRange     '0.3.6',
+547 silly addNameRange     '0.3.7',
+547 silly addNameRange     '0.3.8',
+547 silly addNameRange     '0.3.9',
+547 silly addNameRange     '0.3.10',
+547 silly addNameRange     '0.4.0',
+547 silly addNameRange     '1.0.1',
+547 silly addNameRange     '1.0.0',
+547 silly addNameRange     '1.0.2' ] ]
+548 silly addNamed pm2-deploy@1.0.2
+549 verbose addNamed "1.0.2" is a plain semver version for pm2-deploy
+550 silly resolveWithNewModule chalk@3.0.0 checking installable status
+551 silly cache add args [ 'chalk@3.0.0', null ]
+552 verbose cache add spec chalk@3.0.0
+553 silly cache add parsed spec Result {
+553 silly cache add   raw: 'chalk@3.0.0',
+553 silly cache add   scope: null,
+553 silly cache add   name: 'chalk',
+553 silly cache add   rawSpec: '3.0.0',
+553 silly cache add   spec: '3.0.0',
+553 silly cache add   type: 'version' }
+554 silly addNamed chalk@3.0.0
+555 verbose addNamed "3.0.0" is a plain semver version for chalk
+556 silly mapToRegistry name chalk
+557 silly mapToRegistry using default registry
+558 silly mapToRegistry registry https://registry.npmjs.org/
+559 silly mapToRegistry uri https://registry.npmjs.org/chalk
+560 verbose addNameVersion registry:https://registry.npmjs.org/chalk not in flight; fetching
+561 http fetch 200 https://registry.npmjs.org/pm2-multimeter/-/pm2-multimeter-0.1.2.tgz
+562 info retry fetch attempt 1 at 1:41:07 AM
+563 info attempt registry request try #1 at 1:41:07 AM
+564 http fetch GET https://registry.npmjs.org/yamljs/-/yamljs-0.3.0.tgz
+565 silly resolveWithNewModule blessed@0.1.81 checking installable status
+566 silly cache add args [ 'blessed@0.1.81', null ]
+567 verbose cache add spec blessed@0.1.81
+568 silly cache add parsed spec Result {
+568 silly cache add   raw: 'blessed@0.1.81',
+568 silly cache add   scope: null,
+568 silly cache add   name: 'blessed',
+568 silly cache add   rawSpec: '0.1.81',
+568 silly cache add   spec: '0.1.81',
+568 silly cache add   type: 'version' }
+569 silly addNamed blessed@0.1.81
+570 verbose addNamed "0.1.81" is a plain semver version for blessed
+571 silly mapToRegistry name blessed
+572 silly mapToRegistry using default registry
+573 silly mapToRegistry registry https://registry.npmjs.org/
+574 silly mapToRegistry uri https://registry.npmjs.org/blessed
+575 verbose addNameVersion registry:https://registry.npmjs.org/blessed not in flight; fetching
+576 verbose get https://registry.npmjs.org/mkdirp not expired, no request
+577 silly mapToRegistry name pm2-deploy
+578 silly mapToRegistry using default registry
+579 silly mapToRegistry registry https://registry.npmjs.org/
+580 silly mapToRegistry uri https://registry.npmjs.org/pm2-deploy
+581 verbose addRemoteTarball https://registry.npmjs.org/pm2-deploy/-/pm2-deploy-1.0.2.tgz not in flight; adding
+582 verbose addRemoteTarball [ 'https://registry.npmjs.org/pm2-deploy/-/pm2-deploy-1.0.2.tgz',
+582 verbose addRemoteTarball   '98d8385553a3a4dca11c7b3116deb519bc5961a7' ]
+583 silly resolveWithNewModule source-map-support@0.5.19 checking installable status
+584 silly cache add args [ 'source-map-support@0.5.19', null ]
+585 verbose cache add spec source-map-support@0.5.19
+586 silly cache add parsed spec Result {
+586 silly cache add   raw: 'source-map-support@0.5.19',
+586 silly cache add   scope: null,
+586 silly cache add   name: 'source-map-support',
+586 silly cache add   rawSpec: '0.5.19',
+586 silly cache add   spec: '0.5.19',
+586 silly cache add   type: 'version' }
+587 silly addNamed source-map-support@0.5.19
+588 verbose addNamed "0.5.19" is a plain semver version for source-map-support
+589 silly mapToRegistry name source-map-support
+590 silly mapToRegistry using default registry
+591 silly mapToRegistry registry https://registry.npmjs.org/
+592 silly mapToRegistry uri https://registry.npmjs.org/source-map-support
+593 verbose addNameVersion registry:https://registry.npmjs.org/source-map-support not in flight; fetching
+594 http 200 https://registry.npmjs.org/pidusage
+595 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+595 verbose headers   'content-type': 'application/json',
+595 verbose headers   'transfer-encoding': 'chunked',
+595 verbose headers   connection: 'keep-alive',
+595 verbose headers   'cf-ray': '6fc9377d9a295dda-IAD',
+595 verbose headers   'access-control-allow-origin': '*',
+595 verbose headers   'cache-control': 'public, max-age=300',
+595 verbose headers   etag: 'W/"e63f473c87874f152ea48b26027d9194"',
+595 verbose headers   'last-modified': 'Sun, 09 Jan 2022 23:04:46 GMT',
+595 verbose headers   vary: 'accept-encoding, accept',
+595 verbose headers   'cf-cache-status': 'REVALIDATED',
+595 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+595 verbose headers   'x-amz-replication-status': 'COMPLETED',
+595 verbose headers   server: 'cloudflare',
+595 verbose headers   'content-encoding': 'gzip' }
+596 silly get cb [ 200,
+596 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+596 silly get     'content-type': 'application/json',
+596 silly get     'transfer-encoding': 'chunked',
+596 silly get     connection: 'keep-alive',
+596 silly get     'cf-ray': '6fc9377d9a295dda-IAD',
+596 silly get     'access-control-allow-origin': '*',
+596 silly get     'cache-control': 'public, max-age=300',
+596 silly get     etag: 'W/"e63f473c87874f152ea48b26027d9194"',
+596 silly get     'last-modified': 'Sun, 09 Jan 2022 23:04:46 GMT',
+596 silly get     vary: 'accept-encoding, accept',
+596 silly get     'cf-cache-status': 'REVALIDATED',
+596 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+596 silly get     'x-amz-replication-status': 'COMPLETED',
+596 silly get     server: 'cloudflare',
+596 silly get     'content-encoding': 'gzip' } ]
+597 verbose get saving pidusage to /root/.npm/registry.npmjs.org/pidusage/.cache.json
+598 silly mapToRegistry name mkdirp
+599 silly mapToRegistry using default registry
+600 silly mapToRegistry registry https://registry.npmjs.org/
+601 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+602 verbose addRemoteTarball https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz not in flight; adding
+603 verbose addRemoteTarball [ 'https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz',
+603 verbose addRemoteTarball   '3eb5ed62622756d79a5f0e2a221dfebad75c2f7e' ]
+604 silly resolveWithNewModule eventemitter2@5.0.1 checking installable status
+605 silly cache add args [ 'eventemitter2@5.0.1', null ]
+606 verbose cache add spec eventemitter2@5.0.1
+607 silly cache add parsed spec Result {
+607 silly cache add   raw: 'eventemitter2@5.0.1',
+607 silly cache add   scope: null,
+607 silly cache add   name: 'eventemitter2',
+607 silly cache add   rawSpec: '5.0.1',
+607 silly cache add   spec: '5.0.1',
+607 silly cache add   type: 'version' }
+608 silly addNamed eventemitter2@5.0.1
+609 verbose addNamed "5.0.1" is a plain semver version for eventemitter2
+610 silly mapToRegistry name eventemitter2
+611 silly mapToRegistry using default registry
+612 silly mapToRegistry registry https://registry.npmjs.org/
+613 silly mapToRegistry uri https://registry.npmjs.org/eventemitter2
+614 verbose addNameVersion registry:https://registry.npmjs.org/eventemitter2 not in flight; fetching
+615 http fetch 200 https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.2.tgz
+616 http fetch 200 https://registry.npmjs.org/fclone/-/fclone-1.0.11.tgz
+617 verbose get https://registry.npmjs.org/@pm2%2fagent not expired, no request
+618 silly addNameRange number 2 { name: '@pm2/agent', range: '>=2.0.0 <2.1.0', hasData: true }
+619 silly addNameRange versions [ '@pm2/agent',
+619 silly addNameRange   [ '0.4.1',
+619 silly addNameRange     '0.4.2',
+619 silly addNameRange     '0.5.0',
+619 silly addNameRange     '0.5.1',
+619 silly addNameRange     '0.5.2',
+619 silly addNameRange     '0.5.3',
+619 silly addNameRange     '0.5.4',
+619 silly addNameRange     '0.5.5',
+619 silly addNameRange     '0.5.6',
+619 silly addNameRange     '0.5.7',
+619 silly addNameRange     '0.5.8',
+619 silly addNameRange     '0.5.9',
+619 silly addNameRange     '0.5.10',
+619 silly addNameRange     '0.5.11',
+619 silly addNameRange     '0.5.12',
+619 silly addNameRange     '0.5.13',
+619 silly addNameRange     '0.5.14-next',
+619 silly addNameRange     '0.5.14-beta',
+619 silly addNameRange     '0.5.14',
+619 silly addNameRange     '0.5.15',
+619 silly addNameRange     '0.5.16',
+619 silly addNameRange     '0.5.17',
+619 silly addNameRange     '0.5.18',
+619 silly addNameRange     '0.5.19',
+619 silly addNameRange     '0.5.20',
+619 silly addNameRange     '0.5.21',
+619 silly addNameRange     '0.5.22',
+619 silly addNameRange     '0.5.23',
+619 silly addNameRange     '0.5.24',
+619 silly addNameRange     '0.5.25',
+619 silly addNameRange     '0.5.26',
+619 silly addNameRange     '1.0.0',
+619 silly addNameRange     '1.0.2',
+619 silly addNameRange     '1.0.3',
+619 silly addNameRange     '1.0.4',
+619 silly addNameRange     '1.0.5',
+619 silly addNameRange     '1.0.6',
+619 silly addNameRange     '1.0.7',
+619 silly addNameRange     '1.0.8',
+619 silly addNameRange     '2.0.0',
+619 silly addNameRange     '2.0.1' ] ]
+620 silly addNamed @pm2/agent@2.0.1
+621 verbose addNamed "2.0.1" is a plain semver version for @pm2/agent
+622 silly resolveWithNewModule semver@7.3.7 checking installable status
+623 silly cache add args [ 'semver@^7.2', null ]
+624 verbose cache add spec semver@^7.2
+625 silly cache add parsed spec Result {
+625 silly cache add   raw: 'semver@^7.2',
+625 silly cache add   scope: null,
+625 silly cache add   name: 'semver',
+625 silly cache add   rawSpec: '^7.2',
+625 silly cache add   spec: '>=7.2.0 <8.0.0',
+625 silly cache add   type: 'range' }
+626 silly addNamed semver@>=7.2.0 <8.0.0
+627 verbose addNamed ">=7.2.0 <8.0.0" is a valid semver range for semver
+628 silly addNameRange { name: 'semver', range: '>=7.2.0 <8.0.0', hasData: false }
+629 silly mapToRegistry name semver
+630 silly mapToRegistry using default registry
+631 silly mapToRegistry registry https://registry.npmjs.org/
+632 silly mapToRegistry uri https://registry.npmjs.org/semver
+633 verbose addNameRange registry:https://registry.npmjs.org/semver not in flight; fetching
+634 silly mapToRegistry name @pm2/agent
+635 silly mapToRegistry scope (from package name) @pm2
+636 verbose mapToRegistry no registry URL found in name for scope @pm2
+637 silly mapToRegistry using default registry
+638 silly mapToRegistry registry https://registry.npmjs.org/
+639 silly mapToRegistry uri https://registry.npmjs.org/@pm2%2fagent
+640 verbose addRemoteTarball https://registry.npmjs.org/@pm2/agent/-/agent-2.0.1.tgz not in flight; adding
+641 verbose addRemoteTarball [ 'https://registry.npmjs.org/@pm2/agent/-/agent-2.0.1.tgz',
+641 verbose addRemoteTarball   '0edffc54cd8ee2b12f90136264e7880f3f78c79d' ]
+642 info retry fetch attempt 1 at 1:41:07 AM
+643 info attempt registry request try #1 at 1:41:07 AM
+644 http fetch GET https://registry.npmjs.org/pm2-deploy/-/pm2-deploy-1.0.2.tgz
+645 silly fetchAndShaCheck shasum 1a1e55153d41a05534cea23cfe860abaa0eb4ace
+646 http fetch 200 https://registry.npmjs.org/yamljs/-/yamljs-0.3.0.tgz
+647 info retry fetch attempt 1 at 1:41:07 AM
+648 info attempt registry request try #1 at 1:41:07 AM
+649 http fetch GET https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz
+650 verbose get https://registry.npmjs.org/chalk not expired, no request
+651 silly resolveWithNewModule enquirer@2.3.6 checking installable status
+652 silly cache add args [ 'enquirer@2.3.6', null ]
+653 verbose cache add spec enquirer@2.3.6
+654 silly cache add parsed spec Result {
+654 silly cache add   raw: 'enquirer@2.3.6',
+654 silly cache add   scope: null,
+654 silly cache add   name: 'enquirer',
+654 silly cache add   rawSpec: '2.3.6',
+654 silly cache add   spec: '2.3.6',
+654 silly cache add   type: 'version' }
+655 silly addNamed enquirer@2.3.6
+656 verbose addNamed "2.3.6" is a plain semver version for enquirer
+657 silly mapToRegistry name enquirer
+658 silly mapToRegistry using default registry
+659 silly mapToRegistry registry https://registry.npmjs.org/
+660 silly mapToRegistry uri https://registry.npmjs.org/enquirer
+661 verbose addNameVersion registry:https://registry.npmjs.org/enquirer not in flight; fetching
+662 silly resolveWithNewModule needle@2.4.0 checking installable status
+663 silly cache add args [ 'needle@2.4.0', null ]
+664 verbose cache add spec needle@2.4.0
+665 silly cache add parsed spec Result {
+665 silly cache add   raw: 'needle@2.4.0',
+665 silly cache add   scope: null,
+665 silly cache add   name: 'needle',
+665 silly cache add   rawSpec: '2.4.0',
+665 silly cache add   spec: '2.4.0',
+665 silly cache add   type: 'version' }
+666 silly addNamed needle@2.4.0
+667 verbose addNamed "2.4.0" is a plain semver version for needle
+668 silly mapToRegistry name needle
+669 silly mapToRegistry using default registry
+670 silly mapToRegistry registry https://registry.npmjs.org/
+671 silly mapToRegistry uri https://registry.npmjs.org/needle
+672 verbose addNameVersion registry:https://registry.npmjs.org/needle not in flight; fetching
+673 verbose get https://registry.npmjs.org/blessed not expired, no request
+674 silly mapToRegistry name chalk
+675 silly mapToRegistry using default registry
+676 silly mapToRegistry registry https://registry.npmjs.org/
+677 silly mapToRegistry uri https://registry.npmjs.org/chalk
+678 verbose addRemoteTarball https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz not in flight; adding
+679 verbose addRemoteTarball [ 'https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz',
+679 verbose addRemoteTarball   '3f73c2bf526591f574cc492c51e2456349f844e4' ]
+680 silly resolveWithNewModule async@3.2.3 checking installable status
+681 silly cache add args [ 'async@~3.2.0', null ]
+682 verbose cache add spec async@~3.2.0
+683 silly cache add parsed spec Result {
+683 silly cache add   raw: 'async@~3.2.0',
+683 silly cache add   scope: null,
+683 silly cache add   name: 'async',
+683 silly cache add   rawSpec: '~3.2.0',
+683 silly cache add   spec: '>=3.2.0 <3.3.0',
+683 silly cache add   type: 'range' }
+684 silly addNamed async@>=3.2.0 <3.3.0
+685 verbose addNamed ">=3.2.0 <3.3.0" is a valid semver range for async
+686 silly addNameRange { name: 'async', range: '>=3.2.0 <3.3.0', hasData: false }
+687 silly mapToRegistry name async
+688 silly mapToRegistry using default registry
+689 silly mapToRegistry registry https://registry.npmjs.org/
+690 silly mapToRegistry uri https://registry.npmjs.org/async
+691 verbose addNameRange registry:https://registry.npmjs.org/async not in flight; fetching
+692 verbose get https://registry.npmjs.org/source-map-support not expired, no request
+693 silly fetchAndShaCheck shasum da1765262bf8c0f571749f2ad6c26300207ae673
+694 silly fetchAndShaCheck shasum 10e85da38bfea7fc599341c296ee1d77266ee640
+695 silly mapToRegistry name blessed
+696 silly mapToRegistry using default registry
+697 silly mapToRegistry registry https://registry.npmjs.org/
+698 silly mapToRegistry uri https://registry.npmjs.org/blessed
+699 verbose addRemoteTarball https://registry.npmjs.org/blessed/-/blessed-0.1.81.tgz not in flight; adding
+700 verbose addRemoteTarball [ 'https://registry.npmjs.org/blessed/-/blessed-0.1.81.tgz',
+700 verbose addRemoteTarball   'f962d687ec2c369570ae71af843256e6d0ca1129' ]
+701 verbose get https://registry.npmjs.org/eventemitter2 not expired, no request
+702 silly mapToRegistry name source-map-support
+703 silly mapToRegistry using default registry
+704 silly mapToRegistry registry https://registry.npmjs.org/
+705 silly mapToRegistry uri https://registry.npmjs.org/source-map-support
+706 verbose addRemoteTarball https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.19.tgz not in flight; adding
+707 verbose addRemoteTarball [ 'https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.19.tgz',
+707 verbose addRemoteTarball   'a98b62f86dcaf4f67399648c085291ab9e8fed61' ]
+708 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/pm2-multimeter/-/pm2-multimeter-0.1.2.tgz not in flight; adding
+709 verbose addTmpTarball already have metadata; skipping unpack for pm2-multimeter@0.1.2
+710 http fetch 200 https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz
+711 verbose get https://registry.npmjs.org/semver not expired, no request
+712 silly addNameRange number 2 { name: 'semver', range: '>=7.2.0 <8.0.0', hasData: true }
+713 silly addNameRange versions [ 'semver',
+713 silly addNameRange   [ '1.0.0',
+713 silly addNameRange     '1.0.1',
+713 silly addNameRange     '1.0.2',
+713 silly addNameRange     '1.0.3',
+713 silly addNameRange     '1.0.4',
+713 silly addNameRange     '1.0.5',
+713 silly addNameRange     '1.0.6',
+713 silly addNameRange     '1.0.7',
+713 silly addNameRange     '1.0.8',
+713 silly addNameRange     '1.0.9',
+713 silly addNameRange     '1.0.10',
+713 silly addNameRange     '1.0.11',
+713 silly addNameRange     '1.0.12',
+713 silly addNameRange     '1.0.13',
+713 silly addNameRange     '1.0.14',
+713 silly addNameRange     '1.1.0',
+713 silly addNameRange     '1.1.1',
+713 silly addNameRange     '1.1.2',
+713 silly addNameRange     '1.1.3',
+713 silly addNameRange     '1.1.4',
+713 silly addNameRange     '2.0.0-alpha',
+713 silly addNameRange     '2.0.0-beta',
+713 silly addNameRange     '2.0.1',
+713 silly addNameRange     '2.0.2',
+713 silly addNameRange     '2.0.3',
+713 silly addNameRange     '2.0.4',
+713 silly addNameRange     '2.0.5',
+713 silly addNameRange     '2.0.6',
+713 silly addNameRange     '2.0.7',
+713 silly addNameRange     '2.0.8',
+713 silly addNameRange     '2.0.9',
+713 silly addNameRange     '2.0.10',
+713 silly addNameRange     '2.0.11',
+713 silly addNameRange     '2.1.0',
+713 silly addNameRange     '2.2.0',
+713 silly addNameRange     '2.2.1',
+713 silly addNameRange     '2.3.0',
+713 silly addNameRange     '2.3.1',
+713 silly addNameRange     '2.3.2',
+713 silly addNameRange     '3.0.0',
+713 silly addNameRange     '3.0.1',
+713 silly addNameRange     '4.0.0',
+713 silly addNameRange     '4.0.2',
+713 silly addNameRange     '4.0.3',
+713 silly addNameRange     '4.1.0',
+713 silly addNameRange     '4.1.1',
+713 silly addNameRange     '4.2.0',
+713 silly addNameRange     '4.2.1',
+713 silly addNameRange     '4.2.2',
+713 silly addNameRange     '4.3.0',
+713 silly addNameRange     '4.3.1',
+713 silly addNameRange     '4.3.2',
+713 silly addNameRange     '4.3.3',
+713 silly addNameRange     '4.3.4',
+713 silly addNameRange     '4.3.5',
+713 silly addNameRange     '4.3.6',
+713 silly addNameRange     '5.0.0',
+713 silly addNameRange     '5.0.1',
+713 silly addNameRange     '5.0.2',
+713 silly addNameRange     '5.0.3',
+713 silly addNameRange     '5.1.0',
+713 silly addNameRange     '5.1.1',
+713 silly addNameRange     '5.2.0',
+713 silly addNameRange     '5.3.0',
+713 silly addNameRange     '5.4.0',
+713 silly addNameRange     '5.4.1',
+713 silly addNameRange     '5.5.0',
+713 silly addNameRange     '5.5.1',
+713 silly addNameRange     '5.6.0',
+713 silly addNameRange     '5.7.0',
+713 silly addNameRange     '6.0.0',
+713 silly addNameRange     '6.1.0',
+713 silly addNameRange     '6.1.1',
+713 silly addNameRange     '6.1.2',
+713 silly addNameRange     '6.1.3',
+713 silly addNameRange     '6.2.0',
+713 silly addNameRange     '6.3.0',
+713 silly addNameRange     '5.7.1',
+713 silly addNameRange     '7.0.0',
+713 silly addNameRange     '7.1.0',
+713 silly addNameRange     '7.1.1',
+713 silly addNameRange     '7.1.2',
+713 silly addNameRange     '7.1.3',
+713 silly addNameRange     '7.2.0',
+713 silly addNameRange     '7.2.1',
+713 silly addNameRange     '7.2.2',
+713 silly addNameRange     '7.2.3',
+713 silly addNameRange     '7.3.0',
+713 silly addNameRange     '7.3.1',
+713 silly addNameRange     '7.3.2',
+713 silly addNameRange     '7.3.3',
+713 silly addNameRange     '7.3.4',
+713 silly addNameRange     '7.3.5',
+713 silly addNameRange     '7.3.6',
+713 silly addNameRange     '7.3.7' ] ]
+714 silly addNamed semver@7.3.7
+715 verbose addNamed "7.3.7" is a plain semver version for semver
+716 silly mapToRegistry name eventemitter2
+717 silly mapToRegistry using default registry
+718 silly mapToRegistry registry https://registry.npmjs.org/
+719 silly mapToRegistry uri https://registry.npmjs.org/eventemitter2
+720 verbose addRemoteTarball https://registry.npmjs.org/eventemitter2/-/eventemitter2-5.0.1.tgz not in flight; adding
+721 verbose addRemoteTarball [ 'https://registry.npmjs.org/eventemitter2/-/eventemitter2-5.0.1.tgz',
+721 verbose addRemoteTarball   '6197a095d5fb6b57e8942f6fd7eaad63a09c9452' ]
+722 silly resolveWithNewModule pm2-axon@4.0.1 checking installable status
+723 silly cache add args [ 'pm2-axon@~4.0.1', null ]
+724 verbose cache add spec pm2-axon@~4.0.1
+725 silly cache add parsed spec Result {
+725 silly cache add   raw: 'pm2-axon@~4.0.1',
+725 silly cache add   scope: null,
+725 silly cache add   name: 'pm2-axon',
+725 silly cache add   rawSpec: '~4.0.1',
+725 silly cache add   spec: '>=4.0.1 <4.1.0',
+725 silly cache add   type: 'range' }
+726 silly addNamed pm2-axon@>=4.0.1 <4.1.0
+727 verbose addNamed ">=4.0.1 <4.1.0" is a valid semver range for pm2-axon
+728 silly addNameRange { name: 'pm2-axon', range: '>=4.0.1 <4.1.0', hasData: false }
+729 silly mapToRegistry name pm2-axon
+730 silly mapToRegistry using default registry
+731 silly mapToRegistry registry https://registry.npmjs.org/
+732 silly mapToRegistry uri https://registry.npmjs.org/pm2-axon
+733 verbose addNameRange registry:https://registry.npmjs.org/pm2-axon not in flight; fetching
+734 http fetch 200 https://registry.npmjs.org/pm2-deploy/-/pm2-deploy-1.0.2.tgz
+735 info retry fetch attempt 1 at 1:41:07 AM
+736 info attempt registry request try #1 at 1:41:07 AM
+737 http fetch GET https://registry.npmjs.org/@pm2/agent/-/agent-2.0.1.tgz
+738 silly mapToRegistry name semver
+739 silly mapToRegistry using default registry
+740 silly mapToRegistry registry https://registry.npmjs.org/
+741 silly mapToRegistry uri https://registry.npmjs.org/semver
+742 verbose addRemoteTarball https://registry.npmjs.org/semver/-/semver-7.3.7.tgz not in flight; adding
+743 verbose addRemoteTarball [ 'https://registry.npmjs.org/semver/-/semver-7.3.7.tgz',
+743 verbose addRemoteTarball   '12c5b649afdbf9049707796e22a4028814ce523f' ]
+744 info retry fetch attempt 1 at 1:41:07 AM
+745 info attempt registry request try #1 at 1:41:07 AM
+746 http fetch GET https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz
+747 silly resolveWithNewModule debug@4.3.4 checking installable status
+748 silly cache add args [ 'debug@^4.3.1', null ]
+749 verbose cache add spec debug@^4.3.1
+750 silly cache add parsed spec Result {
+750 silly cache add   raw: 'debug@^4.3.1',
+750 silly cache add   scope: null,
+750 silly cache add   name: 'debug',
+750 silly cache add   rawSpec: '^4.3.1',
+750 silly cache add   spec: '>=4.3.1 <5.0.0',
+750 silly cache add   type: 'range' }
+751 silly addNamed debug@>=4.3.1 <5.0.0
+752 verbose addNamed ">=4.3.1 <5.0.0" is a valid semver range for debug
+753 silly addNameRange { name: 'debug', range: '>=4.3.1 <5.0.0', hasData: false }
+754 silly mapToRegistry name debug
+755 silly mapToRegistry using default registry
+756 silly mapToRegistry registry https://registry.npmjs.org/
+757 silly mapToRegistry uri https://registry.npmjs.org/debug
+758 verbose addNameRange registry:https://registry.npmjs.org/debug not in flight; fetching
+759 silly resolveWithNewModule chokidar@3.5.3 checking installable status
+760 silly cache add args [ 'chokidar@^3.5.1', null ]
+761 verbose cache add spec chokidar@^3.5.1
+762 silly cache add parsed spec Result {
+762 silly cache add   raw: 'chokidar@^3.5.1',
+762 silly cache add   scope: null,
+762 silly cache add   name: 'chokidar',
+762 silly cache add   rawSpec: '^3.5.1',
+762 silly cache add   spec: '>=3.5.1 <4.0.0',
+762 silly cache add   type: 'range' }
+763 silly addNamed chokidar@>=3.5.1 <4.0.0
+764 verbose addNamed ">=3.5.1 <4.0.0" is a valid semver range for chokidar
+765 silly addNameRange { name: 'chokidar', range: '>=3.5.1 <4.0.0', hasData: false }
+766 silly mapToRegistry name chokidar
+767 silly mapToRegistry using default registry
+768 silly mapToRegistry registry https://registry.npmjs.org/
+769 silly mapToRegistry uri https://registry.npmjs.org/chokidar
+770 verbose addNameRange registry:https://registry.npmjs.org/chokidar not in flight; fetching
+771 silly resolveWithNewModule vizion@2.2.1 checking installable status
+772 silly cache add args [ 'vizion@~2.2.1', null ]
+773 verbose cache add spec vizion@~2.2.1
+774 silly cache add parsed spec Result {
+774 silly cache add   raw: 'vizion@~2.2.1',
+774 silly cache add   scope: null,
+774 silly cache add   name: 'vizion',
+774 silly cache add   rawSpec: '~2.2.1',
+774 silly cache add   spec: '>=2.2.1 <2.3.0',
+774 silly cache add   type: 'range' }
+775 silly addNamed vizion@>=2.2.1 <2.3.0
+776 verbose addNamed ">=2.2.1 <2.3.0" is a valid semver range for vizion
+777 silly addNameRange { name: 'vizion', range: '>=2.2.1 <2.3.0', hasData: false }
+778 silly mapToRegistry name vizion
+779 silly mapToRegistry using default registry
+780 silly mapToRegistry registry https://registry.npmjs.org/
+781 silly mapToRegistry uri https://registry.npmjs.org/vizion
+782 verbose addNameRange registry:https://registry.npmjs.org/vizion not in flight; fetching
+783 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.2.tgz not in flight; adding
+784 verbose addTmpTarball already have metadata; skipping unpack for sprintf-js@1.1.2
+785 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/fclone/-/fclone-1.0.11.tgz not in flight; adding
+786 verbose addTmpTarball already have metadata; skipping unpack for fclone@1.0.11
+787 info retry fetch attempt 1 at 1:41:07 AM
+788 info attempt registry request try #1 at 1:41:07 AM
+789 http fetch GET https://registry.npmjs.org/blessed/-/blessed-0.1.81.tgz
+790 verbose get https://registry.npmjs.org/enquirer not expired, no request
+791 verbose get https://registry.npmjs.org/needle not expired, no request
+792 info retry fetch attempt 1 at 1:41:07 AM
+793 info attempt registry request try #1 at 1:41:07 AM
+794 http fetch GET https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.19.tgz
+795 info retry fetch attempt 1 at 1:41:07 AM
+796 info attempt registry request try #1 at 1:41:07 AM
+797 http fetch GET https://registry.npmjs.org/eventemitter2/-/eventemitter2-5.0.1.tgz
+798 silly mapToRegistry name enquirer
+799 silly mapToRegistry using default registry
+800 silly mapToRegistry registry https://registry.npmjs.org/
+801 silly mapToRegistry uri https://registry.npmjs.org/enquirer
+802 verbose addRemoteTarball https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz not in flight; adding
+803 verbose addRemoteTarball [ 'https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz',
+803 verbose addRemoteTarball   '2a7fe5dd634a1e4125a975ec994ff5456dc3734d' ]
+804 verbose get https://registry.npmjs.org/async not expired, no request
+805 silly addNameRange number 2 { name: 'async', range: '>=3.2.0 <3.3.0', hasData: true }
+806 silly addNameRange versions [ 'async',
+806 silly addNameRange   [ '0.1.0',
+806 silly addNameRange     '0.1.1',
+806 silly addNameRange     '0.1.2',
+806 silly addNameRange     '0.1.3',
+806 silly addNameRange     '0.1.4',
+806 silly addNameRange     '0.1.5',
+806 silly addNameRange     '0.1.6',
+806 silly addNameRange     '0.1.7',
+806 silly addNameRange     '0.1.8',
+806 silly addNameRange     '0.1.9',
+806 silly addNameRange     '0.1.10',
+806 silly addNameRange     '0.1.11',
+806 silly addNameRange     '0.1.12',
+806 silly addNameRange     '0.1.13',
+806 silly addNameRange     '0.1.14',
+806 silly addNameRange     '0.1.15',
+806 silly addNameRange     '0.1.16',
+806 silly addNameRange     '0.1.17',
+806 silly addNameRange     '0.1.18',
+806 silly addNameRange     '0.1.19',
+806 silly addNameRange     '0.1.20',
+806 silly addNameRange     '0.1.21',
+806 silly addNameRange     '0.1.22',
+806 silly addNameRange     '0.2.0',
+806 silly addNameRange     '0.2.1',
+806 silly addNameRange     '0.2.2',
+806 silly addNameRange     '0.2.3',
+806 silly addNameRange     '0.2.4',
+806 silly addNameRange     '0.2.5',
+806 silly addNameRange     '0.2.6',
+806 silly addNameRange     '0.2.7',
+806 silly addNameRange     '0.2.8',
+806 silly addNameRange     '0.2.9',
+806 silly addNameRange     '0.2.10',
+806 silly addNameRange     '0.3.0',
+806 silly addNameRange     '0.4.0',
+806 silly addNameRange     '0.4.1',
+806 silly addNameRange     '0.5.0',
+806 silly addNameRange     '0.6.0',
+806 silly addNameRange     '0.6.1',
+806 silly addNameRange     '0.6.2',
+806 silly addNameRange     '0.7.0',
+806 silly addNameRange     '0.8.0',
+806 silly addNameRange     '0.9.0',
+806 silly addNameRange     '0.9.2',
+806 silly addNameRange     '1.0.0',
+806 silly addNameRange     '1.1.0',
+806 silly addNameRange     '1.2.0',
+806 silly addNameRange     '1.1.1',
+806 silly addNameRange     '1.2.1',
+806 silly addNameRange     '1.3.0',
+806 silly addNameRange     '1.4.0',
+806 silly addNameRange     '1.4.1',
+806 silly addNameRange     '1.4.2',
+806 silly addNameRange     '1.5.0',
+806 silly addNameRange     '1.5.1',
+806 silly addNameRange     '1.5.2',
+806 silly addNameRange     '2.0.0-alpha.0',
+806 silly addNameRange     '2.0.0-rc.1',
+806 silly addNameRange     '2.0.0-rc.2',
+806 silly addNameRange     '2.0.0-rc.3',
+806 silly addNameRange     '2.0.0-rc.4',
+806 silly addNameRange     '2.0.0-rc.5',
+806 silly addNameRange     '2.0.0-rc.6',
+806 silly addNameRange     '2.0.0',
+806 silly addNameRange     '2.0.1',
+806 silly addNameRange     '2.1.0',
+806 silly addNameRange     '2.1.1',
+806 silly addNameRange     '2.1.2',
+806 silly addNameRange     '2.1.4',
+806 silly addNameRange     '2.1.5',
+806 silly addNameRange     '2.2.0',
+806 silly addNameRange     '2.3.0',
+806 silly addNameRange     '2.4.0',
+806 silly addNameRange     '2.4.1',
+806 silly addNameRange     '2.5.0',
+806 silly addNameRange     '2.6.0',
+806 silly addNameRange     '2.6.1',
+806 silly addNameRange     '3.0.1-0',
+806 silly addNameRange     '2.6.2',
+806 silly addNameRange     '3.0.0',
+806 silly addNameRange     '3.0.1',
+806 silly addNameRange     '3.1.0',
+806 silly addNameRange     '2.6.3',
+806 silly addNameRange     '3.1.1',
+806 silly addNameRange     '3.2.0',
+806 silly addNameRange     '3.2.1',
+806 silly addNameRange     '3.2.2',
+806 silly addNameRange     '3.2.3',
+806 silly addNameRange     '2.6.4' ] ]
+807 silly addNamed async@3.2.3
+808 verbose addNamed "3.2.3" is a plain semver version for async
+809 silly mapToRegistry name needle
+810 silly mapToRegistry using default registry
+811 silly mapToRegistry registry https://registry.npmjs.org/
+812 silly mapToRegistry uri https://registry.npmjs.org/needle
+813 verbose addRemoteTarball https://registry.npmjs.org/needle/-/needle-2.4.0.tgz not in flight; adding
+814 verbose addRemoteTarball [ 'https://registry.npmjs.org/needle/-/needle-2.4.0.tgz',
+814 verbose addRemoteTarball   '6833e74975c444642590e15a750288c5f939b57c' ]
+815 silly resolveWithNewModule pidusage@3.0.0 checking installable status
+816 silly cache add args [ 'pidusage@~3.0', null ]
+817 verbose cache add spec pidusage@~3.0
+818 silly cache add parsed spec Result {
+818 silly cache add   raw: 'pidusage@~3.0',
+818 silly cache add   scope: null,
+818 silly cache add   name: 'pidusage',
+818 silly cache add   rawSpec: '~3.0',
+818 silly cache add   spec: '>=3.0.0 <3.1.0',
+818 silly cache add   type: 'range' }
+819 silly addNamed pidusage@>=3.0.0 <3.1.0
+820 verbose addNamed ">=3.0.0 <3.1.0" is a valid semver range for pidusage
+821 silly addNameRange { name: 'pidusage', range: '>=3.0.0 <3.1.0', hasData: false }
+822 silly mapToRegistry name pidusage
+823 silly mapToRegistry using default registry
+824 silly mapToRegistry registry https://registry.npmjs.org/
+825 silly mapToRegistry uri https://registry.npmjs.org/pidusage
+826 verbose addNameRange registry:https://registry.npmjs.org/pidusage not in flight; fetching
+827 silly fetchAndShaCheck shasum 3eb5ed62622756d79a5f0e2a221dfebad75c2f7e
+828 silly fetchAndShaCheck shasum 98d8385553a3a4dca11c7b3116deb519bc5961a7
+829 http fetch 200 https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz
+830 info retry fetch attempt 1 at 1:41:07 AM
+831 info attempt registry request try #1 at 1:41:07 AM
+832 http fetch GET https://registry.npmjs.org/semver/-/semver-7.3.7.tgz
+833 silly mapToRegistry name async
+834 silly mapToRegistry using default registry
+835 silly mapToRegistry registry https://registry.npmjs.org/
+836 silly mapToRegistry uri https://registry.npmjs.org/async
+837 verbose addRemoteTarball https://registry.npmjs.org/async/-/async-3.2.3.tgz not in flight; adding
+838 verbose addRemoteTarball [ 'https://registry.npmjs.org/async/-/async-3.2.3.tgz',
+838 verbose addRemoteTarball   'ac53dafd3f4720ee9e8a160628f18ea91df196c9' ]
+839 http fetch 200 https://registry.npmjs.org/@pm2/agent/-/agent-2.0.1.tgz
+840 verbose get https://registry.npmjs.org/pm2-axon not expired, no request
+841 silly addNameRange number 2 { name: 'pm2-axon', range: '>=4.0.1 <4.1.0', hasData: true }
+842 silly addNameRange versions [ 'pm2-axon',
+842 silly addNameRange   [ '2.0.0',
+842 silly addNameRange     '2.0.1',
+842 silly addNameRange     '2.0.2',
+842 silly addNameRange     '2.0.3',
+842 silly addNameRange     '2.0.4',
+842 silly addNameRange     '2.0.5',
+842 silly addNameRange     '2.0.6',
+842 silly addNameRange     '2.0.7',
+842 silly addNameRange     '2.0.8',
+842 silly addNameRange     '2.0.9',
+842 silly addNameRange     '2.0.10',
+842 silly addNameRange     '2.0.11',
+842 silly addNameRange     '3.0.1',
+842 silly addNameRange     '3.0.2',
+842 silly addNameRange     '3.0.3',
+842 silly addNameRange     '3.1.0',
+842 silly addNameRange     '3.2.0',
+842 silly addNameRange     '3.3.0',
+842 silly addNameRange     '4.0.0',
+842 silly addNameRange     '4.0.1' ] ]
+843 silly addNamed pm2-axon@4.0.1
+844 verbose addNamed "4.0.1" is a plain semver version for pm2-axon
+845 http fetch 200 https://registry.npmjs.org/blessed/-/blessed-0.1.81.tgz
+846 http fetch 200 https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.19.tgz
+847 info retry fetch attempt 1 at 1:41:07 AM
+848 info attempt registry request try #1 at 1:41:07 AM
+849 http fetch GET https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz
+850 verbose get https://registry.npmjs.org/debug not expired, no request
+851 silly addNameRange number 2 { name: 'debug', range: '>=4.3.1 <5.0.0', hasData: true }
+852 silly addNameRange versions [ 'debug',
+852 silly addNameRange   [ '0.0.1',
+852 silly addNameRange     '0.1.0',
+852 silly addNameRange     '0.2.0',
+852 silly addNameRange     '0.3.0',
+852 silly addNameRange     '0.4.0',
+852 silly addNameRange     '0.4.1',
+852 silly addNameRange     '0.5.0',
+852 silly addNameRange     '0.6.0',
+852 silly addNameRange     '0.7.0',
+852 silly addNameRange     '0.7.1',
+852 silly addNameRange     '0.7.2',
+852 silly addNameRange     '0.7.3',
+852 silly addNameRange     '0.7.4',
+852 silly addNameRange     '0.8.0',
+852 silly addNameRange     '0.8.1',
+852 silly addNameRange     '1.0.0',
+852 silly addNameRange     '1.0.1',
+852 silly addNameRange     '1.0.2',
+852 silly addNameRange     '1.0.3',
+852 silly addNameRange     '1.0.4',
+852 silly addNameRange     '2.0.0',
+852 silly addNameRange     '2.1.0',
+852 silly addNameRange     '2.1.1',
+852 silly addNameRange     '2.1.2',
+852 silly addNameRange     '2.1.3',
+852 silly addNameRange     '2.2.0',
+852 silly addNameRange     '2.3.0',
+852 silly addNameRange     '2.3.1',
+852 silly addNameRange     '2.3.2',
+852 silly addNameRange     '2.3.3',
+852 silly addNameRange     '2.4.0',
+852 silly addNameRange     '2.4.1',
+852 silly addNameRange     '2.4.2',
+852 silly addNameRange     '2.4.3',
+852 silly addNameRange     '2.4.4',
+852 silly addNameRange     '2.4.5',
+852 silly addNameRange     '2.5.0',
+852 silly addNameRange     '2.5.1',
+852 silly addNameRange     '2.5.2',
+852 silly addNameRange     '2.6.0',
+852 silly addNameRange     '2.6.1',
+852 silly addNameRange     '2.6.2',
+852 silly addNameRange     '2.6.3',
+852 silly addNameRange     '2.6.4',
+852 silly addNameRange     '2.6.5',
+852 silly addNameRange     '2.6.6',
+852 silly addNameRange     '2.6.7',
+852 silly addNameRange     '2.6.8',
+852 silly addNameRange     '1.0.5',
+852 silly addNameRange     '3.0.0',
+852 silly addNameRange     '3.0.1',
+852 silly addNameRange     '2.6.9',
+852 silly addNameRange     '3.1.0',
+852 silly addNameRange     '3.2.0',
+852 silly addNameRange     '3.2.1',
+852 silly addNameRange     '3.2.2',
+852 silly addNameRange     '3.2.3',
+852 silly addNameRange     '4.0.0',
+852 silly addNameRange     '3.2.4',
+852 silly addNameRange     '3.2.5',
+852 silly addNameRange     '4.0.1',
+852 silly addNameRange     '4.1.0',
+852 silly addNameRange     '3.2.6',
+852 silly addNameRange     '4.1.1',
+852 silly addNameRange     '4.2.0',
+852 silly addNameRange     '4.3.0',
+852 silly addNameRange     '4.3.1',
+852 silly addNameRange     '3.2.7',
+852 silly addNameRange     '4.3.2',
+852 silly addNameRange     '4.3.3',
+852 silly addNameRange     '4.3.4' ] ]
+853 silly addNamed debug@4.3.4
+854 verbose addNamed "4.3.4" is a plain semver version for debug
+855 info retry fetch attempt 1 at 1:41:07 AM
+856 info attempt registry request try #1 at 1:41:07 AM
+857 http fetch GET https://registry.npmjs.org/needle/-/needle-2.4.0.tgz
+858 verbose get https://registry.npmjs.org/chokidar not expired, no request
+859 silly addNameRange number 2 { name: 'chokidar', range: '>=3.5.1 <4.0.0', hasData: true }
+860 silly addNameRange versions [ 'chokidar',
+860 silly addNameRange   [ '0.1.1',
+860 silly addNameRange     '0.2.0',
+860 silly addNameRange     '0.2.1',
+860 silly addNameRange     '0.2.2',
+860 silly addNameRange     '0.2.3',
+860 silly addNameRange     '0.2.4',
+860 silly addNameRange     '0.2.5',
+860 silly addNameRange     '0.2.6',
+860 silly addNameRange     '0.3.0',
+860 silly addNameRange     '0.4.0',
+860 silly addNameRange     '0.5.0',
+860 silly addNameRange     '0.5.1',
+860 silly addNameRange     '0.5.2',
+860 silly addNameRange     '0.5.3',
+860 silly addNameRange     '0.6.0',
+860 silly addNameRange     '0.6.1',
+860 silly addNameRange     '0.6.2',
+860 silly addNameRange     '0.6.3',
+860 silly addNameRange     '0.7.0',
+860 silly addNameRange     '0.7.1',
+860 silly addNameRange     '0.8.0',
+860 silly addNameRange     '0.8.1',
+860 silly addNameRange     '0.8.2',
+860 silly addNameRange     '0.8.3',
+860 silly addNameRange     '0.8.4',
+860 silly addNameRange     '0.9.0',
+860 silly addNameRange     '0.10.0',
+860 silly addNameRange     '0.10.1',
+860 silly addNameRange     '0.10.2',
+860 silly addNameRange     '0.10.3',
+860 silly addNameRange     '0.10.4',
+860 silly addNameRange     '0.10.5',
+860 silly addNameRange     '0.10.6',
+860 silly addNameRange     '0.10.7',
+860 silly addNameRange     '0.10.8',
+860 silly addNameRange     '0.10.9',
+860 silly addNameRange     '0.11.0',
+860 silly addNameRange     '0.11.1',
+860 silly addNameRange     '0.12.0',
+860 silly addNameRange     '0.12.1',
+860 silly addNameRange     '0.12.2',
+860 silly addNameRange     '0.12.3',
+860 silly addNameRange     '0.12.4',
+860 silly addNameRange     '0.12.5',
+860 silly addNameRange     '0.12.6',
+860 silly addNameRange     '1.0.0-rc1',
+860 silly addNameRange     '1.0.0-rc1.1',
+860 silly addNameRange     '1.0.0-rc2',
+860 silly addNameRange     '1.0.0-rc3',
+860 silly addNameRange     '1.0.0-rc4',
+860 silly addNameRange     '1.0.0-rc5',
+860 silly addNameRange     '1.0.0',
+860 silly addNameRange     '1.0.1',
+860 silly addNameRange     '1.0.2',
+860 silly addNameRange     '1.0.3',
+860 silly addNameRange     '1.0.4',
+860 silly addNameRange     '1.0.5',
+860 silly addNameRange     '1.0.6',
+860 silly addNameRange     '1.1.0',
+860 silly addNameRange     '1.2.0',
+860 silly addNameRange     '1.3.0',
+860 silly addNameRange     '1.4.0',
+860 silly addNameRange     '1.4.1',
+860 silly addNameRange     '1.4.2',
+860 silly addNameRange     '1.4.3',
+860 silly addNameRange     '1.5.0',
+860 silly addNameRange     '1.5.1',
+860 silly addNameRange     '1.5.2',
+860 silly addNameRange     '1.6.0',
+860 silly addNameRange     '1.6.1',
+860 silly addNameRange     '1.7.0',
+860 silly addNameRange     '2.0.0',
+860 silly addNameRange     '2.0.1',
+860 silly addNameRange     '2.0.2',
+860 silly addNameRange     '2.0.3',
+860 silly addNameRange     '2.0.4',
+860 silly addNameRange     '2.1.0',
+860 silly addNameRange     '2.1.1',
+860 silly addNameRange     '2.1.2',
+860 silly addNameRange     '2.1.3',
+860 silly addNameRange     '2.1.4',
+860 silly addNameRange     '2.1.5',
+860 silly addNameRange     '3.0.0',
+860 silly addNameRange     '2.1.6',
+860 silly addNameRange     '3.0.1',
+860 silly addNameRange     '3.0.2',
+860 silly addNameRange     '2.1.8',
+860 silly addNameRange     '3.1.0',
+860 silly addNameRange     '3.1.1',
+860 silly addNameRange     '3.2.0',
+860 silly addNameRange     '3.2.1',
+860 silly addNameRange     '3.2.2',
+860 silly addNameRange     '3.2.3',
+860 silly addNameRange     '3.3.0',
+860 silly addNameRange     '3.3.1',
+860 silly addNameRange     '3.4.0',
+860 silly addNameRange     '3.4.1',
+860 silly addNameRange     '3.4.2',
+860 silly addNameRange     '3.4.3',
+860 silly addNameRange     '3.5.0',
+860 silly addNameRange     ... 3 more items ] ]
+861 silly addNamed chokidar@3.5.3
+862 verbose addNamed "3.5.3" is a plain semver version for chokidar
+863 silly mapToRegistry name pm2-axon
+864 silly mapToRegistry using default registry
+865 silly mapToRegistry registry https://registry.npmjs.org/
+866 silly mapToRegistry uri https://registry.npmjs.org/pm2-axon
+867 verbose addRemoteTarball https://registry.npmjs.org/pm2-axon/-/pm2-axon-4.0.1.tgz not in flight; adding
+868 verbose addRemoteTarball [ 'https://registry.npmjs.org/pm2-axon/-/pm2-axon-4.0.1.tgz',
+868 verbose addRemoteTarball   'a7b4bb586e9aeb35b1042b488cde15b60cabafd2' ]
+869 verbose get https://registry.npmjs.org/vizion not expired, no request
+870 silly addNameRange number 2 { name: 'vizion', range: '>=2.2.1 <2.3.0', hasData: true }
+871 silly addNameRange versions [ 'vizion',
+871 silly addNameRange   [ '0.1.0',
+871 silly addNameRange     '0.1.1',
+871 silly addNameRange     '0.1.2',
+871 silly addNameRange     '0.1.3',
+871 silly addNameRange     '0.1.4',
+871 silly addNameRange     '0.1.5',
+871 silly addNameRange     '0.1.6',
+871 silly addNameRange     '0.1.7',
+871 silly addNameRange     '0.1.8',
+871 silly addNameRange     '0.1.9',
+871 silly addNameRange     '0.2.0',
+871 silly addNameRange     '0.2.1',
+871 silly addNameRange     '0.2.2',
+871 silly addNameRange     '0.2.3',
+871 silly addNameRange     '0.2.4',
+871 silly addNameRange     '0.2.5',
+871 silly addNameRange     '0.2.6',
+871 silly addNameRange     '0.2.7',
+871 silly addNameRange     '0.2.8',
+871 silly addNameRange     '0.2.9',
+871 silly addNameRange     '0.2.10',
+871 silly addNameRange     '0.2.11',
+871 silly addNameRange     '0.2.12',
+871 silly addNameRange     '0.2.13',
+871 silly addNameRange     '1.0.0-beta1',
+871 silly addNameRange     '2.0.0',
+871 silly addNameRange     '2.0.1',
+871 silly addNameRange     '2.0.2',
+871 silly addNameRange     '2.1.0',
+871 silly addNameRange     '2.1.1',
+871 silly addNameRange     '2.2.0',
+871 silly addNameRange     '2.2.1' ] ]
+872 silly addNamed vizion@2.2.1
+873 verbose addNamed "2.2.1" is a plain semver version for vizion
+874 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz not in flight; adding
+875 verbose addTmpTarball already have metadata; skipping unpack for mkdirp@1.0.4
+876 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/pm2-deploy/-/pm2-deploy-1.0.2.tgz not in flight; adding
+877 verbose addTmpTarball already have metadata; skipping unpack for pm2-deploy@1.0.2
+878 http 200 https://registry.npmjs.org/cli-tableau
+879 verbose headers { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+879 verbose headers   'content-type': 'application/json',
+879 verbose headers   'transfer-encoding': 'chunked',
+879 verbose headers   connection: 'keep-alive',
+879 verbose headers   'cf-ray': '6fc9377d9dcd7fe1-IAD',
+879 verbose headers   'access-control-allow-origin': '*',
+879 verbose headers   'cache-control': 'public, max-age=300',
+879 verbose headers   etag: 'W/"1351355856f024a62c9b825f02b3ab53"',
+879 verbose headers   'last-modified': 'Tue, 12 Apr 2022 06:41:27 GMT',
+879 verbose headers   vary: 'accept-encoding, accept',
+879 verbose headers   'cf-cache-status': 'REVALIDATED',
+879 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+879 verbose headers   'x-amz-replication-status': 'COMPLETED',
+879 verbose headers   server: 'cloudflare',
+879 verbose headers   'content-encoding': 'gzip' }
+880 silly get cb [ 200,
+880 silly get   { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+880 silly get     'content-type': 'application/json',
+880 silly get     'transfer-encoding': 'chunked',
+880 silly get     connection: 'keep-alive',
+880 silly get     'cf-ray': '6fc9377d9dcd7fe1-IAD',
+880 silly get     'access-control-allow-origin': '*',
+880 silly get     'cache-control': 'public, max-age=300',
+880 silly get     etag: 'W/"1351355856f024a62c9b825f02b3ab53"',
+880 silly get     'last-modified': 'Tue, 12 Apr 2022 06:41:27 GMT',
+880 silly get     vary: 'accept-encoding, accept',
+880 silly get     'cf-cache-status': 'REVALIDATED',
+880 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+880 silly get     'x-amz-replication-status': 'COMPLETED',
+880 silly get     server: 'cloudflare',
+880 silly get     'content-encoding': 'gzip' } ]
+881 verbose get saving cli-tableau to /root/.npm/registry.npmjs.org/cli-tableau/.cache.json
+882 info retry fetch attempt 1 at 1:41:07 AM
+883 info attempt registry request try #1 at 1:41:07 AM
+884 http fetch GET https://registry.npmjs.org/async/-/async-3.2.3.tgz
+885 silly mapToRegistry name debug
+886 silly mapToRegistry using default registry
+887 silly mapToRegistry registry https://registry.npmjs.org/
+888 silly mapToRegistry uri https://registry.npmjs.org/debug
+889 verbose addRemoteTarball https://registry.npmjs.org/debug/-/debug-4.3.4.tgz not in flight; adding
+890 verbose addRemoteTarball [ 'https://registry.npmjs.org/debug/-/debug-4.3.4.tgz',
+890 verbose addRemoteTarball   '1319f6579357f2338d3337d2cdd4914bb5dcc865' ]
+891 silly mapToRegistry name chokidar
+892 silly mapToRegistry using default registry
+893 silly mapToRegistry registry https://registry.npmjs.org/
+894 silly mapToRegistry uri https://registry.npmjs.org/chokidar
+895 verbose addRemoteTarball https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz not in flight; adding
+896 verbose addRemoteTarball [ 'https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz',
+896 verbose addRemoteTarball   '1cf37c8707b932bd1af1ae22c0432e2acd1903bd' ]
+897 silly mapToRegistry name vizion
+898 silly mapToRegistry using default registry
+899 silly mapToRegistry registry https://registry.npmjs.org/
+900 silly mapToRegistry uri https://registry.npmjs.org/vizion
+901 verbose addRemoteTarball https://registry.npmjs.org/vizion/-/vizion-2.2.1.tgz not in flight; adding
+902 verbose addRemoteTarball [ 'https://registry.npmjs.org/vizion/-/vizion-2.2.1.tgz',
+902 verbose addRemoteTarball   '04201ea45ffd145d5b5210e385a8f35170387fb2' ]
+903 http 200 https://registry.npmjs.org/pm2-axon-rpc
+904 verbose headers { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+904 verbose headers   'content-type': 'application/json',
+904 verbose headers   'transfer-encoding': 'chunked',
+904 verbose headers   connection: 'keep-alive',
+904 verbose headers   'cf-ray': '6fc9377d9c157f86-IAD',
+904 verbose headers   'access-control-allow-origin': '*',
+904 verbose headers   'cache-control': 'public, max-age=300',
+904 verbose headers   etag: 'W/"47307850fb717fc2b6e61a8cd37aac61"',
+904 verbose headers   'last-modified': 'Thu, 01 Apr 2021 11:15:39 GMT',
+904 verbose headers   vary: 'accept-encoding, accept',
+904 verbose headers   'cf-cache-status': 'REVALIDATED',
+904 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+904 verbose headers   server: 'cloudflare',
+904 verbose headers   'content-encoding': 'gzip' }
+905 silly get cb [ 200,
+905 silly get   { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+905 silly get     'content-type': 'application/json',
+905 silly get     'transfer-encoding': 'chunked',
+905 silly get     connection: 'keep-alive',
+905 silly get     'cf-ray': '6fc9377d9c157f86-IAD',
+905 silly get     'access-control-allow-origin': '*',
+905 silly get     'cache-control': 'public, max-age=300',
+905 silly get     etag: 'W/"47307850fb717fc2b6e61a8cd37aac61"',
+905 silly get     'last-modified': 'Thu, 01 Apr 2021 11:15:39 GMT',
+905 silly get     vary: 'accept-encoding, accept',
+905 silly get     'cf-cache-status': 'REVALIDATED',
+905 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+905 silly get     server: 'cloudflare',
+905 silly get     'content-encoding': 'gzip' } ]
+906 verbose get saving pm2-axon-rpc to /root/.npm/registry.npmjs.org/pm2-axon-rpc/.cache.json
+907 silly fetchAndShaCheck shasum 3f73c2bf526591f574cc492c51e2456349f844e4
+908 http fetch 200 https://registry.npmjs.org/eventemitter2/-/eventemitter2-5.0.1.tgz
+909 http fetch 200 https://registry.npmjs.org/semver/-/semver-7.3.7.tgz
+910 verbose get https://registry.npmjs.org/pidusage not expired, no request
+911 silly addNameRange number 2 { name: 'pidusage', range: '>=3.0.0 <3.1.0', hasData: true }
+912 silly addNameRange versions [ 'pidusage',
+912 silly addNameRange   [ '0.0.1',
+912 silly addNameRange     '0.0.2',
+912 silly addNameRange     '0.0.3',
+912 silly addNameRange     '0.0.4',
+912 silly addNameRange     '0.0.5',
+912 silly addNameRange     '0.0.6',
+912 silly addNameRange     '0.0.7',
+912 silly addNameRange     '0.1.0',
+912 silly addNameRange     '0.1.1',
+912 silly addNameRange     '1.0.0',
+912 silly addNameRange     '1.0.1',
+912 silly addNameRange     '1.0.2',
+912 silly addNameRange     '1.0.3',
+912 silly addNameRange     '1.0.4',
+912 silly addNameRange     '1.0.5',
+912 silly addNameRange     '1.0.6',
+912 silly addNameRange     '1.0.7',
+912 silly addNameRange     '1.0.8',
+912 silly addNameRange     '1.1.0',
+912 silly addNameRange     '1.1.1',
+912 silly addNameRange     '1.1.2',
+912 silly addNameRange     '1.1.3',
+912 silly addNameRange     '1.1.4',
+912 silly addNameRange     '1.1.5',
+912 silly addNameRange     '1.1.6',
+912 silly addNameRange     '1.2.0',
+912 silly addNameRange     '2.0.0',
+912 silly addNameRange     '2.0.1',
+912 silly addNameRange     '2.0.2',
+912 silly addNameRange     '2.0.3',
+912 silly addNameRange     '2.0.4',
+912 silly addNameRange     '2.0.5',
+912 silly addNameRange     '2.0.6',
+912 silly addNameRange     '2.0.7',
+912 silly addNameRange     '2.0.8',
+912 silly addNameRange     '2.0.9',
+912 silly addNameRange     '2.0.10',
+912 silly addNameRange     '2.0.11',
+912 silly addNameRange     '2.0.13',
+912 silly addNameRange     '2.0.12',
+912 silly addNameRange     '2.0.15',
+912 silly addNameRange     '2.0.16',
+912 silly addNameRange     '2.0.17',
+912 silly addNameRange     '2.0.18',
+912 silly addNameRange     '2.0.19',
+912 silly addNameRange     '2.0.20',
+912 silly addNameRange     '2.0.21',
+912 silly addNameRange     '3.0.0' ] ]
+913 silly addNamed pidusage@3.0.0
+914 verbose addNamed "3.0.0" is a plain semver version for pidusage
+915 silly mapToRegistry name pidusage
+916 silly mapToRegistry using default registry
+917 silly mapToRegistry registry https://registry.npmjs.org/
+918 silly mapToRegistry uri https://registry.npmjs.org/pidusage
+919 verbose addRemoteTarball https://registry.npmjs.org/pidusage/-/pidusage-3.0.0.tgz not in flight; adding
+920 verbose addRemoteTarball [ 'https://registry.npmjs.org/pidusage/-/pidusage-3.0.0.tgz',
+920 verbose addRemoteTarball   '69108079724c9afdd958644b920bc40bac964044' ]
+921 info retry fetch attempt 1 at 1:41:07 AM
+922 info attempt registry request try #1 at 1:41:07 AM
+923 http fetch GET https://registry.npmjs.org/pm2-axon/-/pm2-axon-4.0.1.tgz
+924 info retry fetch attempt 1 at 1:41:07 AM
+925 info attempt registry request try #1 at 1:41:07 AM
+926 http fetch GET https://registry.npmjs.org/debug/-/debug-4.3.4.tgz
+927 info retry fetch attempt 1 at 1:41:07 AM
+928 info attempt registry request try #1 at 1:41:07 AM
+929 http fetch GET https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz
+930 info retry fetch attempt 1 at 1:41:07 AM
+931 info attempt registry request try #1 at 1:41:07 AM
+932 http fetch GET https://registry.npmjs.org/vizion/-/vizion-2.2.1.tgz
+933 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/chalk/-/chalk-3.0.0.tgz not in flight; adding
+934 verbose addTmpTarball already have metadata; skipping unpack for chalk@3.0.0
+935 silly fetchAndShaCheck shasum 6197a095d5fb6b57e8942f6fd7eaad63a09c9452
+936 silly fetchAndShaCheck shasum a98b62f86dcaf4f67399648c085291ab9e8fed61
+937 http 200 https://registry.npmjs.org/promptly
+938 verbose headers { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+938 verbose headers   'content-type': 'application/json',
+938 verbose headers   'transfer-encoding': 'chunked',
+938 verbose headers   connection: 'keep-alive',
+938 verbose headers   'cf-ray': '6fc9377d9b195dc8-IAD',
+938 verbose headers   'access-control-allow-origin': '*',
+938 verbose headers   'cache-control': 'public, max-age=300',
+938 verbose headers   etag: 'W/"7c2ede94e81c3d56f9d5c8b2a64f01f3"',
+938 verbose headers   'last-modified': 'Fri, 06 Nov 2020 01:03:40 GMT',
+938 verbose headers   vary: 'accept-encoding, accept',
+938 verbose headers   'cf-cache-status': 'REVALIDATED',
+938 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+938 verbose headers   server: 'cloudflare',
+938 verbose headers   'content-encoding': 'gzip' }
+939 silly get cb [ 200,
+939 silly get   { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+939 silly get     'content-type': 'application/json',
+939 silly get     'transfer-encoding': 'chunked',
+939 silly get     connection: 'keep-alive',
+939 silly get     'cf-ray': '6fc9377d9b195dc8-IAD',
+939 silly get     'access-control-allow-origin': '*',
+939 silly get     'cache-control': 'public, max-age=300',
+939 silly get     etag: 'W/"7c2ede94e81c3d56f9d5c8b2a64f01f3"',
+939 silly get     'last-modified': 'Fri, 06 Nov 2020 01:03:40 GMT',
+939 silly get     vary: 'accept-encoding, accept',
+939 silly get     'cf-cache-status': 'REVALIDATED',
+939 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+939 silly get     server: 'cloudflare',
+939 silly get     'content-encoding': 'gzip' } ]
+940 verbose get saving promptly to /root/.npm/registry.npmjs.org/promptly/.cache.json
+941 info retry fetch attempt 1 at 1:41:07 AM
+942 info attempt registry request try #1 at 1:41:07 AM
+943 http fetch GET https://registry.npmjs.org/pidusage/-/pidusage-3.0.0.tgz
+944 silly fetchAndShaCheck shasum 0edffc54cd8ee2b12f90136264e7880f3f78c79d
+945 http fetch 200 https://registry.npmjs.org/needle/-/needle-2.4.0.tgz
+946 http fetch 200 https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz
+947 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/eventemitter2/-/eventemitter2-5.0.1.tgz not in flight; adding
+948 verbose addTmpTarball already have metadata; skipping unpack for eventemitter2@5.0.1
+949 silly fetchAndShaCheck shasum 12c5b649afdbf9049707796e22a4028814ce523f
+950 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/source-map-support/-/source-map-support-0.5.19.tgz not in flight; adding
+951 verbose addTmpTarball already have metadata; skipping unpack for source-map-support@0.5.19
+952 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/_40pm2/agent/-/agent-2.0.1.tgz not in flight; adding
+953 verbose addTmpTarball already have metadata; skipping unpack for @pm2/agent@2.0.1
+954 http 200 https://registry.npmjs.org/pm2-sysmonit
+955 verbose headers { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+955 verbose headers   'content-type': 'application/json',
+955 verbose headers   'transfer-encoding': 'chunked',
+955 verbose headers   connection: 'keep-alive',
+955 verbose headers   'cf-ray': '6fc9377d9c946faa-IAD',
+955 verbose headers   'access-control-allow-origin': '*',
+955 verbose headers   'cache-control': 'public, max-age=300',
+955 verbose headers   etag: 'W/"1bb40205840e36fb8e702f3e891d7ccc"',
+955 verbose headers   'last-modified': 'Tue, 08 Jun 2021 08:25:22 GMT',
+955 verbose headers   vary: 'accept-encoding, accept',
+955 verbose headers   'cf-cache-status': 'REVALIDATED',
+955 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+955 verbose headers   server: 'cloudflare',
+955 verbose headers   'content-encoding': 'gzip' }
+956 silly get cb [ 200,
+956 silly get   { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+956 silly get     'content-type': 'application/json',
+956 silly get     'transfer-encoding': 'chunked',
+956 silly get     connection: 'keep-alive',
+956 silly get     'cf-ray': '6fc9377d9c946faa-IAD',
+956 silly get     'access-control-allow-origin': '*',
+956 silly get     'cache-control': 'public, max-age=300',
+956 silly get     etag: 'W/"1bb40205840e36fb8e702f3e891d7ccc"',
+956 silly get     'last-modified': 'Tue, 08 Jun 2021 08:25:22 GMT',
+956 silly get     vary: 'accept-encoding, accept',
+956 silly get     'cf-cache-status': 'REVALIDATED',
+956 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+956 silly get     server: 'cloudflare',
+956 silly get     'content-encoding': 'gzip' } ]
+957 verbose get saving pm2-sysmonit to /root/.npm/registry.npmjs.org/pm2-sysmonit/.cache.json
+958 silly fetchAndShaCheck shasum dc060bf267447b39f7304e9b2bfbe8b5a7ddb03b
+959 silly resolveWithNewModule cli-tableau@2.0.1 checking installable status
+960 silly cache add args [ 'cli-tableau@^2.0.0', null ]
+961 verbose cache add spec cli-tableau@^2.0.0
+962 silly cache add parsed spec Result {
+962 silly cache add   raw: 'cli-tableau@^2.0.0',
+962 silly cache add   scope: null,
+962 silly cache add   name: 'cli-tableau',
+962 silly cache add   rawSpec: '^2.0.0',
+962 silly cache add   spec: '>=2.0.0 <3.0.0',
+962 silly cache add   type: 'range' }
+963 silly addNamed cli-tableau@>=2.0.0 <3.0.0
+964 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for cli-tableau
+965 silly addNameRange { name: 'cli-tableau', range: '>=2.0.0 <3.0.0', hasData: false }
+966 silly mapToRegistry name cli-tableau
+967 silly mapToRegistry using default registry
+968 silly mapToRegistry registry https://registry.npmjs.org/
+969 silly mapToRegistry uri https://registry.npmjs.org/cli-tableau
+970 verbose addNameRange registry:https://registry.npmjs.org/cli-tableau not in flight; fetching
+971 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/semver/-/semver-7.3.7.tgz not in flight; adding
+972 verbose addTmpTarball already have metadata; skipping unpack for semver@7.3.7
+973 http fetch 200 https://registry.npmjs.org/async/-/async-3.2.3.tgz
+974 silly resolveWithNewModule pm2-axon-rpc@0.7.1 checking installable status
+975 silly cache add args [ 'pm2-axon-rpc@~0.7.1', null ]
+976 verbose cache add spec pm2-axon-rpc@~0.7.1
+977 silly cache add parsed spec Result {
+977 silly cache add   raw: 'pm2-axon-rpc@~0.7.1',
+977 silly cache add   scope: null,
+977 silly cache add   name: 'pm2-axon-rpc',
+977 silly cache add   rawSpec: '~0.7.1',
+977 silly cache add   spec: '>=0.7.1 <0.8.0',
+977 silly cache add   type: 'range' }
+978 silly addNamed pm2-axon-rpc@>=0.7.1 <0.8.0
+979 verbose addNamed ">=0.7.1 <0.8.0" is a valid semver range for pm2-axon-rpc
+980 silly addNameRange { name: 'pm2-axon-rpc', range: '>=0.7.1 <0.8.0', hasData: false }
+981 silly mapToRegistry name pm2-axon-rpc
+982 silly mapToRegistry using default registry
+983 silly mapToRegistry registry https://registry.npmjs.org/
+984 silly mapToRegistry uri https://registry.npmjs.org/pm2-axon-rpc
+985 verbose addNameRange registry:https://registry.npmjs.org/pm2-axon-rpc not in flight; fetching
+986 http fetch 200 https://registry.npmjs.org/vizion/-/vizion-2.2.1.tgz
+987 silly cache afterAdd pm2-multimeter@0.1.2
+988 verbose afterAdd /root/.npm/pm2-multimeter/0.1.2/package/package.json not in flight; writing
+989 http fetch 200 https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz
+990 http fetch 200 https://registry.npmjs.org/pm2-axon/-/pm2-axon-4.0.1.tgz
+991 http fetch 200 https://registry.npmjs.org/pidusage/-/pidusage-3.0.0.tgz
+992 silly cache afterAdd sprintf-js@1.1.2
+993 verbose afterAdd /root/.npm/sprintf-js/1.1.2/package/package.json not in flight; writing
+994 silly cache afterAdd fclone@1.0.11
+995 verbose afterAdd /root/.npm/fclone/1.0.11/package/package.json not in flight; writing
+996 silly fetchAndShaCheck shasum 6833e74975c444642590e15a750288c5f939b57c
+997 silly fetchAndShaCheck shasum 2a7fe5dd634a1e4125a975ec994ff5456dc3734d
+998 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/yamljs/-/yamljs-0.3.0.tgz not in flight; adding
+999 verbose addTmpTarball already have metadata; skipping unpack for yamljs@0.3.0
+1000 verbose get https://registry.npmjs.org/cli-tableau not expired, no request
+1001 silly addNameRange number 2 { name: 'cli-tableau', range: '>=2.0.0 <3.0.0', hasData: true }
+1002 silly addNameRange versions [ 'cli-tableau', [ '2.0.0', '2.0.1' ] ]
+1003 silly addNamed cli-tableau@2.0.1
+1004 verbose addNamed "2.0.1" is a plain semver version for cli-tableau
+1005 silly resolveWithNewModule promptly@2.2.0 checking installable status
+1006 silly cache add args [ 'promptly@^2', null ]
+1007 verbose cache add spec promptly@^2
+1008 silly cache add parsed spec Result {
+1008 silly cache add   raw: 'promptly@^2',
+1008 silly cache add   scope: null,
+1008 silly cache add   name: 'promptly',
+1008 silly cache add   rawSpec: '^2',
+1008 silly cache add   spec: '>=2.0.0 <3.0.0',
+1008 silly cache add   type: 'range' }
+1009 silly addNamed promptly@>=2.0.0 <3.0.0
+1010 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for promptly
+1011 silly addNameRange { name: 'promptly', range: '>=2.0.0 <3.0.0', hasData: false }
+1012 silly mapToRegistry name promptly
+1013 silly mapToRegistry using default registry
+1014 silly mapToRegistry registry https://registry.npmjs.org/
+1015 silly mapToRegistry uri https://registry.npmjs.org/promptly
+1016 verbose addNameRange registry:https://registry.npmjs.org/promptly not in flight; fetching
+1017 silly fetchAndShaCheck shasum 04201ea45ffd145d5b5210e385a8f35170387fb2
+1018 verbose get https://registry.npmjs.org/pm2-axon-rpc not expired, no request
+1019 silly addNameRange number 2 { name: 'pm2-axon-rpc', range: '>=0.7.1 <0.8.0', hasData: true }
+1020 silly addNameRange versions [ 'pm2-axon-rpc',
+1020 silly addNameRange   [ '0.0.2',
+1020 silly addNameRange     '0.2.0',
+1020 silly addNameRange     '0.2.1',
+1020 silly addNameRange     '0.3.1',
+1020 silly addNameRange     '0.3.2',
+1020 silly addNameRange     '0.3.3',
+1020 silly addNameRange     '0.3.4',
+1020 silly addNameRange     '0.3.5',
+1020 silly addNameRange     '0.3.6',
+1020 silly addNameRange     '0.4.0',
+1020 silly addNameRange     '0.4.2',
+1020 silly addNameRange     '0.4.3',
+1020 silly addNameRange     '0.4.4',
+1020 silly addNameRange     '0.4.5',
+1020 silly addNameRange     '0.4.6',
+1020 silly addNameRange     '0.5.0',
+1020 silly addNameRange     '0.5.1',
+1020 silly addNameRange     '0.5.2',
+1020 silly addNameRange     '0.6.0',
+1020 silly addNameRange     '0.7.0',
+1020 silly addNameRange     '0.7.1' ] ]
+1021 silly addNamed pm2-axon-rpc@0.7.1
+1022 verbose addNamed "0.7.1" is a plain semver version for pm2-axon-rpc
+1023 silly mapToRegistry name cli-tableau
+1024 silly mapToRegistry using default registry
+1025 silly mapToRegistry registry https://registry.npmjs.org/
+1026 silly mapToRegistry uri https://registry.npmjs.org/cli-tableau
+1027 verbose addRemoteTarball https://registry.npmjs.org/cli-tableau/-/cli-tableau-2.0.1.tgz not in flight; adding
+1028 verbose addRemoteTarball [ 'https://registry.npmjs.org/cli-tableau/-/cli-tableau-2.0.1.tgz',
+1028 verbose addRemoteTarball   'baa78d83e08a2d7ab79b7dad9406f0254977053f' ]
+1029 silly fetchAndShaCheck shasum a7b4bb586e9aeb35b1042b488cde15b60cabafd2
+1030 verbose afterAdd /root/.npm/pm2-multimeter/0.1.2/package/package.json written
+1031 silly mapToRegistry name pm2-axon-rpc
+1032 silly mapToRegistry using default registry
+1033 silly mapToRegistry registry https://registry.npmjs.org/
+1034 silly mapToRegistry uri https://registry.npmjs.org/pm2-axon-rpc
+1035 verbose addRemoteTarball https://registry.npmjs.org/pm2-axon-rpc/-/pm2-axon-rpc-0.7.1.tgz not in flight; adding
+1036 verbose addRemoteTarball [ 'https://registry.npmjs.org/pm2-axon-rpc/-/pm2-axon-rpc-0.7.1.tgz',
+1036 verbose addRemoteTarball   '2daec5383a63135b3f18babb70266dacdcbc429a' ]
+1037 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/needle/-/needle-2.4.0.tgz not in flight; adding
+1038 verbose addTmpTarball already have metadata; skipping unpack for needle@2.4.0
+1039 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz not in flight; adding
+1040 verbose addTmpTarball already have metadata; skipping unpack for enquirer@2.3.6
+1041 silly fetchAndShaCheck shasum 69108079724c9afdd958644b920bc40bac964044
+1042 http fetch 200 https://registry.npmjs.org/debug/-/debug-4.3.4.tgz
+1043 http 200 https://registry.npmjs.org/commander
+1044 verbose headers { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+1044 verbose headers   'content-type': 'application/json',
+1044 verbose headers   'transfer-encoding': 'chunked',
+1044 verbose headers   connection: 'keep-alive',
+1044 verbose headers   'cf-ray': '6fc9377d98895950-IAD',
+1044 verbose headers   'access-control-allow-origin': '*',
+1044 verbose headers   age: '246',
+1044 verbose headers   'cache-control': 'public, max-age=300',
+1044 verbose headers   etag: 'W/"dfc38b9f8b4e8d880055a0eb9bed12b2"',
+1044 verbose headers   'last-modified': 'Fri, 15 Apr 2022 08:17:57 GMT',
+1044 verbose headers   vary: 'accept-encoding, accept',
+1044 verbose headers   'cf-cache-status': 'HIT',
+1044 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+1044 verbose headers   'x-amz-replication-status': 'PENDING',
+1044 verbose headers   server: 'cloudflare',
+1044 verbose headers   'content-encoding': 'gzip' }
+1045 silly get cb [ 200,
+1045 silly get   { date: 'Sat, 16 Apr 2022 01:41:06 GMT',
+1045 silly get     'content-type': 'application/json',
+1045 silly get     'transfer-encoding': 'chunked',
+1045 silly get     connection: 'keep-alive',
+1045 silly get     'cf-ray': '6fc9377d98895950-IAD',
+1045 silly get     'access-control-allow-origin': '*',
+1045 silly get     age: '246',
+1045 silly get     'cache-control': 'public, max-age=300',
+1045 silly get     etag: 'W/"dfc38b9f8b4e8d880055a0eb9bed12b2"',
+1045 silly get     'last-modified': 'Fri, 15 Apr 2022 08:17:57 GMT',
+1045 silly get     vary: 'accept-encoding, accept',
+1045 silly get     'cf-cache-status': 'HIT',
+1045 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+1045 silly get     'x-amz-replication-status': 'PENDING',
+1045 silly get     server: 'cloudflare',
+1045 silly get     'content-encoding': 'gzip' } ]
+1046 verbose get saving commander to /root/.npm/registry.npmjs.org/commander/.cache.json
+1047 http 200 https://registry.npmjs.org/croner
+1048 verbose headers { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+1048 verbose headers   'content-type': 'application/json',
+1048 verbose headers   'transfer-encoding': 'chunked',
+1048 verbose headers   connection: 'keep-alive',
+1048 verbose headers   'cf-ray': '6fc9377d991b5a16-IAD',
+1048 verbose headers   'access-control-allow-origin': '*',
+1048 verbose headers   'cache-control': 'public, max-age=300',
+1048 verbose headers   etag: 'W/"ccabd4c619b5118fb85bd7763e5b21d2"',
+1048 verbose headers   'last-modified': 'Wed, 13 Apr 2022 19:57:19 GMT',
+1048 verbose headers   vary: 'accept-encoding, accept',
+1048 verbose headers   'cf-cache-status': 'REVALIDATED',
+1048 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+1048 verbose headers   'x-amz-replication-status': 'PENDING',
+1048 verbose headers   server: 'cloudflare',
+1048 verbose headers   'content-encoding': 'gzip' }
+1049 silly get cb [ 200,
+1049 silly get   { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+1049 silly get     'content-type': 'application/json',
+1049 silly get     'transfer-encoding': 'chunked',
+1049 silly get     connection: 'keep-alive',
+1049 silly get     'cf-ray': '6fc9377d991b5a16-IAD',
+1049 silly get     'access-control-allow-origin': '*',
+1049 silly get     'cache-control': 'public, max-age=300',
+1049 silly get     etag: 'W/"ccabd4c619b5118fb85bd7763e5b21d2"',
+1049 silly get     'last-modified': 'Wed, 13 Apr 2022 19:57:19 GMT',
+1049 silly get     vary: 'accept-encoding, accept',
+1049 silly get     'cf-cache-status': 'REVALIDATED',
+1049 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+1049 silly get     'x-amz-replication-status': 'PENDING',
+1049 silly get     server: 'cloudflare',
+1049 silly get     'content-encoding': 'gzip' } ]
+1050 verbose get saving croner to /root/.npm/registry.npmjs.org/croner/.cache.json
+1051 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/vizion/-/vizion-2.2.1.tgz not in flight; adding
+1052 verbose addTmpTarball already have metadata; skipping unpack for vizion@2.2.1
+1053 silly fetchAndShaCheck shasum 1cf37c8707b932bd1af1ae22c0432e2acd1903bd
+1054 verbose afterAdd /root/.npm/sprintf-js/1.1.2/package/package.json written
+1055 verbose afterAdd /root/.npm/fclone/1.0.11/package/package.json written
+1056 silly cache afterAdd mkdirp@1.0.4
+1057 verbose afterAdd /root/.npm/mkdirp/1.0.4/package/package.json not in flight; writing
+1058 silly cache afterAdd pm2-deploy@1.0.2
+1059 verbose afterAdd /root/.npm/pm2-deploy/1.0.2/package/package.json not in flight; writing
+1060 info retry fetch attempt 1 at 1:41:07 AM
+1061 info attempt registry request try #1 at 1:41:07 AM
+1062 http fetch GET https://registry.npmjs.org/cli-tableau/-/cli-tableau-2.0.1.tgz
+1063 silly resolveWithNewModule pm2-sysmonit@1.2.8 checking installable status
+1064 silly cache add args [ 'pm2-sysmonit@^1.2.8', null ]
+1065 verbose cache add spec pm2-sysmonit@^1.2.8
+1066 silly cache add parsed spec Result {
+1066 silly cache add   raw: 'pm2-sysmonit@^1.2.8',
+1066 silly cache add   scope: null,
+1066 silly cache add   name: 'pm2-sysmonit',
+1066 silly cache add   rawSpec: '^1.2.8',
+1066 silly cache add   spec: '>=1.2.8 <2.0.0',
+1066 silly cache add   type: 'range' }
+1067 silly addNamed pm2-sysmonit@>=1.2.8 <2.0.0
+1068 verbose addNamed ">=1.2.8 <2.0.0" is a valid semver range for pm2-sysmonit
+1069 silly addNameRange { name: 'pm2-sysmonit', range: '>=1.2.8 <2.0.0', hasData: false }
+1070 silly mapToRegistry name pm2-sysmonit
+1071 silly mapToRegistry using default registry
+1072 silly mapToRegistry registry https://registry.npmjs.org/
+1073 silly mapToRegistry uri https://registry.npmjs.org/pm2-sysmonit
+1074 verbose addNameRange registry:https://registry.npmjs.org/pm2-sysmonit not in flight; fetching
+1075 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/pm2-axon/-/pm2-axon-4.0.1.tgz not in flight; adding
+1076 verbose addTmpTarball already have metadata; skipping unpack for pm2-axon@4.0.1
+1077 info retry fetch attempt 1 at 1:41:07 AM
+1078 info attempt registry request try #1 at 1:41:07 AM
+1079 http fetch GET https://registry.npmjs.org/pm2-axon-rpc/-/pm2-axon-rpc-0.7.1.tgz
+1080 verbose get https://registry.npmjs.org/promptly not expired, no request
+1081 silly addNameRange number 2 { name: 'promptly', range: '>=2.0.0 <3.0.0', hasData: true }
+1082 silly addNameRange versions [ 'promptly',
+1082 silly addNameRange   [ '0.0.0',
+1082 silly addNameRange     '0.0.1',
+1082 silly addNameRange     '0.1.0',
+1082 silly addNameRange     '0.2.0',
+1082 silly addNameRange     '0.2.1',
+1082 silly addNameRange     '1.0.0',
+1082 silly addNameRange     '1.1.0',
+1082 silly addNameRange     '2.0.0',
+1082 silly addNameRange     '2.1.0',
+1082 silly addNameRange     '2.2.0',
+1082 silly addNameRange     '3.0.0',
+1082 silly addNameRange     '3.0.1',
+1082 silly addNameRange     '3.0.2',
+1082 silly addNameRange     '3.0.3',
+1082 silly addNameRange     '3.1.0',
+1082 silly addNameRange     '3.2.0' ] ]
+1083 silly addNamed promptly@2.2.0
+1084 verbose addNamed "2.2.0" is a plain semver version for promptly
+1085 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/pidusage/-/pidusage-3.0.0.tgz not in flight; adding
+1086 verbose addTmpTarball already have metadata; skipping unpack for pidusage@3.0.0
+1087 http 200 https://registry.npmjs.org/dayjs
+1088 verbose headers { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+1088 verbose headers   'content-type': 'application/json',
+1088 verbose headers   'transfer-encoding': 'chunked',
+1088 verbose headers   connection: 'keep-alive',
+1088 verbose headers   'cf-ray': '6fc9377d9ef49c22-IAD',
+1088 verbose headers   'access-control-allow-origin': '*',
+1088 verbose headers   'cache-control': 'public, max-age=300',
+1088 verbose headers   etag: 'W/"b75ff498965fc10e62e86306f9893b36"',
+1088 verbose headers   'last-modified': 'Fri, 15 Apr 2022 03:26:10 GMT',
+1088 verbose headers   vary: 'accept-encoding, accept',
+1088 verbose headers   'cf-cache-status': 'REVALIDATED',
+1088 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+1088 verbose headers   'x-amz-replication-status': 'COMPLETED',
+1088 verbose headers   server: 'cloudflare',
+1088 verbose headers   'content-encoding': 'gzip' }
+1089 silly get cb [ 200,
+1089 silly get   { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+1089 silly get     'content-type': 'application/json',
+1089 silly get     'transfer-encoding': 'chunked',
+1089 silly get     connection: 'keep-alive',
+1089 silly get     'cf-ray': '6fc9377d9ef49c22-IAD',
+1089 silly get     'access-control-allow-origin': '*',
+1089 silly get     'cache-control': 'public, max-age=300',
+1089 silly get     etag: 'W/"b75ff498965fc10e62e86306f9893b36"',
+1089 silly get     'last-modified': 'Fri, 15 Apr 2022 03:26:10 GMT',
+1089 silly get     vary: 'accept-encoding, accept',
+1089 silly get     'cf-cache-status': 'REVALIDATED',
+1089 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+1089 silly get     'x-amz-replication-status': 'COMPLETED',
+1089 silly get     server: 'cloudflare',
+1089 silly get     'content-encoding': 'gzip' } ]
+1090 verbose get saving dayjs to /root/.npm/registry.npmjs.org/dayjs/.cache.json
+1091 silly mapToRegistry name promptly
+1092 silly mapToRegistry using default registry
+1093 silly mapToRegistry registry https://registry.npmjs.org/
+1094 silly mapToRegistry uri https://registry.npmjs.org/promptly
+1095 verbose addRemoteTarball https://registry.npmjs.org/promptly/-/promptly-2.2.0.tgz not in flight; adding
+1096 verbose addRemoteTarball [ 'https://registry.npmjs.org/promptly/-/promptly-2.2.0.tgz',
+1096 verbose addRemoteTarball   '2a13fa063688a2a5983b161fff0108a07d26fc74' ]
+1097 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz not in flight; adding
+1098 verbose addTmpTarball already have metadata; skipping unpack for chokidar@3.5.3
+1099 silly fetchAndShaCheck shasum 1319f6579357f2338d3337d2cdd4914bb5dcc865
+1100 http 200 https://registry.npmjs.org/@pm2%2fpm2-version-check
+1101 verbose headers { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+1101 verbose headers   'content-type': 'application/json',
+1101 verbose headers   'transfer-encoding': 'chunked',
+1101 verbose headers   connection: 'keep-alive',
+1101 verbose headers   'cf-ray': '6fc9377d994c5db6-IAD',
+1101 verbose headers   'access-control-allow-origin': '*',
+1101 verbose headers   'cache-control': 'public, max-age=300',
+1101 verbose headers   etag: 'W/"78d74182389b6c5a44f4aa14bb8c9e7d"',
+1101 verbose headers   'last-modified': 'Wed, 06 Apr 2022 15:29:40 GMT',
+1101 verbose headers   vary: 'accept-encoding, accept',
+1101 verbose headers   'cf-cache-status': 'REVALIDATED',
+1101 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+1101 verbose headers   'x-amz-replication-status': 'COMPLETED',
+1101 verbose headers   server: 'cloudflare',
+1101 verbose headers   'content-encoding': 'gzip' }
+1102 silly get cb [ 200,
+1102 silly get   { date: 'Sat, 16 Apr 2022 01:41:07 GMT',
+1102 silly get     'content-type': 'application/json',
+1102 silly get     'transfer-encoding': 'chunked',
+1102 silly get     connection: 'keep-alive',
+1102 silly get     'cf-ray': '6fc9377d994c5db6-IAD',
+1102 silly get     'access-control-allow-origin': '*',
+1102 silly get     'cache-control': 'public, max-age=300',
+1102 silly get     etag: 'W/"78d74182389b6c5a44f4aa14bb8c9e7d"',
+1102 silly get     'last-modified': 'Wed, 06 Apr 2022 15:29:40 GMT',
+1102 silly get     vary: 'accept-encoding, accept',
+1102 silly get     'cf-cache-status': 'REVALIDATED',
+1102 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+1102 silly get     'x-amz-replication-status': 'COMPLETED',
+1102 silly get     server: 'cloudflare',
+1102 silly get     'content-encoding': 'gzip' } ]
+1103 verbose get saving @pm2/pm2-version-check to /root/.npm/registry.npmjs.org/_40pm2_252fpm2-version-check/.cache.json
+1104 http fetch 200 https://registry.npmjs.org/cli-tableau/-/cli-tableau-2.0.1.tgz
+1105 silly cache afterAdd chalk@3.0.0
+1106 verbose afterAdd /root/.npm/chalk/3.0.0/package/package.json not in flight; writing
+1107 http fetch 200 https://registry.npmjs.org/pm2-axon-rpc/-/pm2-axon-rpc-0.7.1.tgz
+1108 verbose afterAdd /root/.npm/mkdirp/1.0.4/package/package.json written
+1109 verbose afterAdd /root/.npm/pm2-deploy/1.0.2/package/package.json written
+1110 info retry fetch attempt 1 at 1:41:07 AM
+1111 info attempt registry request try #1 at 1:41:07 AM
+1112 http fetch GET https://registry.npmjs.org/promptly/-/promptly-2.2.0.tgz
+1113 verbose get https://registry.npmjs.org/pm2-sysmonit not expired, no request
+1114 silly addNameRange number 2 { name: 'pm2-sysmonit', range: '>=1.2.8 <2.0.0', hasData: true }
+1115 silly addNameRange versions [ 'pm2-sysmonit',
+1115 silly addNameRange   [ '1.0.0',
+1115 silly addNameRange     '1.0.1',
+1115 silly addNameRange     '1.0.2',
+1115 silly addNameRange     '1.0.3',
+1115 silly addNameRange     '1.0.4',
+1115 silly addNameRange     '1.0.5',
+1115 silly addNameRange     '1.0.6',
+1115 silly addNameRange     '1.1.0',
+1115 silly addNameRange     '1.1.1',
+1115 silly addNameRange     '1.1.2',
+1115 silly addNameRange     '1.2.0',
+1115 silly addNameRange     '1.2.1',
+1115 silly addNameRange     '1.2.2',
+1115 silly addNameRange     '1.2.3',
+1115 silly addNameRange     '1.2.4',
+1115 silly addNameRange     '1.2.5',
+1115 silly addNameRange     '1.2.6',
+1115 silly addNameRange     '1.2.7',
+1115 silly addNameRange     '1.2.8' ] ]
+1116 silly addNamed pm2-sysmonit@1.2.8
+1117 verbose addNamed "1.2.8" is a plain semver version for pm2-sysmonit
+1118 verbose addTmpTarball /tmp/npm-2892-6ce8c3f4/registry.npmjs.org/debug/-/debug-4.3.4.tgz not in flight; adding
+1119 verbose addTmpTarball already have metadata; skipping unpack for debug@4.3.4
+1120 silly mapToRegistry name pm2-sysmonit
+1121 silly mapToRegistry using default registry
+1122 silly mapToRegistry registry https://registry.npmjs.org/
+1123 silly mapToRegistry uri https://registry.npmjs.org/pm2-sysmonit
+1124 verbose addRemoteTarball https://registry.npmjs.org/pm2-sysmonit/-/pm2-sysmonit-1.2.8.tgz not in flight; adding
+1125 verbose addRemoteTarball [ 'https://registry.npmjs.org/pm2-sysmonit/-/pm2-sysmonit-1.2.8.tgz',
+1125 verbose addRemoteTarball   'eddea34a53fd8c8d7c3efb73b97a3c548686e24d' ]
+1126 silly cache afterAdd eventemitter2@5.0.1
+1127 verbose afterAdd /root/.npm/eventemitter2/5.0.1/package/package.json not in flight; writing
+1128 silly fetchAndShaCheck shasum baa78d83e08a2d7ab79b7dad9406f0254977053f
+1129 silly fetchAndShaCheck shasum f962d687ec2c369570ae71af843256e6d0ca1129
+1130 silly cache afterAdd source-map-support@0.5.19
+1131 verbose afterAdd /root/.npm/source-map-support/0.5.19/package/package.json not in flight; writing
+1132 silly fetchAndShaCheck shasum 2daec5383a63135b3f18babb70266dacdcbc429a
+1133 silly resolveWithNewModule commander@2.15.1 checking installable status
+1134 silly cache add args [ 'commander@2.15.1', null ]
+1135 verbose cache add spec commander@2.15.1
+1136 silly cache add parsed spec Result {
+1136 silly cache add   raw: 'commander@2.15.1',
+1136 silly cache add   scope: null,
+1136 silly cache add   name: 'commander',
+1136 silly cache add   rawSpec: '2.15.1',
+1136 silly cache add   spec: '2.15.1',
+1136 silly cache add   type: 'version' }
+1137 silly addNamed commander@2.15.1
+1138 verbose addNamed "2.15.1" is a plain semver version for commander
+1139 silly mapToRegistry name commander
+1140 silly mapToRegistry using default registry
+1141 silly mapToRegistry registry https://registry.npmjs.org/
+1142 silly mapToRegistry uri https://registry.npmjs.org/commander
+1143 verbose addNameVersion registry:https://registry.npmjs.org/commander not in flight; fetching
+1144 verbose afterAdd /root/.npm/chalk/3.0.0/package/package.json written
+1145 verbose stack Error: Missing required argument #1
+1145 verbose stack     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+1145 verbose stack     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+1145 verbose stack     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+1145 verbose stack     at /usr/share/npm/lib/install/deps.js:457:7
+1145 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+1145 verbose stack     at /usr/share/npm/lib/fetch-package-metadata.js:37:12
+1145 verbose stack     at addRequestedAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:82:5)
+1145 verbose stack     at returnAndAddMetadata (/usr/share/npm/lib/fetch-package-metadata.js:117:7)
+1145 verbose stack     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:134:20)
+1145 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+1146 verbose cwd /var/www/html
+1147 error Linux 5.4.0-1060-aws
+1148 error argv "/usr/bin/node" "/usr/bin/npm" "install" "pm2"
+1149 error node v8.10.0
+1150 error npm  v3.5.2
+1151 error code EMISSINGARG
+1152 error typeerror Error: Missing required argument #1
+1152 error typeerror     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+1152 error typeerror     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+1152 error typeerror     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+1152 error typeerror     at /usr/share/npm/lib/install/deps.js:457:7
+1152 error typeerror     at /usr/share/npm/node_modules/iferr/index.js:13:50
+1152 error typeerror     at /usr/share/npm/lib/fetch-package-metadata.js:37:12
+1152 error typeerror     at addRequestedAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:82:5)
+1152 error typeerror     at returnAndAddMetadata (/usr/share/npm/lib/fetch-package-metadata.js:117:7)
+1152 error typeerror     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:134:20)
+1152 error typeerror     at /usr/share/npm/node_modules/iferr/index.js:13:50
+1153 error typeerror This is an error with npm itself. Please report this error at:
+1153 error typeerror     <http://github.com/npm/npm/issues>
+1154 verbose exit [ 1, true ]
