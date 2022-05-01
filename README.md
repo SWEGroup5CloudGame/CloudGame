@@ -15,7 +15,7 @@
 
 
 ## Breakdown of Individual Contributions
-#####Alexis Corona: 
+######Alexis Corona: 
     1. made design for the scoreboard in Photoshop
     2. created prototype of the game and website (https://www.youtube.com/watch?v=16JwOaVs5PE&ab_channel=AlexisC)
     3. created original list of words used in game
@@ -28,7 +28,7 @@
     10. did manual unit testing for gamePage.html
 
 
-#####Tammy Lin: 
+######Tammy Lin: 
     1. Write the general explanation of the game, including how to play
     2. Plan current and future timeline
     3. SRS Document: 
@@ -48,7 +48,7 @@
     9. Put everything on AWS server
 
 
-#####Esther Shin:
+######Esther Shin:
     1. Collect all game design and edit the design so everything is consistent and share the same aesthetic. In other words, made the final mockup 
     2. Complete the following sections of the SRS: 
       -  2.1 Product Perspective
@@ -76,7 +76,7 @@
     10. did manual unit testing for menu_script.js
 
 
-#####Kim Tran:
+######Kim Tran:
     1. Complete the following sections of the SRS: 
       -  1.1 Purpose 
       -  1.2 Document Conventions
@@ -95,7 +95,7 @@
     6. Manual testing document: High Scores Board 
 
 
-#####Katelyn Truong:
+######Katelyn Truong:
     1. Designed all scenes of the game (both general and educational mode) and sent it to Esther for her to make the design more aesthetic and coherent. I also wrote some explanation for the game
     2. Complete the following sections of the SRS: 
       -  3.1 User Interfaces 
