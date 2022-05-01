@@ -11,6 +11,7 @@
   - We did not unit test any of our HTML or CSS code because they are function-based languages. 
   - For some reason, none of the JavaScript Unit Testing Frameworks (i.e. Mocha and Jest) would work with our code. Thus, we tried to manually test most of the major function we wrote in JavaScript. Due to unit testing framework issues, we included a PDF document labeled "Manual Testing" that contains the expected behavior of our major functions as well as pictures of the actual behavior of our major functions. 
   - Again, due to the testing framework issues, we were not able to include a test coverage report. 
+  - The "Manual Testing" PDF does not include gameplay testing since that was done by Alexis Corona's manual testing. 
 
 
 ## Breakdown of Individual Contributions
